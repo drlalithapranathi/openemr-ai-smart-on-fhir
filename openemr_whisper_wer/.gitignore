@@ -1,0 +1,30 @@
+# Python specific
+*.pyc
+__pycache__/
+.venv/
+.Python/
+env/
+venv/
+
+# IDE specific
+.idea/
+*.iml
+
+# OS specific
+.DS_Store
+
+# Project specific (generated files/folders)
+audio.py
+preformat_w_large.py
+whisperlarge.py
+csv_script_preformat.py
+data/capstone_audio.csv
+data/audio/
+data/audiowav/
+data/anemia_wlarge.txt
+data/copd_wlarge.txt
+data/dka_wlarge.txt
+data/gerd_wlarge.txt
+data/gallstones_wlarge.txt
+data/arthritis_wlarge.txt
+

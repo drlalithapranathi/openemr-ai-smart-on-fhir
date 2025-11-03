@@ -1,0 +1,5188 @@
+file_name,transcribed_text,phrase,sentence_wer,alignment_visualization
+1249120_44415714_12774994.wav,[speaking in foreign language],I read a book for along time and when I finished reading I feel head ache,1.0,"=== SENTENCE 1 ===
+
+REF:        i read       a     book for along time and when i finished reading i feel head ache
+HYP: speaking   in foreign language *** ***** **** *** **** * ******** ******* * **** **** ****
+            S    S       S        S   D     D    D   D    D D        D       D D    D    D    D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=12 insertions=0 hits=0
+
+mer=100.00%
+wil=100.00%
+wip=0.00%
+wer=100.00%
+"
+1249120_44323331_89529293.wav,My hair is feeling out in hug amount.,My hair is falling out in huge amount,0.25,"=== SENTENCE 1 ===
+
+REF: my hair is falling out in huge amount
+HYP: my hair is feeling out in  hug amount
+                      S           S       
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=6
+
+mer=25.00%
+wil=43.75%
+wip=56.25%
+wer=25.00%
+"
+1249120_44263136_64809479.wav,My whip is hurting so much.,My foot is hurting so much.,0.16666666666666666,"=== SENTENCE 1 ===
+
+REF: my foot is hurting so much
+HYP: my whip is hurting so much
+           S                   
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=5
+
+mer=16.67%
+wil=30.56%
+wip=69.44%
+wer=16.67%
+"
+1249120_44259428_83019694.wav,I should pay in the lower lap.,I feel pain in the lower back,0.42857142857142855,"=== SENTENCE 1 ===
+
+REF: i   feel pain in the lower back
+HYP: i should  pay in the lower  lap
+            S    S                 S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=4
+
+mer=42.86%
+wil=67.35%
+wip=32.65%
+wer=42.86%
+"
+1249120_44259428_45992221.wav,I feel very late to ash.,i feel pain in my stomach,0.6666666666666666,"=== SENTENCE 1 ===
+
+REF: i feel pain   in my stomach
+HYP: i feel very late to     ash
+               S    S  S       S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=0 hits=2
+
+mer=66.67%
+wil=88.89%
+wip=11.11%
+wer=66.67%
+"
+1249120_44273314_28827187.wav,"My child has tough all night, she can't sleep.","my child has cough all night, she can't sleep",0.1111111111111111,"=== SENTENCE 1 ===
+
+REF: my child has cough all night she cant sleep
+HYP: my child has tough all night she cant sleep
+                      S                         
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=8
+
+mer=11.11%
+wil=20.99%
+wip=79.01%
+wer=11.11%
+"
+1249120_44294866_20041027.wav,I am disappointed.,i'm disappointed,1.0,"=== SENTENCE 1 ===
+
+REF: * im disappointed
+HYP: i am disappointed
+     I  S             
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=1 hits=1
+
+mer=66.67%
+wil=83.33%
+wip=16.67%
+wer=100.00%
+"
+1249120_44294866_98831261.wav,I feel this when I said in front of my laptop for an hour or two. What was it being? It could be the reason.,"I feel dizzy when I set in-front of my laptop for an hour or two, what possibly could be the reason?",0.38095238095238093,"=== SENTENCE 1 ===
+
+REF: i feel dizzy when i **** set infront of my laptop for an hour or two what *** ** ***** possibly could be the reason
+HYP: i feel  this when i said  in   front of my laptop for an hour or two what was it being       it could be the reason
+                S           I   S       S                                        I  I     I        S                    
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=4 hits=17
+
+mer=32.00%
+wil=44.95%
+wip=55.05%
+wer=38.10%
+"
+1249120_44263136_42546148.wav,I feel pain inside and I cannot but I can fight.,I feel pain inside and I can not identify it,0.5,"=== SENTENCE 1 ===
+
+REF: i feel pain inside and i ****** can not identify    it
+HYP: i feel pain inside and i cannot but   i      can fight
+                                   I   S   S        S     S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=1 hits=6
+
+mer=45.45%
+wil=67.27%
+wip=32.73%
+wer=50.00%
+"
+1249120_44323331_89173398.wav,I have an indigestant.,I have an indigestion,0.25,"=== SENTENCE 1 ===
+
+REF: i have an indigestion
+HYP: i have an indigestant
+                         S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=3
+
+mer=25.00%
+wil=43.75%
+wip=56.25%
+wer=25.00%
+"
+1249120_44323331_27898617.wav,"I build it, where ever I stand up.",I feel dizzy whenever I stand up.,0.5714285714285714,"=== SENTENCE 1 ===
+
+REF: i ***** feel dizzy whenever i stand up
+HYP: i build   it where     ever i stand up
+           I    S     S        S           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=1 hits=4
+
+mer=50.00%
+wil=71.43%
+wip=28.57%
+wer=57.14%
+"
+1249120_44259428_102515958.wav,I want to come and I share an injury from a sport in my knee.,When I was young I had an injury from sports in my knee.,0.6153846153846154,"=== SENTENCE 1 ===
+
+REF: * when  i  was young i   had an injury from * sports in my knee
+HYP: i want to come   and i share an injury from a  sport in my knee
+     I    S  S    S     S       S                I      S           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=0 insertions=2 hits=7
+
+mer=53.33%
+wil=74.87%
+wip=25.13%
+wer=61.54%
+"
+1249120_44259428_108958575.wav,"I'm sitting called, ""Fold and the H.I.""",I m feeling cold though the temperature is high,0.8888888888888888,"=== SENTENCE 1 ===
+
+REF:  i       m feeling cold though the temperature is high
+HYP: im sitting  called fold    and the          hi ** ****
+      S       S       S    S      S               S  D    D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=2 insertions=0 hits=1
+
+mer=88.89%
+wil=98.41%
+wip=1.59%
+wer=88.89%
+"
+1249120_44259428_17428469.wav,I should say my name where I plan for today.,I feel pain in my knee when I climb the stairs.,0.7272727272727273,"=== SENTENCE 1 ===
+
+REF: i   feel pain in my knee  when i climb the stairs
+HYP: i should  say ** my name where i  plan for  today
+            S    S  D       S     S       S   S      S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=7 deletions=1 insertions=0 hits=3
+
+mer=72.73%
+wil=91.82%
+wip=8.18%
+wer=72.73%
+"
+1249120_44259428_19293556.wav,My business does not take action after I went to the end.,My biceps started aching after I went to the gym,0.6,"=== SENTENCE 1 ===
+
+REF: my ******** **** biceps started aching after i went to the gym
+HYP: my business does    not    take action after i went to the end
+               I    I      S       S      S                       S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=2 hits=6
+
+mer=50.00%
+wil=70.00%
+wip=30.00%
+wer=60.00%
+"
+1249120_44259428_38940948.wav,I think we are in so many.,I feel cold although we are in summer.,0.625,"=== SENTENCE 1 ===
+
+REF: i  feel cold although we are in ** summer
+HYP: i think **** ******** we are in so   many
+           S    D        D            I      S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=2 insertions=1 hits=4
+
+mer=55.56%
+wil=71.43%
+wip=28.57%
+wer=62.50%
+"
+1249120_44259428_39681967.wav,Go ahead and leave yourself a very full request on St. Arthur's Land.,Chronic disease of hair follicles and sebaceous glands,1.625,"=== SENTENCE 1 ===
+
+REF: ** ***** *** ***** ******** chronic disease   of    hair follicles and sebaceous glands
+HYP: go ahead and leave yourself       a    very full request        on  st   arthurs   land
+      I     I   I     I        I       S       S    S       S         S   S         S      S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=8 deletions=0 insertions=5 hits=0
+
+mer=100.00%
+wil=100.00%
+wip=0.00%
+wer=162.50%
+"
+1249120_44259428_46527054.wav,I have not seen it in my room that will not heal.,I have a split on my thumb that will not heal.,0.45454545454545453,"=== SENTENCE 1 ===
+
+REF: i have ***    a split on my thumb that will not heal
+HYP: i have not seen    it in my  room that will not heal
+              I    S     S  S        S                   
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=1 hits=7
+
+mer=41.67%
+wil=62.88%
+wip=37.12%
+wer=45.45%
+"
+1249120_44259428_50914735.wav,I feel like going at 10 now.,I feel lightheaded when I stand up,0.7142857142857143,"=== SENTENCE 1 ===
+
+REF: i feel lightheaded  when  i stand  up
+HYP: i feel        like going at    10 now
+                      S     S  S     S   S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=5 deletions=0 insertions=0 hits=2
+
+mer=71.43%
+wil=91.84%
+wip=8.16%
+wer=71.43%
+"
+1249120_44259428_53172278.wav,I have a motivation since I work this morning. What could be the reason?,"I have a blurry vision since I woke up this morning, what could be the reason?",0.25,"=== SENTENCE 1 ===
+
+REF: i have a     blurry vision since i woke up this morning what could be the reason
+HYP: i have a motivation ****** since i work ** this morning what could be the reason
+                       S      D            S  D                                      
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=2 insertions=0 hits=12
+
+mer=25.00%
+wil=35.71%
+wip=64.29%
+wer=25.00%
+"
+1249120_44259428_58867514.wav,I took that long screen by the same screen problem.,I tried alot of cream but i still feel the same skin problem,0.6923076923076923,"=== SENTENCE 1 ===
+
+REF: i tried alot   of  cream but i still feel the same   skin problem
+HYP: i  took that long screen  by * ***** **** the same screen problem
+           S    S    S      S   S D     D    D               S        
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=3 insertions=0 hits=4
+
+mer=69.23%
+wil=87.69%
+wip=12.31%
+wer=69.23%
+"
+1249120_44259428_59884279.wav,I have a provision to do the same way as training in the phone. Why?,"I have a blurry vision during my swimming training in the pool, why?",0.6153846153846154,"=== SENTENCE 1 ===
+
+REF: i have a ********* ** blurry vision during  my swimming training in the  pool why
+HYP: i have a provision to     do    the   same way       as training in the phone why
+                      I  I      S      S      S   S        S                     S    
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=0 insertions=2 hits=7
+
+mer=53.33%
+wil=74.87%
+wip=25.13%
+wer=61.54%
+"
+1249120_44259428_71308387.wav,"I'm a really nice running. I'm an actor, an engineer, or a tishali.","Annoyance starts suddenly, often after an injury or exercise.",1.2222222222222223,"=== SENTENCE 1 ===
+
+REF: ** annoyance starts suddenly   often after an ***** **   injury or * exercise
+HYP: im         a really     nice running    im an actor an engineer or a  tishali
+      I         S      S        S       S     S        I  I        S    I        S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=7 deletions=0 insertions=4 hits=2
+
+mer=84.62%
+wil=96.58%
+wip=3.42%
+wer=122.22%
+"
+1249120_44259428_75102963.wav,"I could buy a couple of things ago. And also, as you can see, I'm using it, except it has been close up.",I cut my hand a couple of days ago and although I didn't think I needed it stitches it hasn't closed up.,0.6818181818181818,"=== SENTENCE 1 ===
+
+REF: i   cut  my hand a couple of   days ago and **** although   i didnt think  i needed it stitches it *** hasnt closed up
+HYP: i could buy **** a couple of things ago and also       as you   can   see im  using it   except it has  been  close up
+           S   S    D                  S            I        S   S     S     S  S      S           S      I     S      S   
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=12 deletions=1 insertions=2 hits=9
+
+mer=62.50%
+wil=83.99%
+wip=16.01%
+wer=68.18%
+"
+1249120_44259428_77483299.wav,"I have a very angry character, or when it's been called, why?","I have a foot ache in winter, or when it feels cold, why?",0.5384615384615384,"=== SENTENCE 1 ===
+
+REF: i have a foot  ache        in winter or when  it feels   cold why
+HYP: i have a very angry character ****** or when its  been called why
+                 S     S         S      D           S     S      S    
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=1 insertions=0 hits=6
+
+mer=53.85%
+wil=76.92%
+wip=23.08%
+wer=53.85%
+"
+1249120_44259428_82428785.wav,to last a walk and walk my erectively. The walk is so wide.,glass broken and wound my leg badly the wound is so wide,0.6666666666666666,"=== SENTENCE 1 ===
+
+REF: ** **** glass broken and wound my        leg badly the wound is so wide
+HYP: to last     a   walk and  walk my erectively ***** the  walk is so wide
+      I    I     S      S         S             S     D         S           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=5 deletions=1 insertions=2 hits=6
+
+mer=57.14%
+wil=76.92%
+wip=23.08%
+wer=66.67%
+"
+1249120_44263136_107507771.wav,My son had a rude kennel in the dentist acted at the inside of his cheek and now he would not heal.,My son had a root canal and the dentist accidentally cut the inside of his cheek and now it will not heal.,0.3181818181818182,"=== SENTENCE 1 ===
+
+REF: my son had a root  canal and the dentist accidentally cut the inside of his cheek and now it  will not heal
+HYP: my son had a rude kennel  in the dentist        acted  at the inside of his cheek and now he would not heal
+                     S      S   S                        S   S                                  S     S         
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=7 deletions=0 insertions=0 hits=15
+
+mer=31.82%
+wil=53.51%
+wip=46.49%
+wer=31.82%
+"
+1249120_44263136_13332887.wav,My knee touches and hurts when I first turn up after seating.,My knee catches and hurts when I first stand up after sitting.,0.25,"=== SENTENCE 1 ===
+
+REF: my knee catches and hurts when i first stand up after sitting
+HYP: my knee touches and hurts when i first  turn up after seating
+                   S                            S                S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=9
+
+mer=25.00%
+wil=43.75%
+wip=56.25%
+wer=25.00%
+"
+1249120_44263136_27728779.wav,I have a heart pain in my stomach.,i have a hard pain in my stomach,0.125,"=== SENTENCE 1 ===
+
+REF: i have a  hard pain in my stomach
+HYP: i have a heart pain in my stomach
+                  S                   
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=7
+
+mer=12.50%
+wil=23.44%
+wip=76.56%
+wer=12.50%
+"
+1249120_44263136_34906231.wav,I have severe dry golf.,i have severe dry cough,0.2,"=== SENTENCE 1 ===
+
+REF: i have severe dry cough
+HYP: i have severe dry  golf
+                           S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=4
+
+mer=20.00%
+wil=36.00%
+wip=64.00%
+wer=20.00%
+"
+1249120_44263136_47696189.wav,The worst headache was during a hangover in my twenties. I sincerely thought I was going to die for all brain formation.,The worst headache was during a hangover in my twenties: I sincerely thought I was going to die from brain inflammation.,0.14285714285714285,"=== SENTENCE 1 ===
+
+REF: the worst headache was during a hangover in my twenties i sincerely thought i was going to die *** from brain inflammation
+HYP: the worst headache was during a hangover in my twenties i sincerely thought i was going to die for  all brain    formation
+                                                                                                      I    S                  S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=1 hits=19
+
+mer=13.64%
+wil=21.86%
+wip=78.14%
+wer=14.29%
+"
+1249120_44263136_83669979.wav,I hardly have an extreme to get up.,"I hardly have enough stength to get up,",0.25,"=== SENTENCE 1 ===
+
+REF: i hardly have enough stength to get up
+HYP: i hardly have     an extreme to get up
+                        S       S          
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=6
+
+mer=25.00%
+wil=43.75%
+wip=56.25%
+wer=25.00%
+"
+1249120_44263136_87409253.wav,Sturdy legs are for the eye.,Sterilizer for the eye,0.75,"=== SENTENCE 1 ===
+
+REF: ****** **** sterilizer for the eye
+HYP: sturdy legs        are for the eye
+          I    I          S            
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=2 hits=3
+
+mer=50.00%
+wil=62.50%
+wip=37.50%
+wer=75.00%
+"
+1249120_44263136_94477614.wav,My shoulder aches when I try to lift five pounds.,My shoulder aches when I try to lift five pounds.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=10
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_93618448.wav,I have a heartbeat in my stomach.,i have a hard pain in my stomach,0.25,"=== SENTENCE 1 ===
+
+REF: i have a      hard pain in my stomach
+HYP: i have a heartbeat **** in my stomach
+                      S    D              
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=1 insertions=0 hits=6
+
+mer=25.00%
+wil=35.71%
+wip=64.29%
+wer=25.00%
+"
+1249120_44294866_102078306.wav,I should have been in my knee cough after working out.,I have shooting pain in my kneecap after working out.,0.5,"=== SENTENCE 1 ===
+
+REF: i ****** have shooting pain in my **** kneecap after working out
+HYP: i should have     been **** in my knee   cough after working out
+            I             S    D          I       S                  
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=1 insertions=2 hits=7
+
+mer=41.67%
+wil=55.45%
+wip=44.55%
+wer=50.00%
+"
+1249120_44294866_103485284.wav,My daughter had her apron 3D and it followed it on opening off skiing in one of her bronz that it's not perfect and easy.,My daughter had her eyebrows threaded and it pulled an opening of skin in one of her brows that is now puffy and oozing.,0.5,"=== SENTENCE 1 ===
+
+REF: my daughter had her eyebrows threaded and it ******** pulled an opening  of   skin in one of her brows that  is now   puffy and oozing
+HYP: my daughter had her    apron       3d and it followed     it on opening off skiing in one of her bronz that its not perfect and   easy
+                                S        S               I      S  S           S      S                   S        S   S       S          S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=11 deletions=0 insertions=1 hits=13
+
+mer=48.00%
+wil=71.83%
+wip=28.17%
+wer=50.00%
+"
+1249120_44294866_15891095.wav,I have shorter pain when I try to carry my groceries.,I have shoulder pain when I try to carry my groceries.,0.09090909090909091,"=== SENTENCE 1 ===
+
+REF: i have shoulder pain when i try to carry my groceries
+HYP: i have  shorter pain when i try to carry my groceries
+                   S                                      
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=10
+
+mer=9.09%
+wil=17.36%
+wip=82.64%
+wer=9.09%
+"
+1249120_44294866_23003547.wav,I feel weak all over.,I feel weak all over.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=5
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44294866_30296550.wav,"The cross-incenseational of my heart, leave me rattle us.",The crushing sensation on my heart leaves me breathless.,0.6666666666666666,"=== SENTENCE 1 ===
+
+REF: the            crushing sensation on my heart leaves me ****** breathless
+HYP: the crossincenseational        of ** my heart  leave me rattle         us
+                           S         S  D               S         I          S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=1 insertions=1 hits=4
+
+mer=60.00%
+wil=80.25%
+wip=19.75%
+wer=66.67%
+"
+1249120_44294866_53414183.wav,"I'm not good, I'm feeling so cold.",I'm not good i'm feeling so cold,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=7
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44294866_72495478.wav,My head hurts when I'm doing this.,My head hurts when I'm doing this.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=7
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44294866_73599319.wav,"When it first my eyes to be you, I have really been so",When I force my eyes to view I have blurry vision.,0.6363636363636364,"=== SENTENCE 1 ===
+
+REF: when  i force my eyes to ** view i have ****** blurry vision
+HYP: when it first my eyes to be  you i have really   been     so
+           S     S             I    S             I      S      S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=5 deletions=0 insertions=2 hits=6
+
+mer=53.85%
+wil=74.83%
+wip=25.17%
+wer=63.64%
+"
+1249120_44294866_90929031.wav,It is like a hot and needle it push and throw my out.,It is like I have a needle pushing through my heart.,0.7272727272727273,"=== SENTENCE 1 ===
+
+REF: it is like i have   a needle ** **** pushing through my heart
+HYP: it is like a  hot and needle it push     and   throw my   out
+                S    S   S         I    I       S       S        S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=0 insertions=2 hits=5
+
+mer=61.54%
+wil=82.52%
+wip=17.48%
+wer=72.73%
+"
+1249120_44294866_96337692.wav,"When it band over, I get to shoot in band on like that.",When I bend over I get a shooting pain down my back,0.75,"=== SENTENCE 1 ===
+
+REF: when  i bend over i get **     a shooting pain down   my back
+HYP: when it band over i get to shoot       in band   on like that
+           S    S             I     S        S    S    S    S    S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=8 deletions=0 insertions=1 hits=4
+
+mer=69.23%
+wil=89.74%
+wip=10.26%
+wer=75.00%
+"
+1249120_44323331_16235297.wav,"Good, I played the ball. I have joined it.",When I play football I have joint pain.,0.75,"=== SENTENCE 1 ===
+
+REF: when i ****** play football i have  joint pain
+HYP: good i played  the     ball i have joined   it
+        S        I    S        S             S    S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=5 deletions=0 insertions=1 hits=3
+
+mer=66.67%
+wil=87.50%
+wip=12.50%
+wer=75.00%
+"
+1249120_44323331_17693815.wav,"I cannot work, because... Oh, God.",i can't breath because of  Cough,0.6666666666666666,"=== SENTENCE 1 ===
+
+REF: i   cant breath because of cough
+HYP: i cannot   work because oh   god
+            S      S          S     S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=0 hits=2
+
+mer=66.67%
+wil=88.89%
+wip=11.11%
+wer=66.67%
+"
+1249120_44323331_24602215.wav,There is pain in my mind. I cannot be our pain.,There is pain in my joints. I can not bear pain,0.36363636363636365,"=== SENTENCE 1 ===
+
+REF: there is pain in my joints i    can not bear pain
+HYP: there is pain in my   mind i cannot  be  our pain
+                              S        S   S    S     
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=0 hits=7
+
+mer=36.36%
+wil=59.50%
+wip=40.50%
+wer=36.36%
+"
+1249120_44323331_25847807.wav,My right shoulder clicks when I move my arm.,My right shoulder clicks when I move my arm.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=9
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44323331_42291661.wav,I have a strong full of it.,i have a strong shoulder pain,0.5,"=== SENTENCE 1 ===
+
+REF: i have a strong **** shoulder pain
+HYP: i have a strong full       of   it
+                        I        S    S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=1 hits=4
+
+mer=42.86%
+wil=61.90%
+wip=38.10%
+wer=50.00%
+"
+1249120_44323331_53313006.wav,"Prog my uncle will docking rock, landing in the apetics.",I broke my ankle while doing rock climbing in the Carpathians.,0.6363636363636364,"=== SENTENCE 1 ===
+
+REF:    i broke my ankle while   doing rock climbing in the carpathians
+HYP: prog ***** my uncle  will docking rock  landing in the     apetics
+        S     D        S     S       S             S                  S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=1 insertions=0 hits=4
+
+mer=63.64%
+wil=85.45%
+wip=14.55%
+wer=63.64%
+"
+1249120_44323331_61837950.wav,I have been feeling very sad lately.,I've been feeling very sad lately,0.3333333333333333,"=== SENTENCE 1 ===
+
+REF: *  ive been feeling very sad lately
+HYP: i have been feeling very sad lately
+     I    S                             
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=1 hits=5
+
+mer=28.57%
+wil=40.48%
+wip=59.52%
+wer=33.33%
+"
+1249120_44323331_63502960.wav,"It's like they are in and needles, sticking in my dirt.",Feels like there are pins and needles sticking in my joints,0.36363636363636365,"=== SENTENCE 1 ===
+
+REF: feels like there are pins and needles sticking in my joints
+HYP:   its like  they are   in and needles sticking in my   dirt
+         S          S        S                                 S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=0 hits=7
+
+mer=36.36%
+wil=59.50%
+wip=40.50%
+wer=36.36%
+"
+1249120_44323331_81893062.wav,I feel pain in my ears with tinnitus.,I feel pain in my ears with tinnitus,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=8
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44323331_95219530.wav,I peel thin in my knee.,i feel pain in my knee,0.3333333333333333,"=== SENTENCE 1 ===
+
+REF: i feel pain in my knee
+HYP: i peel thin in my knee
+          S    S           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=4
+
+mer=33.33%
+wil=55.56%
+wip=44.44%
+wer=33.33%
+"
+1249120_44323331_95484507.wav,"My son had you noep, that's me.",My son has a lot of acne.,0.7142857142857143,"=== SENTENCE 1 ===
+
+REF: my son has   a  lot    of acne
+HYP: my son had you noep thats   me
+              S   S    S     S    S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=5 deletions=0 insertions=0 hits=2
+
+mer=71.43%
+wil=91.84%
+wip=8.16%
+wer=71.43%
+"
+1249120_44323331_95561004.wav,"When I go to sleep, I am feeling cold.",When I go to sleep I am feeling cold,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=9
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44442354_52494335.wav,I can hack and gurf it because of my angle.,I can't get a girlfriend because of my acne.,0.6666666666666666,"=== SENTENCE 1 ===
+
+REF: i *** cant get    a girlfriend because of my  acne
+HYP: i can hack and gurf         it because of my angle
+         I    S   S    S          S                   S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=5 deletions=0 insertions=1 hits=4
+
+mer=60.00%
+wil=82.22%
+wip=17.78%
+wer=66.67%
+"
+1249120_44259428_100658896.wav,I hope I put the light in my head.,I have a dull ache in my head,0.625,"=== SENTENCE 1 ===
+
+REF: i **** have   a dull  ache in my head
+HYP: i hope    i put  the light in my head
+          I    S   S    S     S           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=1 hits=4
+
+mer=55.56%
+wil=77.78%
+wip=22.22%
+wer=62.50%
+"
+1249120_44259428_103086666.wav,I can't get it anything. I have a baby for my shelter.,I can't carry anything I have a pain in my shoulder,0.45454545454545453,"=== SENTENCE 1 ===
+
+REF: i cant *** carry anything i have a pain  in my shoulder
+HYP: i cant get    it anything i have a baby for my  shelter
+              I     S                      S   S           S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=1 hits=7
+
+mer=41.67%
+wil=62.88%
+wip=37.12%
+wer=45.45%
+"
+1249120_44259428_106881229.wav,"I walk everywhere, but now I get chow away after I go on I should away.",I walk every day but now I get short of breath after going only a short way.,0.6470588235294118,"=== SENTENCE 1 ===
+
+REF: i walk      every day but now i get short   of breath after going only a  short  way
+HYP: i walk everywhere *** but now i get  chow away  after     i    go   on i should away
+                     S   D                   S    S      S     S     S    S S      S    S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=10 deletions=1 insertions=0 hits=6
+
+mer=64.71%
+wil=86.76%
+wip=13.24%
+wer=64.71%
+"
+1249120_44259428_107372342.wav,I feel so very good.,i feel head ache,0.75,"=== SENTENCE 1 ===
+
+REF: i feel ** head ache
+HYP: i feel so very good
+             I    S    S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=1 hits=2
+
+mer=60.00%
+wil=80.00%
+wip=20.00%
+wer=75.00%
+"
+1249120_44259428_17570271.wav,"I trouble my brain, my feelings, it's a problem. And this time, I'll heal my hair, my ink, love, and death.",I travelled by plane a few days ago and this time during landing my ears remained clogged and painful.,0.7894736842105263,"=== SENTENCE 1 ===
+
+REF: i ******* travelled    by plane        a few days     ago and this time during landing my **** ears remained clogged and painful
+HYP: i trouble        my brain    my feelings its    a problem and this time    ill    heal my hair   my      ink    love and   death
+             I         S     S     S        S   S    S       S                    S       S       I    S        S       S           S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=13 deletions=0 insertions=2 hits=6
+
+mer=71.43%
+wil=90.98%
+wip=9.02%
+wer=78.95%
+"
+1249120_44259428_26033114.wav,He is in fact a girl who has been able to draw up.,His infected wound was beginning to rot.,1.7142857142857142,"=== SENTENCE 1 ===
+
+REF: ** ** ** **** *  his infected wound  was beginning to **** rot
+HYP: he is in fact a girl      who   has been      able to draw  up
+      I  I  I    I I    S        S     S    S         S       I   S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=0 insertions=6 hits=1
+
+mer=92.31%
+wil=98.90%
+wip=1.10%
+wer=171.43%
+"
+1249120_44259428_28102523.wav,I have a hope and will end in my garden.,I have an open wound in my arm,0.75,"=== SENTENCE 1 ===
+
+REF: i have * ****  an open wound in my    arm
+HYP: i have a hope and will   end in my garden
+            I    I   S    S     S            S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=2 hits=4
+
+mer=60.00%
+wil=80.00%
+wip=20.00%
+wer=75.00%
+"
+1249120_44259428_31222743.wav,My brand is filled with and I pray to make you see love. When it's filled by love.,My body feels weak and I tried to make it relax but it stills pain me,0.8125,"=== SENTENCE 1 ===
+
+REF: my ***** body  feels weak and i tried to make ***  it relax  but  it stills pain   me
+HYP: my brand   is filled with and i  pray to make you see  love when its filled   by love
+            I    S      S    S           S           I   S     S    S   S      S    S    S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=11 deletions=0 insertions=2 hits=5
+
+mer=72.22%
+wil=91.32%
+wip=8.68%
+wer=81.25%
+"
+1249120_44259428_34993210.wav,I feel very quick in my body.,I feel very weak in my body,0.14285714285714285,"=== SENTENCE 1 ===
+
+REF: i feel very  weak in my body
+HYP: i feel very quick in my body
+                     S           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=6
+
+mer=14.29%
+wil=26.53%
+wip=73.47%
+wer=14.29%
+"
+1249120_44259428_45195927.wav,I have to go home in my garden.,I have throbing in my shoulder,0.6666666666666666,"=== SENTENCE 1 ===
+
+REF: i have ** ** throbing in my shoulder
+HYP: i have to go     home in my   garden
+             I  I        S              S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=2 hits=4
+
+mer=50.00%
+wil=66.67%
+wip=33.33%
+wer=66.67%
+"
+1249120_44259428_49203869.wav,I feel depressed when I have fun in now.,I feel depressed when I see my hair falling out,0.5,"=== SENTENCE 1 ===
+
+REF: i feel depressed when i  see  my hair falling out
+HYP: i feel depressed when i have fun   in     now ***
+                                S   S    S       S   D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=1 insertions=0 hits=5
+
+mer=50.00%
+wil=72.22%
+wip=27.78%
+wer=50.00%
+"
+1249120_44259428_51361064.wav,It is hard to believe when they end up in the ground with their attention. Why?,"It is hard to breath when I am in the underground metro station, why?",0.5714285714285714,"=== SENTENCE 1 ===
+
+REF: it is hard to  breath when ****   i am in the ****** underground metro   station why
+HYP: it is hard to believe when they end up in the ground        with their attention why
+                         S         I   S  S             I           S     S         S    
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=0 insertions=2 hits=8
+
+mer=50.00%
+wil=71.43%
+wip=28.57%
+wer=57.14%
+"
+1249120_44259428_54047497.wav,and having to help the stories because the better our voices.,I'm having a hard time reading because the letters are all fuzzy,0.75,"=== SENTENCE 1 ===
+
+REF:  im having  a hard time reading because the letters are    all fuzzy
+HYP: and having to help  the stories because the  better our voices *****
+       S         S    S    S       S                   S   S      S     D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=8 deletions=1 insertions=0 hits=3
+
+mer=75.00%
+wil=93.18%
+wip=6.82%
+wer=75.00%
+"
+1249120_44259428_54344716.wav,"Now if you like the hidden commercial opinion, I said, ""Welcome to my Grapery.""",I feel a huge emotional pain after I broke up with my girlfriend.,0.9230769230769231,"=== SENTENCE 1 ===
+
+REF: ***  i feel    a huge emotional       pain   after i broke      up with my girlfriend
+HYP: now if  you like  the    hidden commercial opinion i  said welcome   to my    grapery
+       I  S    S    S    S         S          S       S       S       S    S             S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=11 deletions=0 insertions=1 hits=2
+
+mer=85.71%
+wil=97.80%
+wip=2.20%
+wer=92.31%
+"
+1249120_44259428_61618701.wav,"My head got passes, when I try to drop.",My head gets dizzy when I try to get up.,0.4,"=== SENTENCE 1 ===
+
+REF: my head gets  dizzy when i try to  get up
+HYP: my head  got passes when i try to drop **
+                S      S                  S  D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=1 insertions=0 hits=6
+
+mer=40.00%
+wil=60.00%
+wip=40.00%
+wer=40.00%
+"
+1249120_44259428_86445054.wav,"My son, who is in the person and he is following and he is I am a she is a she is a she is a she is a she is a she is a she a she a she a she a she a",My son had his lip pierced and it is swollen and the skin inside on his lip is grey and looks infected.,1.7727272727272727,"=== SENTENCE 1 ===
+
+REF: my son *** had his lip pierced and it is   swollen and the skin inside on his lip is * *** ** * *** ** * *** ** * *** ** * *** ** * *** * *** * *** * grey and looks infected
+HYP: my son who  is  in the  person and he is following and  he   is      i am   a she is a she is a she is a she is a she is a she is a she a she a she a  she   a   she        a
+              I   S   S   S       S      S            S       S    S      S  S   S   S    I   I  I I   I  I I   I  I I   I  I I   I  I I   I I   I I   I I    S   S     S        S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=16 deletions=0 insertions=23 hits=6
+
+mer=86.67%
+wil=96.36%
+wip=3.64%
+wer=177.27%
+"
+1249120_44259428_95841310.wav,I could not emphasize because of my pain.,I could not exercise because of my knee pain,0.2222222222222222,"=== SENTENCE 1 ===
+
+REF: i could not  exercise because of my knee pain
+HYP: i could not emphasize because of my **** pain
+                         S                  D     
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=1 insertions=0 hits=7
+
+mer=22.22%
+wil=31.94%
+wip=68.06%
+wer=22.22%
+"
+1249120_44259428_96688403.wav,I have this equally increasing in closet prices.,I have difficulty in breathing in crowded places.,0.625,"=== SENTENCE 1 ===
+
+REF: i have difficulty      in  breathing in crowded places
+HYP: i have       this equally increasing in  closet prices
+                     S       S          S          S      S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=5 deletions=0 insertions=0 hits=3
+
+mer=62.50%
+wil=85.94%
+wip=14.06%
+wer=62.50%
+"
+1249120_44263136_103802215.wav,My child has cough all night. She can sleep,"my child has cough all night, she can't sleep",0.1111111111111111,"=== SENTENCE 1 ===
+
+REF: my child has cough all night she cant sleep
+HYP: my child has cough all night she  can sleep
+                                         S      
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=8
+
+mer=11.11%
+wil=20.99%
+wip=79.01%
+wer=11.11%
+"
+1249120_44263136_106922287.wav,I have a back pain since I turned 70 years old.,I have a back pain since I turned 70 years old.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=11
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_107482610.wav,I feel like something is squeezing my lungs.,I feel like something is squeezing my lungs.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=8
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_12662866.wav,I feel pain in the meat.,I feel pain in the knee,0.16666666666666666,"=== SENTENCE 1 ===
+
+REF: i feel pain in the knee
+HYP: i feel pain in the meat
+                           S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=5
+
+mer=16.67%
+wil=30.56%
+wip=69.44%
+wer=16.67%
+"
+1249120_44263136_13651055.wav,My ankle joint throat when I put pressure on my foot.,My ankle joint throbs when I put pressure on my foot.,0.09090909090909091,"=== SENTENCE 1 ===
+
+REF: my ankle joint throbs when i put pressure on my foot
+HYP: my ankle joint throat when i put pressure on my foot
+                         S                               
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=10
+
+mer=9.09%
+wil=17.36%
+wip=82.64%
+wer=9.09%
+"
+1249120_44263136_15762375.wav,"I always feel like half an inch of paint, even if I don't have my period.",I always feel like I have menstrual pains even if I don't have my period.,0.3333333333333333,"=== SENTENCE 1 ===
+
+REF: i always feel like ****  i have menstrual pains even if i dont have my period
+HYP: i always feel like half an inch        of paint even if i dont have my period
+                           I  S    S         S     S                              
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=1 hits=11
+
+mer=31.25%
+wil=49.58%
+wip=50.42%
+wer=33.33%
+"
+1249120_44263136_18526428.wav,In high school I had a lot of acne.,In highschool I had a lot of acne.,0.25,"=== SENTENCE 1 ===
+
+REF: in **** highschool i had a lot of acne
+HYP: in high     school i had a lot of acne
+           I          S                    
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=1 hits=7
+
+mer=22.22%
+wil=31.94%
+wip=68.06%
+wer=25.00%
+"
+1249120_44263136_22818184.wav,I have a red brush that is itching or making.,I have a red rash that is itchy on my skin,0.45454545454545453,"=== SENTENCE 1 ===
+
+REF: i have a red  rash that is   itchy on     my skin
+HYP: i have a red brush that is itching or making ****
+                      S               S  S      S    D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=1 insertions=0 hits=6
+
+mer=45.45%
+wil=67.27%
+wip=32.73%
+wer=45.45%
+"
+1249120_44263136_25998544.wav,I have pain like needles in my joints.,i have pain like needles in my joints.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=8
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_26194304.wav,My food had been aching since last Tuesday.,My foot had been aching since last Tuesday.,0.125,"=== SENTENCE 1 ===
+
+REF: my foot had been aching since last tuesday
+HYP: my food had been aching since last tuesday
+           S                                   
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=7
+
+mer=12.50%
+wil=23.44%
+wip=76.56%
+wer=12.50%
+"
+1249120_44263136_28094510.wav,I can stop shaking or I'm kind to my jaw. That's how cool I was.,"I couldn't stop shaking or unclench my jaw, that's how cold I was.",0.38461538461538464,"=== SENTENCE 1 ===
+
+REF: i couldnt stop shaking or ** **** unclench my jaw thats how cold i was
+HYP: i     can stop shaking or im kind       to my jaw thats how cool i was
+             S                  I    I        S                     S      
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=2 hits=10
+
+mer=33.33%
+wil=48.72%
+wip=51.28%
+wer=38.46%
+"
+1249120_44263136_30518887.wav,Long she choosing all burning line across back with her spiritary movements.,longitudinal burning line across back with hard respiratory movements,0.6666666666666666,"=== SENTENCE 1 ===
+
+REF: **** *** ******** longitudinal burning line across back with hard respiratory movements
+HYP: long she choosing          all burning line across back with  her   spiritary movements
+        I   I        I            S                                  S           S          
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=3 hits=6
+
+mer=50.00%
+wil=66.67%
+wip=33.33%
+wer=66.67%
+"
+1249120_44263136_31607750.wav,I feel aging on my insides.,I feel aching on my insides.,0.16666666666666666,"=== SENTENCE 1 ===
+
+REF: i feel aching on my insides
+HYP: i feel  aging on my insides
+                 S              
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=5
+
+mer=16.67%
+wil=30.56%
+wip=69.44%
+wer=16.67%
+"
+1249120_44263136_34327747.wav,My hair always falls out and I have lost a lot of hair.,My hair always falls out and i have lost a lot of hair lately,0.07142857142857142,"=== SENTENCE 1 ===
+
+REF: my hair always falls out and i have lost a lot of hair lately
+HYP: my hair always falls out and i have lost a lot of hair ******
+                                                                 D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=1 insertions=0 hits=13
+
+mer=7.14%
+wil=7.14%
+wip=92.86%
+wer=7.14%
+"
+1249120_44263136_36286570.wav,My net has been sourced and exited.,My neck has been sore since the accident.,0.625,"=== SENTENCE 1 ===
+
+REF: my neck has been    sore since    the accident
+HYP: my  net has been sourced   and exited ********
+           S                S     S      S        D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=1 insertions=0 hits=3
+
+mer=62.50%
+wil=83.93%
+wip=16.07%
+wer=62.50%
+"
+1249120_44263136_41431969.wav,I have a headache almost every day.,I have a headache almost every day,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=7
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_49038863.wav,"I have a Magrane and a 2-headle, but it does not help.",i have a migrain and i took panadol but it doesn√ït help,0.5,"=== SENTENCE 1 ===
+
+REF: i have a migrain and i    took panadol but it **** doesn√ït help
+HYP: i have a magrane and a 2headle ******* but it does      not help
+                    S     S       S       D           I        S     
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=1 insertions=1 hits=7
+
+mer=46.15%
+wil=65.97%
+wip=34.03%
+wer=50.00%
+"
+1249120_44263136_51762834.wav,My back hurts a lot when I bend.,My back hurts a lot when I bend,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=8
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_58592964.wav,My chest hurts when I got to take a breath.,My chest hurts when I go to take a breath,0.1,"=== SENTENCE 1 ===
+
+REF: my chest hurts when i  go to take a breath
+HYP: my chest hurts when i got to take a breath
+                             S                 
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=9
+
+mer=10.00%
+wil=19.00%
+wip=81.00%
+wer=10.00%
+"
+1249120_44263136_77095387.wav,Have some ear code in the car.,Have severe cold and cough,1.2,"=== SENTENCE 1 ===
+
+REF: have **** *** severe cold and cough
+HYP: have some ear   code   in the   car
+             I   I      S    S   S     S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=2 hits=1
+
+mer=85.71%
+wil=97.14%
+wip=2.86%
+wer=120.00%
+"
+1249120_44263136_78073786.wav,My knee is a swallowing which indicates that I have an infected wound.,My kee is swallowing which indicates i have an infected wound,0.2727272727272727,"=== SENTENCE 1 ===
+
+REF: my  kee is * swallowing which indicates **** i have an infected wound
+HYP: my knee is a swallowing which indicates that i have an infected wound
+           S    I                               I                         
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=2 hits=10
+
+mer=23.08%
+wil=30.07%
+wip=69.93%
+wer=27.27%
+"
+1249120_44263136_78833554.wav,I feel sad.,i feel sad,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=3
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_79226700.wav,I'm very worried that I go vaults in my Versic.,I'm very worried that I'll go bald soon. Am I very sick?,0.5833333333333334,"=== SENTENCE 1 ===
+
+REF: im very worried that ill go   bald soon am      i very sick
+HYP: im very worried that   i go vaults   in my versic **** ****
+                            S         S    S  S      S    D    D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=5 deletions=2 insertions=0 hits=5
+
+mer=58.33%
+wil=79.17%
+wip=20.83%
+wer=58.33%
+"
+1249120_44263136_81225662.wav,I feel like I'm hardly breathing unless you get what's in my lungs out.,I feel like I can hardly breathe unless I get what's in my lungs out,0.26666666666666666,"=== SENTENCE 1 ===
+
+REF: i feel like  i can hardly   breathe unless   i get whats in my lungs out
+HYP: i feel like im *** hardly breathing unless you get whats in my lungs out
+                  S   D                S          S                          
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=1 insertions=0 hits=11
+
+mer=26.67%
+wil=42.38%
+wip=57.62%
+wer=26.67%
+"
+1249120_44263136_85067361.wav,My throat is so sore.,My throught is so sore.,0.2,"=== SENTENCE 1 ===
+
+REF: my throught is so sore
+HYP: my   throat is so sore
+               S           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=4
+
+mer=20.00%
+wil=36.00%
+wip=64.00%
+wer=20.00%
+"
+1249120_44263136_86205654.wav,My body feels with overall eye-etalot. Why?,"My body feels weak although I eat a lot, why?",0.6,"=== SENTENCE 1 ===
+
+REF: my body feels weak although         i eat a lot why
+HYP: my body feels with  overall eyeetalot *** * *** why
+                      S        S         S   D D   D    
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=3 insertions=0 hits=4
+
+mer=60.00%
+wil=77.14%
+wip=22.86%
+wer=60.00%
+"
+1249120_44263136_87455428.wav,My ankle is hurting me.,my ankle is hurting me,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=5
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_88227448.wav,I cut my foot of the pool and he breaks open every day when I walk in it.,I cut my foot at the pool and it breaks open every day when I walk on it.,0.16666666666666666,"=== SENTENCE 1 ===
+
+REF: i cut my foot at the pool and it breaks open every day when i walk on it
+HYP: i cut my foot of the pool and he breaks open every day when i walk in it
+                    S               S                                    S   
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=15
+
+mer=16.67%
+wil=30.56%
+wip=69.44%
+wer=16.67%
+"
+1249120_44263136_89141475.wav,My heart hurts while I'm sad.,"My heart hurts while I'm sad, why?",0.14285714285714285,"=== SENTENCE 1 ===
+
+REF: my heart hurts while im sad why
+HYP: my heart hurts while im sad ***
+                                   D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=1 insertions=0 hits=6
+
+mer=14.29%
+wil=14.29%
+wip=85.71%
+wer=14.29%
+"
+1249120_44263136_93647784.wav,Everything looks like being in a smoky area.,Everything looks like beeing in a smoky area.,0.125,"=== SENTENCE 1 ===
+
+REF: everything looks like beeing in a smoky area
+HYP: everything looks like  being in a smoky area
+                                S                
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=7
+
+mer=12.50%
+wil=23.44%
+wip=76.56%
+wer=12.50%
+"
+1249120_44273314_104690533.wav,My body feels like it's in a refrigerator.,My body feels like it's in a refrigerator.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=8
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_106435928.wav,I've tried reading books but nothing can cheer me up.,"I've tried reading books, but nothing can cheer me up.",0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=10
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_106442057.wav,Stereulizer for the eye.,Sterilizer for the eye,0.25,"=== SENTENCE 1 ===
+
+REF:  sterilizer for the eye
+HYP: stereulizer for the eye
+               S            
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=3
+
+mer=25.00%
+wil=43.75%
+wip=56.25%
+wer=25.00%
+"
+1249120_44273314_16049788.wav,My chest hurts when I go to take a breath.,My chest hurts when I go to take a breath,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=10
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_24711015.wav,My heart hurts while I'm set. Why?,"My heart hurts while I'm sad, why?",0.14285714285714285,"=== SENTENCE 1 ===
+
+REF: my heart hurts while im sad why
+HYP: my heart hurts while im set why
+                               S    
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=6
+
+mer=14.29%
+wil=26.53%
+wip=73.47%
+wer=14.29%
+"
+1249120_44273314_25005396.wav,Everything looks like being in a sokee area.,Everything looks like beeing in a smoky area.,0.25,"=== SENTENCE 1 ===
+
+REF: everything looks like beeing in a smoky area
+HYP: everything looks like  being in a sokee area
+                                S          S     
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=6
+
+mer=25.00%
+wil=43.75%
+wip=56.25%
+wer=25.00%
+"
+1249120_44273314_30937230.wav,I feel pain in the knee when walking.,I feel pain in the knee when walking,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=8
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_35569629.wav,I have a red rash that is eche on my skin.,I have a red rash that is itchy on my skin,0.09090909090909091,"=== SENTENCE 1 ===
+
+REF: i have a red rash that is itchy on my skin
+HYP: i have a red rash that is  eche on my skin
+                                   S           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=10
+
+mer=9.09%
+wil=17.36%
+wip=82.64%
+wer=9.09%
+"
+1249120_44273314_38073414.wav,I feel like I fell in hot water.,I feel like l fell in hot water,0.125,"=== SENTENCE 1 ===
+
+REF: i feel like l fell in hot water
+HYP: i feel like i fell in hot water
+                 S                  
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=7
+
+mer=12.50%
+wil=23.44%
+wip=76.56%
+wer=12.50%
+"
+1249120_44273314_47748885.wav,My body feels weak although I eat a lot. Why?,"My body feels weak although I eat a lot, why?",0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=10
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_69242491.wav,My body aches on the inside between my hips and shoulders.,My body aches on the inside between my hips and shoulders.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=11
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_71015022.wav,My ankle joined ropes when I put pressure on my foot.,My ankle joint throbs when I put pressure on my foot.,0.18181818181818182,"=== SENTENCE 1 ===
+
+REF: my ankle  joint throbs when i put pressure on my foot
+HYP: my ankle joined  ropes when i put pressure on my foot
+                   S      S                               
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=9
+
+mer=18.18%
+wil=33.06%
+wip=66.94%
+wer=18.18%
+"
+1249120_44273314_71205285.wav,"I'm not hearing well, I have problems with my ear.",I'm not hearing well I have problem with my ear,0.1,"=== SENTENCE 1 ===
+
+REF: im not hearing well i have  problem with my ear
+HYP: im not hearing well i have problems with my ear
+                                       S            
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=9
+
+mer=10.00%
+wil=19.00%
+wip=81.00%
+wer=10.00%
+"
+1249120_44273314_72971747.wav,I feel emotionally crushed.,I feel emotionally crushed,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=4
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_91569607.wav,"There is a sharp pain in my bicep. I have tried to apply pain relief pain, but it does not help.",There is a sharp pain in my bicep. I have tried to apply pain relief cream but it does not help.,0.047619047619047616,"=== SENTENCE 1 ===
+
+REF: there is a sharp pain in my bicep i have tried to apply pain relief cream but it does not help
+HYP: there is a sharp pain in my bicep i have tried to apply pain relief  pain but it does not help
+                                                                             S                     
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=20
+
+mer=4.76%
+wil=9.30%
+wip=90.70%
+wer=4.76%
+"
+1249120_44294866_104237668.wav,I have a pain in my head.,I have a pain in my head,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=7
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44294866_104430582.wav,"Hey, I've been traveling with my joints.",I have a throbbing in my joints,0.7142857142857143,"=== SENTENCE 1 ===
+
+REF:   i have    a throbbing   in my joints
+HYP: hey  ive been traveling with my joints
+       S    S    S         S    S          
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=5 deletions=0 insertions=0 hits=2
+
+mer=71.43%
+wil=91.84%
+wip=8.16%
+wer=71.43%
+"
+1249120_44294866_104890103.wav,"I have a hard, musculp thing since I went to the human.",I have a hard muscle pain since i went to the gym,0.25,"=== SENTENCE 1 ===
+
+REF: i have a hard  muscle  pain since i went to the   gym
+HYP: i have a hard musculp thing since i went to the human
+                         S     S                         S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=9
+
+mer=25.00%
+wil=43.75%
+wip=56.25%
+wer=25.00%
+"
+1249120_44294866_105332708.wav,I don't have full rings of motion with my arms.,I don't have full range of motion with my arms,0.1,"=== SENTENCE 1 ===
+
+REF: i dont have full range of motion with my arms
+HYP: i dont have full rings of motion with my arms
+                          S                       
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=9
+
+mer=10.00%
+wil=19.00%
+wip=81.00%
+wer=10.00%
+"
+1249120_44294866_106050928.wav,A was a mouse with pneumonia. It can break it.,"i was diagnosed with pneumonia, i can't breath easily.",0.7777777777777778,"=== SENTENCE 1 ===
+
+REF: i was * diagnosed with pneumonia  i cant breath easily
+HYP: a was a     mouse with pneumonia it  can  break     it
+     S     I         S                 S    S      S      S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=0 insertions=1 hits=3
+
+mer=70.00%
+wil=90.00%
+wip=10.00%
+wer=77.78%
+"
+1249120_44294866_13068476.wav,The area around my heart doesn't feel good.,The area around my heart doesn't feel good.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=8
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44294866_16718315.wav,I get a knee pain when it walk a lot.,I get a knee pain when I walk a lot,0.1,"=== SENTENCE 1 ===
+
+REF: i get a knee pain when  i walk a lot
+HYP: i get a knee pain when it walk a lot
+                             S           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=9
+
+mer=10.00%
+wil=19.00%
+wip=81.00%
+wer=10.00%
+"
+1249120_44294866_19000724.wav,"When I stand up too quickly, I start to feel dizzy and light ahead.",When I stand up too quickly I start to feel dizzy and light-headed,0.15384615384615385,"=== SENTENCE 1 ===
+
+REF: when i stand up too quickly i start to feel dizzy and ***** lightheaded
+HYP: when i stand up too quickly i start to feel dizzy and light       ahead
+                                                               I           S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=1 hits=12
+
+mer=14.29%
+wil=20.88%
+wip=79.12%
+wer=15.38%
+"
+1249120_44294866_21761084.wav,"I got up man, went ahead and cheated.",I got acne when I ate chili,0.8571428571428571,"=== SENTENCE 1 ===
+
+REF: i got ** acne when     i ate   chili
+HYP: i got up  man went ahead and cheated
+            I    S    S     S   S       S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=5 deletions=0 insertions=1 hits=2
+
+mer=75.00%
+wil=92.86%
+wip=7.14%
+wer=85.71%
+"
+1249120_44294866_29194304.wav,I usually have a bad cup when you get food.,I usually have a bad cough when I get flu.,0.3,"=== SENTENCE 1 ===
+
+REF: i usually have a bad cough when   i get  flu
+HYP: i usually have a bad   cup when you get food
+                              S        S        S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=7
+
+mer=30.00%
+wil=51.00%
+wip=49.00%
+wer=30.00%
+"
+1249120_44294866_30450066.wav,I have a neck pain when I sit in front of my laptop.,I have a neck pain when I sit in-front of my laptop.,0.16666666666666666,"=== SENTENCE 1 ===
+
+REF: i have a neck pain when i sit ** infront of my laptop
+HYP: i have a neck pain when i sit in   front of my laptop
+                                    I       S             
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=1 hits=11
+
+mer=15.38%
+wil=22.44%
+wip=77.56%
+wer=16.67%
+"
+1249120_44294866_37364395.wav,So they are paying in the upper left side of chest and may have paying to buy.,severe pain in the upper left side of chest and may have pain to back,0.4,"=== SENTENCE 1 ===
+
+REF: ** **** severe   pain in the upper left side of chest and may have   pain to back
+HYP: so they    are paying in the upper left side of chest and may have paying to  buy
+      I    I      S      S                                                   S       S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=2 hits=11
+
+mer=35.29%
+wil=52.55%
+wip=47.45%
+wer=40.00%
+"
+1249120_44294866_39510206.wav,"I love to God, but I get a terrible change in my lower back when I lean over.",I love to garden but I get a terrible twinge in my lower back when I lean over.,0.1111111111111111,"=== SENTENCE 1 ===
+
+REF: i love to garden but i get a terrible twinge in my lower back when i lean over
+HYP: i love to    god but i get a terrible change in my lower back when i lean over
+                    S                           S                                  
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=16
+
+mer=11.11%
+wil=20.99%
+wip=79.01%
+wer=11.11%
+"
+1249120_44294866_43326442.wav,I have a pain in my elbow joint.,i have a pain in my elbow joint,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=8
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44294866_49687487.wav,I had an accident and my wound was open when I arrived hospital.,I had an accident and my wound was open when I arrived to hospital,0.07142857142857142,"=== SENTENCE 1 ===
+
+REF: i had an accident and my wound was open when i arrived to hospital
+HYP: i had an accident and my wound was open when i arrived ** hospital
+                                                             D         
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=1 insertions=0 hits=13
+
+mer=7.14%
+wil=7.14%
+wip=92.86%
+wer=7.14%
+"
+1249120_44294866_52332577.wav,I don't do anything at home and still I feel exhausted.,I don't do anything at home and still I feel exhausted.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=11
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44294866_53713877.wav,I feel very hard to breathe.,I feel very hard to breathe,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=6
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44294866_56914981.wav,"My lower body hurts, but it improves if I stretch it.",My lower back hurts but it improves if I stretch it,0.09090909090909091,"=== SENTENCE 1 ===
+
+REF: my lower back hurts but it improves if i stretch it
+HYP: my lower body hurts but it improves if i stretch it
+                 S                                      
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=10
+
+mer=9.09%
+wil=17.36%
+wip=82.64%
+wer=9.09%
+"
+1249120_44294866_57205296.wav,I feel a burn sensation in my kids about two hours after age meal.,I feel a burning sensation in my guts about 2 hours after each meal.,0.2857142857142857,"=== SENTENCE 1 ===
+
+REF: i feel a burning sensation in my guts about   2 hours after each meal
+HYP: i feel a    burn sensation in my kids about two hours after  age meal
+                    S                    S         S                S     
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=0 hits=10
+
+mer=28.57%
+wil=48.98%
+wip=51.02%
+wer=28.57%
+"
+1249120_44294866_58377113.wav,sometimes when it is called outside my face hurts it's basically around the pimples that are ready to go,"Sometimes when it is cold outside, my face hurts, especially around the pimples that are ready to pop.",0.2222222222222222,"=== SENTENCE 1 ===
+
+REF: sometimes when it is   cold outside my face hurts *** especially around the pimples that are ready to pop
+HYP: sometimes when it is called outside my face hurts its  basically around the pimples that are ready to  go
+                               S                         I          S                                        S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=1 hits=15
+
+mer=21.05%
+wil=34.21%
+wip=65.79%
+wer=22.22%
+"
+1249120_44294866_60643161.wav,They can't stand up or sit down. They have a pain in my bed and that's annoying me.,I can't stand up or sit down I have a pain in my back that annoys me,0.35294117647058826,"=== SENTENCE 1 ===
+
+REF:    i cant stand up or sit down    i have a pain in my *** back  that   annoys me
+HYP: they cant stand up or sit down they have a pain in my bed  and thats annoying me
+        S                              S                     I    S     S        S   
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=5 deletions=0 insertions=1 hits=12
+
+mer=33.33%
+wil=52.94%
+wip=47.06%
+wer=35.29%
+"
+1249120_44294866_61770999.wav,"When I move on my shoulder, being shut down my arms.","When I move on my shoulder, pain shoots down my arm",0.2727272727272727,"=== SENTENCE 1 ===
+
+REF: when i move on my shoulder  pain shoots down my  arm
+HYP: when i move on my shoulder being   shut down my arms
+                                    S      S            S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=8
+
+mer=27.27%
+wil=47.11%
+wip=52.89%
+wer=27.27%
+"
+1249120_44294866_63568111.wav,I feel a great pain in my shoulder when I try to lift something heavy.,I feel a great pain in my shoulder when i try to lift something heavy,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=15
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44294866_64368433.wav,I was traveling by ship and I feel these,i was travelling by ship and i feel dizzy.,0.2222222222222222,"=== SENTENCE 1 ===
+
+REF: i was travelling by ship and i feel dizzy
+HYP: i was  traveling by ship and i feel these
+                    S                        S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=7
+
+mer=22.22%
+wil=39.51%
+wip=60.49%
+wer=22.22%
+"
+1249120_44294866_67568437.wav,My hair isn't too old.,my hair isn't well,0.5,"=== SENTENCE 1 ===
+
+REF: my hair isnt *** well
+HYP: my hair isnt too  old
+                    I    S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=1 hits=3
+
+mer=40.00%
+wil=55.00%
+wip=45.00%
+wer=50.00%
+"
+1249120_44294866_68130365.wav,They are the big mice damage.,I have a pain in my stomach,1.0,"=== SENTENCE 1 ===
+
+REF:    i have   a pain   in     my stomach
+HYP: they  are the  big mice damage *******
+        S    S   S    S    S      S       D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=1 insertions=0 hits=0
+
+mer=100.00%
+wil=100.00%
+wip=0.00%
+wer=100.00%
+"
+1249120_44294866_74679338.wav,They offer with the stomachache and they can pay its attention.,I have a great stomach ache and i can't eat any thing,0.9166666666666666,"=== SENTENCE 1 ===
+
+REF:    i  have    a great     stomach ache and    i cant eat any     thing
+HYP: they offer with   the stomachache **** and they  can pay its attention
+        S     S    S     S           S    D        S    S   S   S         S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=10 deletions=1 insertions=0 hits=1
+
+mer=91.67%
+wil=99.24%
+wip=0.76%
+wer=91.67%
+"
+1249120_44294866_89734541.wav,My entire body is breathing.,My entire body is freezing.,0.2,"=== SENTENCE 1 ===
+
+REF: my entire body is  freezing
+HYP: my entire body is breathing
+                               S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=4
+
+mer=20.00%
+wil=36.00%
+wip=64.00%
+wer=20.00%
+"
+1249120_44294866_92792208.wav,When I stand up too quickly I start to feel dizzy and lightheaded.,When I stand up too quickly I start to feel dizzy and light-headed,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=13
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44294866_99659302.wav,I feel as earnest in my knees when he walked.,I feel a soreness in my knees when I walk,0.4,"=== SENTENCE 1 ===
+
+REF: i feel  a soreness in my knees when  i   walk
+HYP: i feel as  earnest in my knees when he walked
+             S        S                   S      S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=0 hits=6
+
+mer=40.00%
+wil=64.00%
+wip=36.00%
+wer=40.00%
+"
+1249120_44323331_10095808.wav,There is just hopping in my big cap.,There is a sharp pain in my bicep,0.625,"=== SENTENCE 1 ===
+
+REF: there is    a   sharp pain in my *** bicep
+HYP: there is just hopping **** in my big   cap
+                 S       S    D         I     S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=1 insertions=1 hits=4
+
+mer=55.56%
+wil=75.00%
+wip=25.00%
+wer=62.50%
+"
+1249120_44323331_14650475.wav,I can hardly breathe.,i can hardly breathe,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=4
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44323331_23606264.wav,I put blood over will jumping to get to the ball.,I toppled over while jumping to catch the ball.,0.5555555555555556,"=== SENTENCE 1 ===
+
+REF: i *** toppled over while jumping to *** catch the ball
+HYP: i put   blood over  will jumping to get    to the ball
+         I       S          S              I     S         
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=2 hits=6
+
+mer=45.45%
+wil=63.64%
+wip=36.36%
+wer=55.56%
+"
+1249120_44323331_55722581.wav,"When I wake up in the morning, I feel sorry for the body.",When I wake up in the morning I feel a soreness in my body,0.2857142857142857,"=== SENTENCE 1 ===
+
+REF: when i wake up in the morning i feel     a soreness  in my body
+HYP: when i wake up in the morning i feel sorry      for the ** body
+                                              S        S   S  D     
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=1 insertions=0 hits=10
+
+mer=28.57%
+wil=45.05%
+wip=54.95%
+wer=28.57%
+"
+1249120_44323331_59191528.wav,I get an ER-IT when it is pulled.,I get an ear ache when it is cold,0.3333333333333333,"=== SENTENCE 1 ===
+
+REF: i get an  ear ache when it is   cold
+HYP: i get an erit **** when it is pulled
+                 S    D                 S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=1 insertions=0 hits=6
+
+mer=33.33%
+wil=50.00%
+wip=50.00%
+wer=33.33%
+"
+1249120_44323331_63393498.wav,I have a great pain in my tooth like twin pain with relaxing my pain relief.,i have a great pain in my foot like thrombing pain with relaxing my pain releif,0.1875,"=== SENTENCE 1 ===
+
+REF: i have a great pain in my  foot like thrombing pain with relaxing my pain releif
+HYP: i have a great pain in my tooth like      twin pain with relaxing my pain relief
+                                   S              S                                 S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=13
+
+mer=18.75%
+wil=33.98%
+wip=66.02%
+wer=18.75%
+"
+1249120_44323331_84030889.wav,I feel great pain in the head.,I feel great pain in the head,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=7
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44323331_94962408.wav,I peel then in my throat.,I feel pain in my throat,0.3333333333333333,"=== SENTENCE 1 ===
+
+REF: i feel pain in my throat
+HYP: i peel then in my throat
+          S    S             
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=4
+
+mer=33.33%
+wil=55.56%
+wip=44.44%
+wer=33.33%
+"
+1249120_44323331_95860925.wav,I made lots and lots of analyses to know the main reason for my stock HA.,I made lots and lots of analysis to know the main reason for my stomach ache,0.1875,"=== SENTENCE 1 ===
+
+REF: i made lots and lots of analysis to know the main reason for my stomach ache
+HYP: i made lots and lots of analyses to know the main reason for my   stock   ha
+                                    S                                      S    S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=13
+
+mer=18.75%
+wil=33.98%
+wip=66.02%
+wer=18.75%
+"
+1249120_44442354_25790660.wav,I am a head shorter.,I have a hair shortage,0.6,"=== SENTENCE 1 ===
+
+REF: i have a hair shortage
+HYP: i   am a head  shorter
+          S      S        S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=2
+
+mer=60.00%
+wil=84.00%
+wip=16.00%
+wer=60.00%
+"
+1249120_44442354_96518720.wav,I failed my state's net in my elbows and solo.,I fell a stiffness in my elbows and shoulders,0.5555555555555556,"=== SENTENCE 1 ===
+
+REF: i ****** fell      a stiffness in my elbows and shoulders
+HYP: i failed   my states       net in my elbows and      solo
+            I    S      S         S                          S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=1 hits=5
+
+mer=50.00%
+wil=72.22%
+wip=27.78%
+wer=55.56%
+"
+1249120_44442354_97149231.wav,I'm suffering from a shared company being fired.,I'm suffering from sharp cough Accompanied by  phlegm,0.625,"=== SENTENCE 1 ===
+
+REF: im suffering from sharp  cough accompanied    by phlegm
+HYP: im suffering from     a shared     company being  fired
+                           S      S           S     S      S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=5 deletions=0 insertions=0 hits=3
+
+mer=62.50%
+wil=85.94%
+wip=14.06%
+wer=62.50%
+"
+1249120_44259428_100443017.wav,They are paying in my phone.,there pain in my foot,0.8,"=== SENTENCE 1 ===
+
+REF: **** there   pain in my  foot
+HYP: they   are paying in my phone
+        I     S      S           S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=1 hits=2
+
+mer=66.67%
+wil=86.67%
+wip=13.33%
+wer=80.00%
+"
+1249120_44259428_105662498.wav,"I will say in basketball yesterday, I have a bright ankle.","i was playing basketball yesterday, i have sprained ankle",0.5555555555555556,"=== SENTENCE 1 ===
+
+REF: i **** was playing basketball yesterday i have * sprained ankle
+HYP: i will say      in basketball yesterday i have a   bright ankle
+          I   S       S                             I        S      
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=2 hits=6
+
+mer=45.45%
+wil=63.64%
+wip=36.36%
+wer=55.56%
+"
+1249120_44259428_105786249.wav,I feel a bonus extension in my shoulder muscles.,I feel a burning sensation in my shoulder muscle.,0.3333333333333333,"=== SENTENCE 1 ===
+
+REF: i feel a burning sensation in my shoulder  muscle
+HYP: i feel a   bonus extension in my shoulder muscles
+                    S         S                      S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=6
+
+mer=33.33%
+wil=55.56%
+wip=44.44%
+wer=33.33%
+"
+1249120_44259428_108477882.wav,"When it hurts about the world, that it is getting more than I should.",My knees hurt so bad to walk that I stay sitting more than I should.,0.6666666666666666,"=== SENTENCE 1 ===
+
+REF:   my knees  hurt    so bad    to walk that  i stay sitting more than i should
+HYP: when    it hurts about the world **** that it   is getting more than i should
+        S     S     S     S   S     S    D       S    S       S                   
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=9 deletions=1 insertions=0 hits=5
+
+mer=66.67%
+wil=88.10%
+wip=11.90%
+wer=66.67%
+"
+1249120_44259428_16757387.wav,I fit this cohort to allow the body in general.,I feel discomfort throughout the body in general,0.625,"=== SENTENCE 1 ===
+
+REF: i *** ****   feel discomfort throughout the body in general
+HYP: i fit this cohort         to      allow the body in general
+         I    I      S          S          S                    
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=2 hits=5
+
+mer=50.00%
+wil=68.75%
+wip=31.25%
+wer=62.50%
+"
+1249120_44259428_20551217.wav,I have this people working more in my next.,i have difficulty moving my neck,1.0,"=== SENTENCE 1 ===
+
+REF: i have **** ****** ******* difficulty moving my neck
+HYP: i have this people working       more     in my next
+               I      I       I          S      S       S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=3 hits=3
+
+mer=66.67%
+wil=83.33%
+wip=16.67%
+wer=100.00%
+"
+1249120_44259428_25649773.wav,I can't believe it.,i cant breathe,0.6666666666666666,"=== SENTENCE 1 ===
+
+REF: i cant ******* breathe
+HYP: i cant believe      it
+                  I       S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=1 hits=2
+
+mer=50.00%
+wil=66.67%
+wip=33.33%
+wer=66.67%
+"
+1249120_44259428_32632229.wav,I feel painly hurt when I wake up.,I feel pain in my heart when I wake up,0.4,"=== SENTENCE 1 ===
+
+REF: i feel   pain   in my heart when i wake up
+HYP: i feel painly hurt ** ***** when i wake up
+                 S    S  D     D               
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=2 insertions=0 hits=6
+
+mer=40.00%
+wil=55.00%
+wip=45.00%
+wer=40.00%
+"
+1249120_44259428_34986999.wav,I gave to us all the people on my face. That's another way.,I get clusters of pimples on my face that never go away.,0.8333333333333334,"=== SENTENCE 1 ===
+
+REF: i **** ** get clusters  of pimples on my face  that   never  go away
+HYP: i gave to  us      all the  people on my face thats another way ****
+          I  I   S        S   S       S                S       S   S    D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=7 deletions=1 insertions=2 hits=4
+
+mer=71.43%
+wil=89.74%
+wip=10.26%
+wer=83.33%
+"
+1249120_44259428_46472982.wav,May I say that we can't badly air them out on my side.,My face break out badly every month around my cycle.,1.1,"=== SENTENCE 1 ===
+
+REF: *** *  my face break  out badly *** every month around my cycle
+HYP: may i say that    we cant badly air  them   out     on my  side
+       I I   S    S     S    S         I     S     S      S        S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=8 deletions=0 insertions=3 hits=2
+
+mer=84.62%
+wil=96.92%
+wip=3.08%
+wer=110.00%
+"
+1249120_44259428_52976378.wav,My back hurts so much. I get burned down to team isolate.,My back hurts so much I can't bend down to tie my shoelaces.,0.38461538461538464,"=== SENTENCE 1 ===
+
+REF: my back hurts so much i cant   bend down to  tie      my shoelaces
+HYP: my back hurts so much i  get burned down to team isolate *********
+                                S      S            S       S         D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=1 insertions=0 hits=8
+
+mer=38.46%
+wil=58.97%
+wip=41.03%
+wer=38.46%
+"
+1249120_44259428_54532216.wav,"If you have, there are family homes.","i feel hurt, lot of pain in my heart",1.0,"=== SENTENCE 1 ===
+
+REF:  i feel hurt   lot  of   pain    in my heart
+HYP: if  you have there are family homes ** *****
+      S    S    S     S   S      S     S  D     D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=7 deletions=2 insertions=0 hits=0
+
+mer=100.00%
+wil=100.00%
+wip=0.00%
+wer=100.00%
+"
+1249120_44259428_55288440.wav,My check is made to come with simple and I have...,My chest break out with red pimples and whiteheads.,1.0,"=== SENTENCE 1 ===
+
+REF: my ***** ** chest break  out with    red pimples and whiteheads
+HYP: my check is  made    to come with simple     and   i       have
+            I  I     S     S    S           S       S   S          S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=7 deletions=0 insertions=2 hits=2
+
+mer=81.82%
+wil=95.96%
+wip=4.04%
+wer=100.00%
+"
+1249120_44259428_56567581.wav,"I go straight in the head, play it out last night.",I was kicked in the head playing soccer last night.,0.5,"=== SENTENCE 1 ===
+
+REF: i was   kicked in the head **** playing soccer last night
+HYP: i  go straight in the head play      it    out last night
+         S        S                I       S      S           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=1 hits=6
+
+mer=45.45%
+wil=67.27%
+wip=32.73%
+wer=50.00%
+"
+1249120_44259428_57761508.wav,I can't believe I have a hard job.,I can't sleep I have a hard cough,0.25,"=== SENTENCE 1 ===
+
+REF: i cant   sleep i have a hard cough
+HYP: i cant believe i have a hard   job
+                  S                   S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=6
+
+mer=25.00%
+wil=43.75%
+wip=56.25%
+wer=25.00%
+"
+1249120_44259428_58709056.wav,Would I do hard research? I feel great to meet you in my muscles.,When I do hard exercises I feel great pain in my muscles.,0.4166666666666667,"=== SENTENCE 1 ===
+
+REF:  when i do hard exercises i feel great ** **** pain in my muscles
+HYP: would i do hard  research i feel great to meet  you in my muscles
+         S                   S               I    I    S              
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=2 hits=9
+
+mer=35.71%
+wil=51.79%
+wip=48.21%
+wer=41.67%
+"
+1249120_44259428_65420088.wav,I should have been writing a hair.,I feel pain when i think of her,0.875,"=== SENTENCE 1 ===
+
+REF: i   feel pain when       i think   of her
+HYP: i should have been writing     a hair ***
+            S    S    S       S     S    S   D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=1 insertions=0 hits=1
+
+mer=87.50%
+wil=98.21%
+wip=1.79%
+wer=87.50%
+"
+1249120_44259428_67815432.wav,I have missed off for two weeks.,I've had this cough for two weeks.,0.5714285714285714,"=== SENTENCE 1 ===
+
+REF: ive  had   this cough for two weeks
+HYP:   i have missed   off for two weeks
+       S    S      S     S              
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=0 hits=3
+
+mer=57.14%
+wil=81.63%
+wip=18.37%
+wer=57.14%
+"
+1249120_44259428_72249048.wav,"I break out all my face, beautiful crying.",I break out on my face very frequently,0.375,"=== SENTENCE 1 ===
+
+REF: i break out  on my face      very frequently
+HYP: i break out all my face beautiful     crying
+                   S                 S          S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=5
+
+mer=37.50%
+wil=60.94%
+wip=39.06%
+wer=37.50%
+"
+1249120_44259428_76204403.wav,"If you look at this whole day, good pray.",I feel increased heart rate with prick,1.2857142857142858,"=== SENTENCE 1 ===
+
+REF: ** ***    i feel increased heart rate with prick
+HYP: if you look   at      this whole  day good  pray
+      I   I    S    S         S     S    S    S     S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=7 deletions=0 insertions=2 hits=0
+
+mer=100.00%
+wil=100.00%
+wip=0.00%
+wer=128.57%
+"
+1249120_44259428_84461460.wav,"We are now at 10 now, I filled it.",Whenever I stand up I feel dizzy.,1.1428571428571428,"=== SENTENCE 1 ===
+
+REF: ** *** whenever  i stand  up i   feel dizzy
+HYP: we are      now at    10 now i filled    it
+      I   I        S  S     S   S        S     S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=0 insertions=2 hits=1
+
+mer=88.89%
+wil=98.41%
+wip=1.59%
+wer=114.29%
+"
+1249120_44259428_87762932.wav,I have had next before my face.,I have acne all over my face,0.42857142857142855,"=== SENTENCE 1 ===
+
+REF: i have acne  all   over my face
+HYP: i have  had next before my face
+               S    S      S        
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=4
+
+mer=42.86%
+wil=67.35%
+wip=32.65%
+wer=42.86%
+"
+1249120_44259428_88280001.wav,"When we got this like, it is very much wrong when I go home.",My kneecap feels like it is grating bone on bone when I walk.,0.7692307692307693,"=== SENTENCE 1 ===
+
+REF: **** my kneecap feels like it is grating bone    on bone when i ** walk
+HYP: when we     got  this like it is    very much wrong **** when i go home
+        I  S       S     S                  S    S     S    D         I    S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=7 deletions=1 insertions=2 hits=5
+
+mer=66.67%
+wil=86.26%
+wip=13.74%
+wer=76.92%
+"
+1249120_44259428_92199033.wav,I feel this after doing a most lot of work.,I feel dizzy after doing a muscular effort.,0.625,"=== SENTENCE 1 ===
+
+REF: i feel dizzy after doing a **** *** muscular effort
+HYP: i feel  this after doing a most lot       of   work
+                S                  I   I        S      S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=2 hits=5
+
+mer=50.00%
+wil=68.75%
+wip=31.25%
+wer=62.50%
+"
+1249120_44263136_100870435.wav,The joins in my fingers are painful in the morning.,The joints in my fingers are painful in the morning.,0.1,"=== SENTENCE 1 ===
+
+REF: the joints in my fingers are painful in the morning
+HYP: the  joins in my fingers are painful in the morning
+              S                                         
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=9
+
+mer=10.00%
+wil=19.00%
+wip=81.00%
+wer=10.00%
+"
+1249120_44263136_101522822.wav,I have a pain in my muscle.,I have a pain in my muscle,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=7
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_101812019.wav,I feel hurt in my heart.,I feel hurts in my heart,0.16666666666666666,"=== SENTENCE 1 ===
+
+REF: i feel hurts in my heart
+HYP: i feel  hurt in my heart
+                S            
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=5
+
+mer=16.67%
+wil=30.56%
+wip=69.44%
+wer=16.67%
+"
+1249120_44263136_106227417.wav,Heart aches so much.,heart aches so much,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=4
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_107636900.wav,I may have overdone it with the weight lifting because I am afraid I may have torn a muscle on my back.,"I may have overdone it with the weightlifting, because I am afraid I may have torn a muscle on my back.",0.09523809523809523,"=== SENTENCE 1 ===
+
+REF: i may have overdone it with the ****** weightlifting because i am afraid i may have torn a muscle on my back
+HYP: i may have overdone it with the weight       lifting because i am afraid i may have torn a muscle on my back
+                                          I             S                                                        
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=1 hits=20
+
+mer=9.09%
+wil=13.42%
+wip=86.58%
+wer=9.52%
+"
+1249120_44263136_11828866.wav,There is a sharp pain in my bicep. I have tried to apply and be really cream but it does not help.,There is a sharp pain in my bicep. I have tried to apply pain relief cream but it does not help.,0.14285714285714285,"=== SENTENCE 1 ===
+
+REF: there is a sharp pain in my bicep i have tried to apply *** pain relief cream but it does not help
+HYP: there is a sharp pain in my bicep i have tried to apply and   be really cream but it does not help
+                                                               I    S      S                           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=1 hits=19
+
+mer=13.64%
+wil=21.86%
+wip=78.14%
+wer=14.29%
+"
+1249120_44263136_13172477.wav,Sometimes my body feels weak without reasoning.,Sometimes my body feels week without reason,0.2857142857142857,"=== SENTENCE 1 ===
+
+REF: sometimes my body feels week without    reason
+HYP: sometimes my body feels weak without reasoning
+                                S                 S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=5
+
+mer=28.57%
+wil=48.98%
+wip=51.02%
+wer=28.57%
+"
+1249120_44263136_20870238.wav,"My body feels weak, overall I take my body I'm usually wearing literally.",My body feels weak although I take my vitamins regularly.,0.6,"=== SENTENCE 1 ===
+
+REF: my body feels weak although i take my **** ** ******* vitamins regularly
+HYP: my body feels weak  overall i take my body im usually  wearing literally
+                               S              I  I       I        S         S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=3 hits=7
+
+mer=46.15%
+wil=62.31%
+wip=37.69%
+wer=60.00%
+"
+1249120_44263136_42090113.wav,There are times when I feel crushed under huge way in no air-cut into my locks. It actually scares the hail out of me when it happens.,"There are times when I feel crushed under a huge weight and no air passing to my lungs, it actually scares the hell out of me when it happens.",0.27586206896551724,"=== SENTENCE 1 ===
+
+REF: there are times when i feel crushed under a huge weight and no    air passing to my lungs it actually scares the hell out of me when it happens
+HYP: there are times when i feel crushed under * huge    way  in no aircut    into ** my locks it actually scares the hail out of me when it happens
+                                               D           S   S         S       S  D        S                           S                          
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=2 insertions=0 hits=21
+
+mer=27.59%
+wil=43.68%
+wip=56.32%
+wer=27.59%
+"
+1249120_44263136_43213149.wav,having difficulty moving my knee.,having difficulty moving my knee,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=5
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_44160087.wav,"I feel sharp, plain, and stomach after eating.",I feel a sharp pain in the stomach after eating,0.4,"=== SENTENCE 1 ===
+
+REF: i feel a sharp  pain  in the stomach after eating
+HYP: i feel * sharp plain and *** stomach after eating
+            D           S   S   D                     
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=2 insertions=0 hits=6
+
+mer=40.00%
+wil=55.00%
+wip=45.00%
+wer=40.00%
+"
+1249120_44263136_46878275.wav,"I'm not hearing well, I have problem with my ear.",I'm not hearing well I have problem with my ear,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=10
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_49448724.wav,Is there a cure for acne?,Is there a cure for acne?,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=6
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_51547342.wav,I feel emotionally crushed.,I feel emotionally crushed,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=4
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_52222173.wav,"Every time I make a effort, I felt dizzy.","Every time I make an effort, I felt dizzy.",0.1111111111111111,"=== SENTENCE 1 ===
+
+REF: every time i make an effort i felt dizzy
+HYP: every time i make  a effort i felt dizzy
+                        S                    
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=8
+
+mer=11.11%
+wil=20.99%
+wip=79.01%
+wer=11.11%
+"
+1249120_44263136_55671220.wav,I feel that it's great painting my life's shoulder.,i feel that is great pain in my left shoulder,0.4,"=== SENTENCE 1 ===
+
+REF: i feel that  is great     pain in my  left shoulder
+HYP: i feel that its great painting ** my lifes shoulder
+                   S              S  D        S         
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=1 insertions=0 hits=6
+
+mer=40.00%
+wil=60.00%
+wip=40.00%
+wer=40.00%
+"
+1249120_44263136_57609608.wav,My body aches on the inside between my hips and shoulders.,My body aches on the inside between my hips and shoulders.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=11
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_59289865.wav,"When I'm too high, I start to feel dizzy.",When I'm too high I start to feel dizzy,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=9
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_68968933.wav,"I used a lot of painkiller to get better, but I still built the same back pain.",I used alot of pain killer to get better but i still feel the same back pain,0.29411764705882354,"=== SENTENCE 1 ===
+
+REF: i used * alot of       pain killer to get better but i still  feel the same back pain
+HYP: i used a  lot of painkiller ****** to get better but i still built the same back pain
+            I    S             S      D                               S                   
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=1 insertions=1 hits=13
+
+mer=27.78%
+wil=41.52%
+wip=58.48%
+wer=29.41%
+"
+1249120_44263136_71092044.wav,My body feels like it's another refrigerator.,My body feels like it's in a refrigerator.,0.25,"=== SENTENCE 1 ===
+
+REF: my body feels like its      in a refrigerator
+HYP: my body feels like its another * refrigerator
+                                  S D             
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=1 insertions=0 hits=6
+
+mer=25.00%
+wil=35.71%
+wip=64.29%
+wer=25.00%
+"
+1249120_44263136_82613525.wav,I feel like I've always got something in my throat.,I feel like I've always got something in my throat,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=10
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_92015834.wav,"When I wake up in the morning, I feel dizzy.",when i wake up in the morning i feel dizzy,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=10
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_93996655.wav,"I have found some bittersnake skin in charts in this print, but it doesn't get better.",I have found some issues in my skin and tried to use cream but it doesn't get better,0.4444444444444444,"=== SENTENCE 1 ===
+
+REF: i have found some      issues in my skin and  tried to  use cream but it doesnt get better
+HYP: i have found some bittersnake ** ** skin  in charts in this print but it doesnt get better
+                                 S  D  D        S      S  S    S     S                         
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=2 insertions=0 hits=10
+
+mer=44.44%
+wil=65.28%
+wip=34.72%
+wer=44.44%
+"
+1249120_44273314_102521547.wav,The worst headache was during a hangover in my twenties. I sincerely thought I was going to die from brain inflammation.,The worst headache was during a hangover in my twenties: I sincerely thought I was going to die from brain inflammation.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=21
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_16303816.wav,"I have a problem in my needle ear, made by infection.",i have a problem in my middle ear made by infection,0.09090909090909091,"=== SENTENCE 1 ===
+
+REF: i have a problem in my middle ear made by infection
+HYP: i have a problem in my needle ear made by infection
+                                 S                      
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=10
+
+mer=9.09%
+wil=17.36%
+wip=82.64%
+wer=9.09%
+"
+1249120_44273314_18787091.wav,I have a back pain since I turned 70 years old.,I have a back pain since I turned 70 years old.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=11
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_52748628.wav,I feel aching on my insights.,I feel aching on my insides.,0.16666666666666666,"=== SENTENCE 1 ===
+
+REF: i feel aching on my  insides
+HYP: i feel aching on my insights
+                                S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=5
+
+mer=16.67%
+wil=30.56%
+wip=69.44%
+wer=16.67%
+"
+1249120_44273314_68456497.wav,I feel sad.,i feel sad,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=3
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_70276723.wav,I may have overdone it with the wind lifting because I may have torn a muscle on my back.,"I may have overdone it with the weightlifting, because I am afraid I may have torn a muscle on my back.",0.23809523809523808,"=== SENTENCE 1 ===
+
+REF: i may have overdone it with the **** weightlifting because i am afraid i may have torn a muscle on my back
+HYP: i may have overdone it with the wind       lifting because * ** ****** i may have torn a muscle on my back
+                                        I             S         D  D      D                                    
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=3 insertions=1 hits=17
+
+mer=22.73%
+wil=27.57%
+wip=72.43%
+wer=23.81%
+"
+1249120_44273314_70741506.wav,I noticed a lot more hair coming up than usual when I brush my hair.,I notice a lot more hair coming out than usual when I brush my hair,0.13333333333333333,"=== SENTENCE 1 ===
+
+REF: i  notice a lot more hair coming out than usual when i brush my hair
+HYP: i noticed a lot more hair coming  up than usual when i brush my hair
+             S                          S                                
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=13
+
+mer=13.33%
+wil=24.89%
+wip=75.11%
+wer=13.33%
+"
+1249120_44273314_73290676.wav,My hair always falls out and I have lost a lot of hair lately.,My hair always falls out and i have lost a lot of hair lately,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=14
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_75699317.wav,I have severe dry cough.,i have severe dry cough,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=5
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_76070691.wav,I have a migraine and I took piano dough but it doesn't help.,i have a migrain and i took panadol but it doesn√ït help,0.3333333333333333,"=== SENTENCE 1 ===
+
+REF: i have a  migrain and i took ***** panadol but it doesn√ït help
+HYP: i have a migraine and i took piano   dough but it   doesnt help
+                     S                I       S               S     
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=1 hits=9
+
+mer=30.77%
+wil=48.08%
+wip=51.92%
+wer=33.33%
+"
+1249120_44273314_96055783.wav,"My hair is so heavy, I can't think normally.",My head is so heavy can't think normally,0.25,"=== SENTENCE 1 ===
+
+REF: my head is so heavy * cant think normally
+HYP: my hair is so heavy i cant think normally
+           S             I                    
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=1 hits=7
+
+mer=22.22%
+wil=31.94%
+wip=68.06%
+wer=25.00%
+"
+1249120_44294866_102554677.wav,I have written in my face an other problem in my dharma like it.,I have acne in my face and other problema in my derma like itching,0.35714285714285715,"=== SENTENCE 1 ===
+
+REF: i have    acne in my face and other problema in my  derma like itching
+HYP: i have written in my face  an other  problem in my dharma like      it
+                  S              S              S            S            S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=5 deletions=0 insertions=0 hits=9
+
+mer=35.71%
+wil=58.67%
+wip=41.33%
+wer=35.71%
+"
+1249120_44294866_103743912.wav,Yes and they haven't showed or been.,Yesterday I had a shouder pain,1.1666666666666667,"=== SENTENCE 1 ===
+
+REF: *** yesterday    i    had      a shouder pain
+HYP: yes       and they havent showed      or been
+       I         S    S      S      S       S    S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=0 insertions=1 hits=0
+
+mer=100.00%
+wil=100.00%
+wip=0.00%
+wer=116.67%
+"
+1249120_44294866_103812071.wav,I have a rake when I go to the pool.,I have a ear ache when I go to the pool,0.18181818181818182,"=== SENTENCE 1 ===
+
+REF: i have a  ear ache when i go to the pool
+HYP: i have a rake **** when i go to the pool
+                 S    D                      
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=1 insertions=0 hits=9
+
+mer=18.18%
+wil=26.36%
+wip=73.64%
+wer=18.18%
+"
+1249120_44294866_14283535.wav,I start thinking we were in relation and I guess I was walking too much water from my nose because this sinusitis is killing me now.,"I started taking swimming lessons and I guess I swallowed too much water through my nose, because this sinusitis is killing me now.",0.391304347826087,"=== SENTENCE 1 ===
+
+REF: i ***** ******** started taking swimming  lessons and i guess i *** swallowed too much water through my nose because this sinusitis is killing me now
+HYP: i start thinking      we   were       in relation and i guess i was   walking too much water    from my nose because this sinusitis is killing me now
+           I        I       S      S        S        S                 I         S                      S                                                 
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=0 insertions=3 hits=17
+
+mer=34.62%
+wil=51.67%
+wip=48.33%
+wer=39.13%
+"
+1249120_44294866_18570665.wav,I have a room soon on my face that comment go.,I have eruptions on my face that come and go .,0.5,"=== SENTENCE 1 ===
+
+REF: i have * **** eruptions on my face that    come and go
+HYP: i have a room      soon on my face that comment *** go
+            I    I         S                       S   D   
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=1 insertions=2 hits=7
+
+mer=41.67%
+wil=55.45%
+wip=44.55%
+wer=50.00%
+"
+1249120_44294866_29285051.wav,and having really close.,I am having running nose,0.8,"=== SENTENCE 1 ===
+
+REF:   i am having running  nose
+HYP: and ** having  really close
+       S  D              S     S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=1 insertions=0 hits=1
+
+mer=80.00%
+wil=95.00%
+wip=5.00%
+wer=80.00%
+"
+1249120_44294866_38949666.wav,for our school is grant like once.,fell skull is cracked like nuts,0.8333333333333334,"=== SENTENCE 1 ===
+
+REF: *** fell  skull is cracked like nuts
+HYP: for  our school is   grant like once
+       I    S      S          S         S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=1 hits=2
+
+mer=71.43%
+wil=90.48%
+wip=9.52%
+wer=83.33%
+"
+1249120_44294866_52206190.wav,my shoulder has a great pain,My shoulder has agreat pain,0.4,"=== SENTENCE 1 ===
+
+REF: my shoulder has * agreat pain
+HYP: my shoulder has a  great pain
+                     I      S     
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=1 hits=4
+
+mer=33.33%
+wil=46.67%
+wip=53.33%
+wer=40.00%
+"
+1249120_44294866_52604131.wav,"stiffness, inability to look right or left, except by moving the whole body.",stiffness inability to look right or left except by moving the whole body,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=13
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44294866_61858983.wav,I got enjoyed exercising.,I got injured exercising,0.25,"=== SENTENCE 1 ===
+
+REF: i got injured exercising
+HYP: i got enjoyed exercising
+                 S           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=3
+
+mer=25.00%
+wil=43.75%
+wip=56.25%
+wer=25.00%
+"
+1249120_44294866_63476113.wav,I was watching to be an exactly half-brother be sure.,i was watching tv and suddenly have blurry vision,0.7777777777777778,"=== SENTENCE 1 ===
+
+REF: i was watching ** tv and suddenly        have blurry vision
+HYP: i was watching to be  an  exactly halfbrother     be   sure
+                     I  S   S        S           S      S      S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=0 insertions=1 hits=3
+
+mer=70.00%
+wil=90.00%
+wip=10.00%
+wer=77.78%
+"
+1249120_44294866_63987415.wav,"When I rise my head, I feel pain in my shoulder.",when i raise my hand i feel pain in my shoulder.,0.18181818181818182,"=== SENTENCE 1 ===
+
+REF: when i raise my hand i feel pain in my shoulder
+HYP: when i  rise my head i feel pain in my shoulder
+                S       S                           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=9
+
+mer=18.18%
+wil=33.06%
+wip=66.94%
+wer=18.18%
+"
+1249120_44294866_69316456.wav,My hair is falling out after I take a shower.,My hair is falling out after I take a shower.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=10
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44294866_76461050.wav,My neck is annoying me. I can't sleep because of it.,My neck is annoying me I can't sleep bacause of it,0.09090909090909091,"=== SENTENCE 1 ===
+
+REF: my neck is annoying me i cant sleep bacause of it
+HYP: my neck is annoying me i cant sleep because of it
+                                               S      
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=10
+
+mer=9.09%
+wil=17.36%
+wip=82.64%
+wer=9.09%
+"
+1249120_44294866_77416341.wav,The warm name says that of my house is broken and feels cold.,The warming system of my house is broken and  feel so cold,0.5,"=== SENTENCE 1 ===
+
+REF: the **** **** warming system of my house is broken and  feel so cold
+HYP: the warm name    says   that of my house is broken and feels ** cold
+            I    I       S      S                               S  D     
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=1 insertions=2 hits=8
+
+mer=42.86%
+wil=58.97%
+wip=41.03%
+wer=50.00%
+"
+1249120_44294866_78490603.wav,My nose is congested all the time and there is this really situation in my throat that make it impossible for me to sleep. I often have to not sit in the eye.,My nose is congested all the time and there's this gluey secretion in my throat that makes it impossible for me to sleep. I often have to nap sitting down.,0.3333333333333333,"=== SENTENCE 1 ===
+
+REF: my nose is congested all the time and ***** theres this  gluey secretion in my throat that makes it impossible for me to sleep i often have to *** *** nap sitting down
+HYP: my nose is congested all the time and there     is this really situation in my throat that  make it impossible for me to sleep i often have to not sit  in     the  eye
+                                               I      S           S         S                       S                                                 I   I   S       S    S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=7 deletions=0 insertions=3 hits=23
+
+mer=30.30%
+wil=46.57%
+wip=53.43%
+wer=33.33%
+"
+1249120_44294866_86233279.wav,They have a very vision and it can't see in the darkness. What is the reason Doctor?,"I have a blurry vision and i can't see in the darkness , what is the reason doctor ?",0.17647058823529413,"=== SENTENCE 1 ===
+
+REF:    i have a blurry vision and  i cant see in the darkness what is the reason doctor
+HYP: they have a   very vision and it cant see in the darkness what is the reason doctor
+        S             S             S                                                   
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=14
+
+mer=17.65%
+wil=32.18%
+wip=67.82%
+wer=17.65%
+"
+1249120_44294866_90790242.wav,It adds from an center of top.,itch at front and center of scalp,0.7142857142857143,"=== SENTENCE 1 ===
+
+REF: itch   at front and center of scalp
+HYP:   it adds  from  an center of   top
+        S    S     S   S               S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=5 deletions=0 insertions=0 hits=2
+
+mer=71.43%
+wil=91.84%
+wip=8.16%
+wer=71.43%
+"
+1249120_44294866_94282612.wav,I have to retain my hair.,I have terrible pain in my heart,0.5714285714285714,"=== SENTENCE 1 ===
+
+REF: i have terrible   pain in my heart
+HYP: i have       to retain ** my  hair
+                   S      S  D        S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=1 insertions=0 hits=3
+
+mer=57.14%
+wil=78.57%
+wip=21.43%
+wer=57.14%
+"
+1249120_44294866_94374240.wav,I feel something hurt me in taking bread and I can't take my bread.,I feel something hurt me in taking breath and I cant take my breath,0.14285714285714285,"=== SENTENCE 1 ===
+
+REF: i feel something hurt me in taking breath and i cant take my breath
+HYP: i feel something hurt me in taking  bread and i cant take my  bread
+                                             S                         S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=12
+
+mer=14.29%
+wil=26.53%
+wip=73.47%
+wer=14.29%
+"
+1249120_44323331_28822792.wav,All of a sudden I felt dizzy when I stood up.,All of a sudden I felt dizzy when I stood up.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=11
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44323331_35285585.wav,I feel a good amount of peace on of my head.,I feel a great amount of pressure of my head.,0.3,"=== SENTENCE 1 ===
+
+REF: i feel a great amount of ***** pressure of my head
+HYP: i feel a  good amount of peace       on of my head
+                  S               I        S           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=1 hits=8
+
+mer=27.27%
+wil=41.82%
+wip=58.18%
+wer=30.00%
+"
+1249120_44323331_47564425.wav,(speaking in foreign language),"surgical wounds red, firing pus, painful and hot to the touch",1.0,"=== SENTENCE 1 ===
+
+REF: surgical wounds     red   firing pus painful and hot to the touch
+HYP: speaking     in foreign language *** ******* *** *** ** *** *****
+            S      S       S        S   D       D   D   D  D   D     D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=7 insertions=0 hits=0
+
+mer=100.00%
+wil=100.00%
+wip=0.00%
+wer=100.00%
+"
+1249120_44323331_63258394.wav,I have not sports on my skin.,I have dark spots on my skin,0.2857142857142857,"=== SENTENCE 1 ===
+
+REF: i have dark  spots on my skin
+HYP: i have  not sports on my skin
+               S      S           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=5
+
+mer=28.57%
+wil=48.98%
+wip=51.02%
+wer=28.57%
+"
+1249120_44323331_81285987.wav,I feel strong pain in my knee after it was hit during the pudal match.,I feel strong pain in my knee after it was hit during the football match.,0.06666666666666667,"=== SENTENCE 1 ===
+
+REF: i feel strong pain in my knee after it was hit during the football match
+HYP: i feel strong pain in my knee after it was hit during the    pudal match
+                                                                      S      
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=14
+
+mer=6.67%
+wil=12.89%
+wip=87.11%
+wer=6.67%
+"
+1249120_44323331_86516132.wav,[Music],There is an injured person,1.0,"=== SENTENCE 1 ===
+
+REF: there is an injured person
+HYP: music ** ** ******* ******
+         S  D  D       D      D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=4 insertions=0 hits=0
+
+mer=100.00%
+wil=100.00%
+wip=0.00%
+wer=100.00%
+"
+1249120_44442354_57228239.wav,My skin needs to change.,My skin is itching.,0.75,"=== SENTENCE 1 ===
+
+REF: my skin ***** is itching
+HYP: my skin needs to  change
+                 I  S       S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=1 hits=2
+
+mer=60.00%
+wil=80.00%
+wip=20.00%
+wer=75.00%
+"
+1249120_44246595_89466082.wav,I often get a stomachache after I eat. I haven't been able to pinpoint which foods may be the trigger.,I often get a stomach ache after I eat.  I haven't been able to pinpoint which foods might be the trigger.,0.14285714285714285,"=== SENTENCE 1 ===
+
+REF: i often get a     stomach ache after i eat i havent been able to pinpoint which foods might be the trigger
+HYP: i often get a stomachache **** after i eat i havent been able to pinpoint which foods   may be the trigger
+                             S    D                                                            S               
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=1 insertions=0 hits=18
+
+mer=14.29%
+wil=22.86%
+wip=77.14%
+wer=14.29%
+"
+1249120_44259428_107932197.wav,I can't help that man yet.,i can't rotate my neck,0.8,"=== SENTENCE 1 ===
+
+REF: i cant **** rotate  my neck
+HYP: i cant help   that man  yet
+               I      S   S    S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=1 hits=2
+
+mer=66.67%
+wil=86.67%
+wip=13.33%
+wer=80.00%
+"
+1249120_44259428_108575544.wav,My next real step.,My neck feels stiff,0.75,"=== SENTENCE 1 ===
+
+REF: my neck feels stiff
+HYP: my next  real  step
+           S     S     S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=1
+
+mer=75.00%
+wil=93.75%
+wip=6.25%
+wer=75.00%
+"
+1249120_44259428_36852781.wav,I'm going to be more of a seat here. I'm going to stop rolling on how to get revenge on my ex-husband.,I got a divorce last year and I just can't stop dwelling on how to get revenge on my ex husband.,0.7142857142857143,"=== SENTENCE 1 ===
+
+REF: ** *****  i got    a divorce last year  and  i  just cant stop dwelling on how to get revenge on my        ex husband
+HYP: im going to  be more      of    a seat here im going   to stop  rolling on how to get revenge on my exhusband *******
+      I     I  S   S    S       S    S    S    S  S     S    S             S                                     S       D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=12 deletions=1 insertions=2 hits=8
+
+mer=65.22%
+wil=86.15%
+wip=13.85%
+wer=71.43%
+"
+1249120_44259428_50949983.wav,I have only internal pain. I cannot describe.,I have an internal pain I cannot describe,0.125,"=== SENTENCE 1 ===
+
+REF: i have   an internal pain i cannot describe
+HYP: i have only internal pain i cannot describe
+               S                                
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=7
+
+mer=12.50%
+wil=23.44%
+wip=76.56%
+wer=12.50%
+"
+1249120_44259428_52926868.wav,"Hello, good evening. Good evening.",heavy breath with fatigue,1.25,"=== SENTENCE 1 ===
+
+REF: ***** heavy  breath with fatigue
+HYP: hello  good evening good evening
+         I     S       S    S       S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=1 hits=0
+
+mer=100.00%
+wil=100.00%
+wip=0.00%
+wer=125.00%
+"
+1249120_44259428_53848525.wav,I can't move my head up and down.,I can't move my head up and down.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=8
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44259428_56194683.wav,I have a good idea.,I have a dry throat,0.4,"=== SENTENCE 1 ===
+
+REF: i have a  dry throat
+HYP: i have a good   idea
+                 S      S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=3
+
+mer=40.00%
+wil=64.00%
+wip=36.00%
+wer=40.00%
+"
+1249120_44259428_72865674.wav,"May your app pause, we'll next day.",My arm hurts when I stretch,1.1666666666666667,"=== SENTENCE 1 ===
+
+REF: ***   my arm hurts when    i stretch
+HYP: may your app pause well next     day
+       I    S   S     S    S    S       S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=0 insertions=1 hits=0
+
+mer=100.00%
+wil=100.00%
+wip=0.00%
+wer=116.67%
+"
+1249120_44259428_84387587.wav,"My next army, and I kill you now for us.",my neck hurts me and i can't look down or up,0.7272727272727273,"=== SENTENCE 1 ===
+
+REF: my neck hurts me and i cant look down  or up
+HYP: my next  army ** and i kill  you  now for us
+           S     S  D          S    S    S   S  S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=7 deletions=1 insertions=0 hits=3
+
+mer=72.73%
+wil=91.82%
+wip=8.18%
+wer=72.73%
+"
+1249120_44259428_89970708.wav,I have a cafe in my neck.,I have a sharp pain in my neck,0.25,"=== SENTENCE 1 ===
+
+REF: i have a sharp pain in my neck
+HYP: i have a  cafe **** in my neck
+                  S    D           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=1 insertions=0 hits=6
+
+mer=25.00%
+wil=35.71%
+wip=64.29%
+wer=25.00%
+"
+1249120_44263136_106766278.wav,I feel like I fell in hot water.,I feel like l fell in hot water,0.125,"=== SENTENCE 1 ===
+
+REF: i feel like l fell in hot water
+HYP: i feel like i fell in hot water
+                 S                  
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=7
+
+mer=12.50%
+wil=23.44%
+wip=76.56%
+wer=12.50%
+"
+1249120_44263136_108585886.wav,"I've always been very active, but now I just don't have to strengthen or energy to go for even a short walk.",I've always been very active but now I just don't have the strength or energy to go for even a short walk.,0.09090909090909091,"=== SENTENCE 1 ===
+
+REF: ive always been very active but now i just dont have the   strength or energy to go for even a short walk
+HYP: ive always been very active but now i just dont have  to strengthen or energy to go for even a short walk
+                                                            S          S                                      
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=20
+
+mer=9.09%
+wil=17.36%
+wip=82.64%
+wer=9.09%
+"
+1249120_44263136_10880734.wav,I had internal pain and gases when I ate in GM's spicy fruit yesterday.,I had internal pain and gases when I ate indian spicy food yesterday,0.23076923076923078,"=== SENTENCE 1 ===
+
+REF: i had internal pain and gases when i ate ** indian spicy  food yesterday
+HYP: i had internal pain and gases when i ate in    gms spicy fruit yesterday
+                                               I      S           S          
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=1 hits=11
+
+mer=21.43%
+wil=33.52%
+wip=66.48%
+wer=23.08%
+"
+1249120_44263136_31123906.wav,I get bit patches of irritated pimples all my back and they hurt.,I get big patches of irritated pimples on my back and they hurt.,0.15384615384615385,"=== SENTENCE 1 ===
+
+REF: i get big patches of irritated pimples  on my back and they hurt
+HYP: i get bit patches of irritated pimples all my back and they hurt
+             S                                S                      
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=11
+
+mer=15.38%
+wil=28.40%
+wip=71.60%
+wer=15.38%
+"
+1249120_44263136_36341086.wav,I feel cold when that comes.,I feel cold when the night comes,0.2857142857142857,"=== SENTENCE 1 ===
+
+REF: i feel cold when  the night comes
+HYP: i feel cold when that ***** comes
+                         S     D      
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=1 insertions=0 hits=5
+
+mer=28.57%
+wil=40.48%
+wip=59.52%
+wer=28.57%
+"
+1249120_44263136_50406387.wav,I feel pain in the knee when walking.,I feel pain in the knee when walking,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=8
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_58938609.wav,"When I drink a lot, I get a headache.","When I drink a lot, I get a headache",0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=9
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_63958069.wav,I feel pain in my bag.,I feel a pain in my back,0.2857142857142857,"=== SENTENCE 1 ===
+
+REF: i feel a pain in my back
+HYP: i feel * pain in my  bag
+            D               S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=1 insertions=0 hits=5
+
+mer=28.57%
+wil=40.48%
+wip=59.52%
+wer=28.57%
+"
+1249120_44263136_70702677.wav,I feel a great pain in my shoulder joint and it does not go away.,I feel a great pain in my shoulder joint and it does not go away,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=15
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44263136_82626452.wav,I have a problem in my middle ear with my inspection.,i have a problem in my middle ear made by infection,0.2727272727272727,"=== SENTENCE 1 ===
+
+REF: i have a problem in my middle ear made by  infection
+HYP: i have a problem in my middle ear with my inspection
+                                          S  S          S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=8
+
+mer=27.27%
+wil=47.11%
+wip=52.89%
+wer=27.27%
+"
+1249120_44263136_89689013.wav,I can walk my knee hurt me.,"i can't walk, my knee hurts me",0.2857142857142857,"=== SENTENCE 1 ===
+
+REF: i cant walk my knee hurts me
+HYP: i  can walk my knee  hurt me
+          S                  S   
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=5
+
+mer=28.57%
+wil=48.98%
+wip=51.02%
+wer=28.57%
+"
+1249120_44273314_21942140.wav,"When I drink a lot, I get a headache.","When I drink a lot, I get a headache",0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=9
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_26783687.wav,My new catches and hurts when I first stand up after sitting.,My knee catches and hurts when I first stand up after sitting.,0.08333333333333333,"=== SENTENCE 1 ===
+
+REF: my knee catches and hurts when i first stand up after sitting
+HYP: my  new catches and hurts when i first stand up after sitting
+           S                                                      
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=11
+
+mer=8.33%
+wil=15.97%
+wip=84.03%
+wer=8.33%
+"
+1249120_44273314_31545094.wav,The joints in my fingers are painful in the morning.,The joints in my fingers are painful in the morning.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=10
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_40698632.wav,I feel a great amount of pressure on the sides of my neck.,I feel a great amount of pressure on the sides of my neck,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=13
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_45479897.wav,I feel hurt in my heart.,I feel hurts in my heart,0.16666666666666666,"=== SENTENCE 1 ===
+
+REF: i feel hurts in my heart
+HYP: i feel  hurt in my heart
+                S            
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=5
+
+mer=16.67%
+wil=30.56%
+wip=69.44%
+wer=16.67%
+"
+1249120_44273314_47534753.wav,I've got my foot at the pool and it breaks open every day when I walk to it.,I cut my foot at the pool and it breaks open every day when I walk on it.,0.16666666666666666,"=== SENTENCE 1 ===
+
+REF:   i cut my foot at the pool and it breaks open every day when i walk on it
+HYP: ive got my foot at the pool and it breaks open every day when i walk to it
+       S   S                                                               S   
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=15
+
+mer=16.67%
+wil=30.56%
+wip=69.44%
+wer=16.67%
+"
+1249120_44273314_54417923.wav,I'm very worried that I'll go ball soon. Am I very sick?,I'm very worried that I'll go bald soon. Am I very sick?,0.08333333333333333,"=== SENTENCE 1 ===
+
+REF: im very worried that ill go bald soon am i very sick
+HYP: im very worried that ill go ball soon am i very sick
+                                    S                    
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=11
+
+mer=8.33%
+wil=15.97%
+wip=84.03%
+wer=8.33%
+"
+1249120_44273314_57161236.wav,I've gone to walk well. I have an eight in my foot.,I can't walk well I have an ache in my foot,0.36363636363636365,"=== SENTENCE 1 ===
+
+REF: ***    i cant walk well i have an  ache in my foot
+HYP: ive gone   to walk well i have an eight in my foot
+       I    S    S                         S           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=1 hits=8
+
+mer=33.33%
+wil=51.52%
+wip=48.48%
+wer=36.36%
+"
+1249120_44273314_59068162.wav,I have been like needles in my joints.,i have pain like needles in my joints.,0.125,"=== SENTENCE 1 ===
+
+REF: i have pain like needles in my joints
+HYP: i have been like needles in my joints
+               S                          
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=7
+
+mer=12.50%
+wil=23.44%
+wip=76.56%
+wer=12.50%
+"
+1249120_44273314_76615195.wav,My shoulder aches when I try to leave 5 pounds.,My shoulder aches when I try to lift five pounds.,0.2,"=== SENTENCE 1 ===
+
+REF: my shoulder aches when i try to  lift five pounds
+HYP: my shoulder aches when i try to leave    5 pounds
+                                         S    S       
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=8
+
+mer=20.00%
+wil=36.00%
+wip=64.00%
+wer=20.00%
+"
+1249120_44273314_96091387.wav,I feel that there is great pain in my left shoulder.,i feel that is great pain in my left shoulder,0.1,"=== SENTENCE 1 ===
+
+REF: i feel that ***** is great pain in my left shoulder
+HYP: i feel that there is great pain in my left shoulder
+                     I                                  
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=1 hits=10
+
+mer=9.09%
+wil=9.09%
+wip=90.91%
+wer=10.00%
+"
+1249120_44294866_102664880.wav,I often gain a sharp gain in my chest and it can't tell what I'm doing that might be triggering.,I often get a sharp pain in my chest and I can't tell what I'm doing that might be triggering it.,0.19047619047619047,"=== SENTENCE 1 ===
+
+REF: i often  get a sharp pain in my chest and  i cant tell what im doing that might be triggering it
+HYP: i often gain a sharp gain in my chest and it cant tell what im doing that might be triggering **
+                S            S                  S                                                   D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=1 insertions=0 hits=17
+
+mer=19.05%
+wil=31.19%
+wip=68.81%
+wer=19.05%
+"
+1249120_44294866_107429604.wav,"Every time I come, my hair, there are so many hair in my comb.",Every time I comb my hair there are so many hair in my comb.,0.07142857142857142,"=== SENTENCE 1 ===
+
+REF: every time i comb my hair there are so many hair in my comb
+HYP: every time i come my hair there are so many hair in my comb
+                     S                                          
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=13
+
+mer=7.14%
+wil=13.78%
+wip=86.22%
+wer=7.14%
+"
+1249120_44294866_80026823.wav,I fell to my yard or when I ran for a long distance.,I felt my heart hurts when I ran for along distance,0.5454545454545454,"=== SENTENCE 1 ===
+
+REF: i **** felt my heart hurts when i ran for * along distance
+HYP: i fell   to my  yard    or when i ran for a  long distance
+          I    S        S     S                I     S         
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=2 hits=7
+
+mer=46.15%
+wil=65.73%
+wip=34.27%
+wer=54.55%
+"
+1249120_44323331_12481133.wav,I cut my head a couple of weeks ago and even true I keep using an athletic team it's not getting better.,I cut my hand a couple of weeks ago and even though I keep using an antibiotic cream it's not getting better.,0.18181818181818182,"=== SENTENCE 1 ===
+
+REF: i cut my hand a couple of weeks ago and even though i keep using an antibiotic cream its not getting better
+HYP: i cut my head a couple of weeks ago and even   true i keep using an   athletic  team its not getting better
+                 S                                     S                          S     S                       
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=0 hits=18
+
+mer=18.18%
+wil=33.06%
+wip=66.94%
+wer=18.18%
+"
+1249120_44323331_18782425.wav,My sound got a tattoo several weeks ago and the skin around each side and hot and it looks interested.,My son got a tattoo several weeks ago and the skin around it is raised and hot and it looks infected.,0.23809523809523808,"=== SENTENCE 1 ===
+
+REF: my   son got a tattoo several weeks ago and the skin around   it   is raised and hot and it looks   infected
+HYP: my sound got a tattoo several weeks ago and the skin around each side ****** and hot and it looks interested
+            S                                                       S    S      D                               S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=1 insertions=0 hits=16
+
+mer=23.81%
+wil=39.05%
+wip=60.95%
+wer=23.81%
+"
+1249120_44387284_64093494.wav,"I was a little bit older than I was in my sleep, couldn't tell you what I was. You know, for a food.","i was injured during football match, i was diagnosed with Cruciate ligament",1.5833333333333333,"=== SENTENCE 1 ===
+
+REF: i was * injured during football match i was ** ** ***** ******* **** *** **** * *** *** diagnosed with cruciate ligament
+HYP: i was a  little    bit    older  than i was in my sleep couldnt tell you what i was you      know  for        a     food
+           I       S      S        S     S        I  I     I       I    I   I    I I   I   I         S    S        S        S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=8 deletions=0 insertions=11 hits=4
+
+mer=82.61%
+wil=94.20%
+wip=5.80%
+wer=158.33%
+"
+1249120_44263136_95817458.wav,"I can walk well, I have an egg in my foot.",I can't walk well I have an ache in my foot,0.18181818181818182,"=== SENTENCE 1 ===
+
+REF: i cant walk well i have an ache in my foot
+HYP: i  can walk well i have an  egg in my foot
+          S                        S           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=9
+
+mer=18.18%
+wil=33.06%
+wip=66.94%
+wer=18.18%
+"
+1249120_44273314_67775131.wav,My back hurts a lot when I bend.,My back hurts a lot when I bend,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=8
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44323331_51610812.wav,"Ben Indi, Large Nick.",Pain in the large neck,0.8,"=== SENTENCE 1 ===
+
+REF: pain   in the large neck
+HYP:  ben indi *** large nick
+        S    S   D          S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=1 insertions=0 hits=1
+
+mer=80.00%
+wil=95.00%
+wip=5.00%
+wer=80.00%
+"
+1249120_44273314_69418683.wav,I feel like I've always got something in my throat.,I feel like I've always got something in my throat,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=10
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44323331_15655234.wav,When I remember here I pulled down.,When I remember her I feel down,0.2857142857142857,"=== SENTENCE 1 ===
+
+REF: when i remember  her i   feel down
+HYP: when i remember here i pulled down
+                        S        S     
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=5
+
+mer=28.57%
+wil=48.98%
+wip=51.02%
+wer=28.57%
+"
+1249120_44323331_23843315.wav,"My son, I stayed, has neck with an old roger and that sport has become inflamed and looks like it is interested.",My son nicked his neck with an old razor and that spot has become inflamed and looks like it is infected.,0.2857142857142857,"=== SENTENCE 1 ===
+
+REF: my son * nicked his neck with an old razor and that  spot has become inflamed and looks like it is   infected
+HYP: my son i stayed has neck with an old roger and that sport has become inflamed and looks like it is interested
+            I      S   S                      S              S                                                   S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=5 deletions=0 insertions=1 hits=16
+
+mer=27.27%
+wil=44.59%
+wip=55.41%
+wer=28.57%
+"
+1249120_44323331_24461872.wav,I cannot stop going.,I can`t stop coughing.,0.5,"=== SENTENCE 1 ===
+
+REF: i  can`t stop coughing
+HYP: i cannot stop    going
+            S             S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=2
+
+mer=50.00%
+wil=75.00%
+wip=25.00%
+wer=50.00%
+"
+1249120_44323331_26408664.wav,"The old, old, old, old, old, old, old.",The wound is still open,1.4,"=== SENTENCE 1 ===
+
+REF: the *** *** *** wound  is still open
+HYP: the old old old   old old   old  old
+           I   I   I     S   S     S    S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=3 hits=1
+
+mer=87.50%
+wil=97.50%
+wip=2.50%
+wer=140.00%
+"
+1249120_44323331_45513911.wav,I started sports because I get injury firm sports.,I stopped sports because I get Injury from sports,0.2222222222222222,"=== SENTENCE 1 ===
+
+REF: i stopped sports because i get injury from sports
+HYP: i started sports because i get injury firm sports
+             S                                S       
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=7
+
+mer=22.22%
+wil=39.51%
+wip=60.49%
+wer=22.22%
+"
+1249120_44323331_54400222.wav,Standing layers in high meters and my back start to HE.,standing less than five minutes and my back start to ache,0.45454545454545453,"=== SENTENCE 1 ===
+
+REF: standing   less than five minutes and my back start to ache
+HYP: standing layers   in high  meters and my back start to   he
+                   S    S    S       S                         S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=5 deletions=0 insertions=0 hits=6
+
+mer=45.45%
+wil=70.25%
+wip=29.75%
+wer=45.45%
+"
+1249120_44323331_66888889.wav,my drugs at a 21-e-pitch court,My joints ache whenever it is cold,0.8571428571428571,"=== SENTENCE 1 ===
+
+REF: my joints ache whenever       it    is cold
+HYP: my  drugs   at        a 21epitch court ****
+             S    S        S        S     S    D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=5 deletions=1 insertions=0 hits=1
+
+mer=85.71%
+wil=97.62%
+wip=2.38%
+wer=85.71%
+"
+1249120_44323331_70756728.wav,"It's standard as a key details, but today the pain each, truth being and unable.","It started as a tinnitus, but today the pain is throbbing and unbearable.",0.6153846153846154,"=== SENTENCE 1 ===
+
+REF:  it  started as a *** tinnitus but today the pain ****    is throbbing and unbearable
+HYP: its standard as a key  details but today the pain each truth     being and     unable
+       S        S        I        S                       I     S         S              S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=0 insertions=2 hits=7
+
+mer=53.33%
+wil=74.87%
+wip=25.13%
+wer=61.54%
+"
+1249120_44323331_72563945.wav,"I feel deep, tingling, when I touch SNA followed by bad sensation.",I feel deep Tingling when I touch Acne followed by bad sensation,0.08333333333333333,"=== SENTENCE 1 ===
+
+REF: i feel deep tingling when i touch acne followed by bad sensation
+HYP: i feel deep tingling when i touch  sna followed by bad sensation
+                                          S                          
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=11
+
+mer=8.33%
+wil=15.97%
+wip=84.03%
+wer=8.33%
+"
+1249120_44323331_79182023.wav,"Every time I talk a deep birth, I start moving.",Every time I take a deep breath I start coughing,0.3,"=== SENTENCE 1 ===
+
+REF: every time i take a deep breath i start coughing
+HYP: every time i talk a deep  birth i start   moving
+                     S             S                S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=7
+
+mer=30.00%
+wil=51.00%
+wip=49.00%
+wer=30.00%
+"
+1249120_44246595_85567147.wav,"When I get up, I see my skin vague.",When i get up i see my skin vague,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=9
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_21492329.wav,I have a pain in my muscle.,I have a pain in my muscle,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=7
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_31089974.wav,I feel cold when the night comes.,I feel cold when the night comes,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=7
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_45748543.wav,My joints feel swollen.,My joints feel swollen,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=4
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_69108455.wav,Have severe colon talk.,Have severe cold and cough,0.6,"=== SENTENCE 1 ===
+
+REF: have severe  cold  and cough
+HYP: have severe colon talk *****
+                     S    S     D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=1 insertions=0 hits=2
+
+mer=60.00%
+wil=80.00%
+wip=20.00%
+wer=60.00%
+"
+1249120_44273314_87229465.wav,I feel a sharp pain in the stomach after eating.,I feel a sharp pain in the stomach after eating,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=10
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44292353_31900996.wav,I have mental suffering.,I have a mental suffering,0.2,"=== SENTENCE 1 ===
+
+REF: i have a mental suffering
+HYP: i have * mental suffering
+            D                 
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=1 insertions=0 hits=4
+
+mer=20.00%
+wil=20.00%
+wip=80.00%
+wer=20.00%
+"
+1249120_44292353_38765156.wav,I started taking swimming lessons and I guess I swallowed too much water through my nose because this sinusitis is killing me now.,"I started taking swimming lessons and I guess I swallowed too much water through my nose, because this sinusitis is killing me now.",0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=23
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44292353_47569087.wav,I feel I went to an acupuncture as practice and had 100 needles in my shoulder.,I feel like I went to an acupuncture's practice and had 100 needles in my shoulder,0.1875,"=== SENTENCE 1 ===
+
+REF: i feel like i went to an *********** acupunctures practice and had 100 needles in my shoulder
+HYP: i feel **** i went to an acupuncture           as practice and had 100 needles in my shoulder
+               D                        I            S                                            
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=1 insertions=1 hits=14
+
+mer=17.65%
+wil=23.44%
+wip=76.56%
+wer=18.75%
+"
+1249120_44292353_53318642.wav,My shower drain is full of hair every time.,My shower drain is full of hair every time.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=9
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44292353_69566092.wav,"I love to garden, but I get a terrible twinge in my lower back when I lean over.",I love to garden but I get a terrible twinge in my lower back when I lean over.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=18
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44292353_71029438.wav,"My neck is annoying me, I can't sleep because of it.",My neck is annoying me I can't sleep bacause of it,0.09090909090909091,"=== SENTENCE 1 ===
+
+REF: my neck is annoying me i cant sleep bacause of it
+HYP: my neck is annoying me i cant sleep because of it
+                                               S      
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=10
+
+mer=9.09%
+wil=17.36%
+wip=82.64%
+wer=9.09%
+"
+1249120_44323331_16590901.wav,I feel server reaching in the skin with readiness.,I feel severe itching in the skin with redness,0.3333333333333333,"=== SENTENCE 1 ===
+
+REF: i feel severe  itching in the skin with   redness
+HYP: i feel server reaching in the skin with readiness
+                 S        S                          S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=6
+
+mer=33.33%
+wil=55.56%
+wip=44.44%
+wer=33.33%
+"
+1249120_44323331_22225771.wav,I have a sock bin in my yard.,I have a sharp pain in my ear,0.375,"=== SENTENCE 1 ===
+
+REF: i have a sharp pain in my  ear
+HYP: i have a  sock  bin in my yard
+                  S    S          S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=5
+
+mer=37.50%
+wil=60.94%
+wip=39.06%
+wer=37.50%
+"
+1249120_44323331_25968681.wav,I have so much solar paint,I have severe shoulder pain,0.8,"=== SENTENCE 1 ===
+
+REF: i have ** severe shoulder  pain
+HYP: i have so   much    solar paint
+             I      S        S     S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=1 hits=2
+
+mer=66.67%
+wil=86.67%
+wip=13.33%
+wer=80.00%
+"
+1249120_44323331_26313266.wav,"I am Oled, how cold, internet, I am, I am, I am, I am, I am, I am, I am, I am, I am, I am, I am,","I am worried how cold intolerant I am, I am always shivering, even out in the sun.",1.1764705882352942,"=== SENTENCE 1 ===
+
+REF: i am worried how cold intolerant i am i am * ** * ** * ** * ** * ** * always shivering even out in the sun
+HYP: i am    oled how cold   internet i am i am i am i am i am i am i am i     am         i   am   i am   i  am
+                S                   S           I  I I  I I  I I  I I  I I      S         S    S   S  S   S   S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=9 deletions=0 insertions=11 hits=8
+
+mer=71.43%
+wil=86.55%
+wip=13.45%
+wer=117.65%
+"
+1249120_44323331_33624071.wav,my body feels wake after my past day in the day why,"My body feels weak after my first day in the gym, why?",0.25,"=== SENTENCE 1 ===
+
+REF: my body feels weak after my first day in the gym why
+HYP: my body feels wake after my  past day in the day why
+                      S              S              S    
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=9
+
+mer=25.00%
+wil=43.75%
+wip=56.25%
+wer=25.00%
+"
+1249120_44323331_38538892.wav,I had it sorted in my dog.,I had a sharp pain in my stomach,0.5,"=== SENTENCE 1 ===
+
+REF: i had  a  sharp pain in my stomach
+HYP: i had it sorted **** in my     dog
+            S      S    D             S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=1 insertions=0 hits=4
+
+mer=50.00%
+wil=71.43%
+wip=28.57%
+wer=50.00%
+"
+1249120_44323331_59510879.wav,Sot pain and heavy breathing.,Sharp pain and heavy breathing,0.2,"=== SENTENCE 1 ===
+
+REF: sharp pain and heavy breathing
+HYP:   sot pain and heavy breathing
+         S                         
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=4
+
+mer=20.00%
+wil=36.00%
+wip=64.00%
+wer=20.00%
+"
+1249120_44323331_63059317.wav,My back hurts me a lot.,my back hurts me a lot,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=6
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44323331_82659146.wav,When I walk it's hard to breathe.,When I walk it's hard to breath.,0.14285714285714285,"=== SENTENCE 1 ===
+
+REF: when i walk its hard to  breath
+HYP: when i walk its hard to breathe
+                                   S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=6
+
+mer=14.29%
+wil=26.53%
+wip=73.47%
+wer=14.29%
+"
+1249120_44246595_105657955.wav,I have a feeling like my whole body is complaining.,I have a feeling like my whole body is complaining,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=10
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44246595_107248522.wav,I notice an important decrease in my vision when I try to look at things up close.,I noticed an important decrease in my vision when I try to look at things up close.,0.058823529411764705,"=== SENTENCE 1 ===
+
+REF: i noticed an important decrease in my vision when i try to look at things up close
+HYP: i  notice an important decrease in my vision when i try to look at things up close
+             S                                                                         
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=16
+
+mer=5.88%
+wil=11.42%
+wip=88.58%
+wer=5.88%
+"
+1249120_44246595_76562955.wav,"When I go to stand, my head starts swirling.","When I go to stand, my head starts swirling",0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=9
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44246595_77258445.wav,I was playing soccer and I twisted my ankle.,I was playing soccer and I twisted my ankle,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=9
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44246595_89098147.wav,I don't know why I'm constantly sad.,I don't know why I'm constantly sad.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=7
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44246595_92462780.wav,He was discovered to have an open wound.,He was discovered to have an open wound.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=8
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44246595_94621639.wav,I feel pain inside. I do not know what it is.,I feel pain inside I do not know what it is,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=11
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44246595_95208403.wav,I can't stand with this horrible feeling in my stomach.,I can't stand with this horrible feeling in my stomach,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=10
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44246595_95437414.wav,I feel shoulder pain at intervals of time.,I feel shoulder pain at intervals of time.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=8
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44246595_95549576.wav,I have issue with my skin.,i have issue with my skin,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=6
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44246595_99457284.wav,"When I eat, I feel my stomach hurts.",When i eat i feel my stomach hurts,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=8
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44259428_90522474.wav,Come from the ocean at the level of the jungle of the river and the island.,Chronic bone disease at the level of the doubles of the lower Estremidades,0.6923076923076923,"=== SENTENCE 1 ===
+
+REF: **** chronic bone disease at the level of the doubles of the ***** *** lower estremidades
+HYP: come    from  the   ocean at the level of the  jungle of the river and   the       island
+        I       S    S       S                           S            I   I     S            S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=6 deletions=0 insertions=3 hits=7
+
+mer=56.25%
+wil=76.44%
+wip=23.56%
+wer=69.23%
+"
+1249120_44259428_91754229.wav,"Oh, my head for me. I tend to be kind and I can't.",Oh my heart hurts me I tried to be calm and I can't,0.3076923076923077,"=== SENTENCE 1 ===
+
+REF: oh my heart hurts me i tried to be calm and i cant
+HYP: oh my  head   for me i  tend to be kind and i cant
+               S     S          S          S           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=0 insertions=0 hits=9
+
+mer=30.77%
+wil=52.07%
+wip=47.93%
+wer=30.77%
+"
+1249120_44259428_97884452.wav,I am pleased to have you.,"i am feeling so dizzy, body is so fragile.",0.7777777777777778,"=== SENTENCE 1 ===
+
+REF: i am feeling so dizzy body is so fragile
+HYP: i am pleased to  have  you ** ** *******
+                S  S     S    S  D  D       D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=3 insertions=0 hits=2
+
+mer=77.78%
+wil=92.59%
+wip=7.41%
+wer=77.78%
+"
+1249120_44273314_107500628.wav,I can't walk my knee hurts me.,"i can't walk, my knee hurts me",0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=7
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_109807607.wav,I feel that I can hardly breathe unless I get what's in my lungs out.,I feel like I can hardly breathe unless I get what's in my lungs out,0.06666666666666667,"=== SENTENCE 1 ===
+
+REF: i feel like i can hardly breathe unless i get whats in my lungs out
+HYP: i feel that i can hardly breathe unless i get whats in my lungs out
+               S                                                        
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=14
+
+mer=6.67%
+wil=12.89%
+wip=87.11%
+wer=6.67%
+"
+1249120_44273314_13390025.wav,I feel pain inside and I cannot identify it.,I feel pain inside and I can not identify it,0.2,"=== SENTENCE 1 ===
+
+REF: i feel pain inside and i    can not identify it
+HYP: i feel pain inside and i cannot *** identify it
+                                   S   D            
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=1 insertions=0 hits=8
+
+mer=20.00%
+wil=28.89%
+wip=71.11%
+wer=20.00%
+"
+1249120_44273314_17246181.wav,My throat is so sore.,My throught is so sore.,0.2,"=== SENTENCE 1 ===
+
+REF: my throught is so sore
+HYP: my   throat is so sore
+               S           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=4
+
+mer=20.00%
+wil=36.00%
+wip=64.00%
+wer=20.00%
+"
+1249120_44273314_32293213.wav,I feel that something is squeezing my lungs.,I feel like something is squeezing my lungs.,0.125,"=== SENTENCE 1 ===
+
+REF: i feel like something is squeezing my lungs
+HYP: i feel that something is squeezing my lungs
+               S                                
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=7
+
+mer=12.50%
+wil=23.44%
+wip=76.56%
+wer=12.50%
+"
+1249120_44273314_38687390.wav,"When I'm too high, I start to feel dizzy.",When I'm too high I start to feel dizzy,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=9
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_56365443.wav,I have a rash on my skin.,I have a rash on my skin,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=7
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_77840631.wav,I wish this excruciating feeling of loss could go away.,I wish this excruciating feeling of loss could go away.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=10
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_84611968.wav,My neck has been sore since the accident.,My neck has been sore since the accident.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=8
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_95639193.wav,I hit the ground when trying to shoot a basket board.,i hit the ground when trying to shoot a basketball,0.2,"=== SENTENCE 1 ===
+
+REF: i hit the ground when trying to shoot a ****** basketball
+HYP: i hit the ground when trying to shoot a basket      board
+                                                  I          S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=1 hits=9
+
+mer=18.18%
+wil=26.36%
+wip=73.64%
+wer=20.00%
+"
+1249120_44273314_97771287.wav,My foot had been 18 since last Tuesday.,My foot had been aching since last Tuesday.,0.125,"=== SENTENCE 1 ===
+
+REF: my foot had been aching since last tuesday
+HYP: my foot had been     18 since last tuesday
+                           S                   
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=7
+
+mer=12.50%
+wil=23.44%
+wip=76.56%
+wer=12.50%
+"
+1249120_44273314_98448714.wav,I feel sad like hurt or pain.,I feel sad like hurt or pain,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=7
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44292353_18156280.wav,I am having running those.,I am having running nose,0.2,"=== SENTENCE 1 ===
+
+REF: i am having running  nose
+HYP: i am having running those
+                             S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=4
+
+mer=20.00%
+wil=36.00%
+wip=64.00%
+wer=20.00%
+"
+1249120_44292353_62335378.wav,I have eruptions on my face that come and go.,I have eruptions on my face that come and go .,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=10
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44292353_67132028.wav,I feel weak all over.,I feel weak all over.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=5
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44292353_95558066.wav,I have a great stomach ache in accounting anything.,I have a great stomach ache and i can't eat any thing,0.5,"=== SENTENCE 1 ===
+
+REF: i have a great stomach ache and          i     cant eat any thing
+HYP: i have a great stomach ache  in accounting anything *** *** *****
+                                   S          S        S   D   D     D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=3 insertions=0 hits=6
+
+mer=50.00%
+wil=66.67%
+wip=33.33%
+wer=50.00%
+"
+1249120_44323331_109641805.wav,See more than in the yarn.,Severe pain in the ear,0.8,"=== SENTENCE 1 ===
+
+REF: *** severe pain in the  ear
+HYP: see   more than in the yarn
+       I      S    S           S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=1 hits=2
+
+mer=66.67%
+wil=86.67%
+wip=13.33%
+wer=80.00%
+"
+1249120_44323331_13821399.wav,There is a serpent in my clip.,There is a sharp pain in my calve.,0.375,"=== SENTENCE 1 ===
+
+REF: there is a   sharp pain in my calve
+HYP: there is a serpent **** in my  clip
+                      S    D           S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=1 insertions=0 hits=5
+
+mer=37.50%
+wil=55.36%
+wip=44.64%
+wer=37.50%
+"
+1249120_44323331_20802934.wav,I cannot bear this squeezing since the sun I have in my chest.,I cannot bear this squeezing sensation I have in my chest.,0.2727272727272727,"=== SENTENCE 1 ===
+
+REF: i cannot bear this squeezing ***** *** sensation i have in my chest
+HYP: i cannot bear this squeezing since the       sun i have in my chest
+                                      I   I         S                   
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=2 hits=10
+
+mer=23.08%
+wil=30.07%
+wip=69.93%
+wer=27.27%
+"
+1249120_44323331_30817447.wav,Red glasses. A compact width itchy.,red flushes accompanied with itchy,0.8,"=== SENTENCE 1 ===
+
+REF: red ******* flushes accompanied  with itchy
+HYP: red glasses       a     compact width itchy
+               I       S           S     S      
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=1 hits=2
+
+mer=66.67%
+wil=86.67%
+wip=13.33%
+wer=80.00%
+"
+1249120_44323331_75046615.wav,I have a problem in my back. I cannot stand it.,i have a problem in my back i cannot extend it,0.09090909090909091,"=== SENTENCE 1 ===
+
+REF: i have a problem in my back i cannot extend it
+HYP: i have a problem in my back i cannot  stand it
+                                               S   
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=10
+
+mer=9.09%
+wil=17.36%
+wip=82.64%
+wer=9.09%
+"
+1249120_44323331_95281494.wav,I hot when I build my arm.,It hurts when I bent my arm,0.42857142857142855,"=== SENTENCE 1 ===
+
+REF: it hurts when i  bent my arm
+HYP:  i   hot when i build my arm
+      S     S            S       
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=0 hits=4
+
+mer=42.86%
+wil=67.35%
+wip=32.65%
+wer=42.86%
+"
+1249120_44246595_101823153.wav,I feel pain in my right shoulder after the tennis match.,I feel pain in my right shoulder after the tennis match.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=11
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44246595_108705425.wav,"I have a footache, although I don't walk a lot.",I have a foot ache although I don't walk a lot.,0.18181818181818182,"=== SENTENCE 1 ===
+
+REF: i have a     foot ache although i dont walk a lot
+HYP: i have a footache **** although i dont walk a lot
+                     S    D                           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=1 insertions=0 hits=9
+
+mer=18.18%
+wil=26.36%
+wip=73.64%
+wer=18.18%
+"
+1249120_44246595_86895734.wav,- Physical wound infection.,Surgical wound infections,0.6666666666666666,"=== SENTENCE 1 ===
+
+REF: surgical wound infections
+HYP: physical wound  infection
+            S                S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=1
+
+mer=66.67%
+wil=88.89%
+wip=11.11%
+wer=66.67%
+"
+1249120_44246595_89680770.wav,I don't have the energy to do the things that I used to.,I don't have the energy to do the things that I used to,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=13
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44246595_92310242.wav,I wake up at night feeling cold.,I wake up at night feeling cold,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=7
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44259428_19250068.wav,I'm not feeling good. I can't take my breath.,I'm not feeling good I can't take my breath,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=9
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44259428_75809403.wav,I have good people.,I have blurred vision.,0.5,"=== SENTENCE 1 ===
+
+REF: i have blurred vision
+HYP: i have    good people
+                  S      S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=2
+
+mer=50.00%
+wil=75.00%
+wip=25.00%
+wer=50.00%
+"
+1249120_44273314_94623228.wav,"When I wake up in the morning, I feel dizzy.",when i wake up in the morning i feel dizzy,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=10
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44292353_25313684.wav,Sometimes I feel like a claw on my chest that leaves me breathless.,Sometimes I feel like a claw on my chest that leaves me breathless.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=13
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44292353_25851801.wav,"When I stand up too quickly, I start to feel dizzy and light-headed.",When I stand up too quickly I start to feel dizzy and light-headed,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=13
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44292353_40076348.wav,"Sometimes when it's cold outside my face hurts, especially around the pimples that are ready to pop.","Sometimes when it is cold outside, my face hurts, especially around the pimples that are ready to pop.",0.1111111111111111,"=== SENTENCE 1 ===
+
+REF: sometimes when  it is cold outside my face hurts especially around the pimples that are ready to pop
+HYP: sometimes when its ** cold outside my face hurts especially around the pimples that are ready to pop
+                      S  D                                                                               
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=1 insertions=0 hits=16
+
+mer=11.11%
+wil=16.34%
+wip=83.66%
+wer=11.11%
+"
+1249120_44292353_53478447.wav,I have a painful cramp in my feet.,I have a painful cramp in my feet,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=8
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44292353_79362392.wav,I feel very hard to breathe.,I feel very hard to breathe,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=6
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44292353_83240359.wav,I was watching TV and suddenly have blurry vision.,i was watching tv and suddenly have blurry vision,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=9
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44292353_95216909.wav,I got injured exercising.,I got injured exercising,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=4
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44323331_15039513.wav,I get I jump in when I try to bend my leg or my arm.,I get i joint pain when i try to bend my leg or my arm,0.13333333333333333,"=== SENTENCE 1 ===
+
+REF: i get i joint pain when i try to bend my leg or my arm
+HYP: i get i  jump   in when i try to bend my leg or my arm
+                 S    S                                    
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=13
+
+mer=13.33%
+wil=24.89%
+wip=75.11%
+wer=13.33%
+"
+1249120_44323331_22949427.wav,I feel pain in my joint after and in your in the last full match I played,I feel pain in my joint after an injury in the last football match I played.,0.25,"=== SENTENCE 1 ===
+
+REF: i feel pain in my joint after *** an injury in the last football match i played
+HYP: i feel pain in my joint after and in   your in the last     full match i played
+                                     I  S      S                    S               
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=3 deletions=0 insertions=1 hits=13
+
+mer=23.53%
+wil=37.87%
+wip=62.13%
+wer=25.00%
+"
+1249120_44323331_26386155.wav,My head is spinning when I get up.,My head is spinning when I get up.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=8
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44323331_34357709.wav,My old opened up again.,My wound opened up again,0.2,"=== SENTENCE 1 ===
+
+REF: my wound opened up again
+HYP: my   old opened up again
+            S                
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=4
+
+mer=20.00%
+wil=36.00%
+wip=64.00%
+wer=20.00%
+"
+1249120_44323331_77964928.wav,"I never had any SNA, Globala, Unitil, my last pregnancy, when all of a student, my back got","I never had any acne problem until my last pregnancy, when all of a sudden my back got covered in zits.",0.3333333333333333,"=== SENTENCE 1 ===
+
+REF: i never had any acne problem  until my last pregnancy when all of a  sudden my back got covered in zits
+HYP: i never had any  sna globala unitil my last pregnancy when all of a student my back got ******* ** ****
+                        S       S      S                                       S                   D  D    D
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=4 deletions=3 insertions=0 hits=14
+
+mer=33.33%
+wil=48.15%
+wip=51.85%
+wer=33.33%
+"
+1249120_44323331_84928769.wav,I have been in my store.,I have pain in my stomach,0.3333333333333333,"=== SENTENCE 1 ===
+
+REF: i have pain in my stomach
+HYP: i have been in my   store
+               S             S
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=0 hits=4
+
+mer=33.33%
+wil=55.56%
+wip=44.44%
+wer=33.33%
+"
+1249120_44323331_88012031.wav,It hurts when I dizzy my arm up.,It hurts when I raise my arm up,0.125,"=== SENTENCE 1 ===
+
+REF: it hurts when i raise my arm up
+HYP: it hurts when i dizzy my arm up
+                         S          
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=1 deletions=0 insertions=0 hits=7
+
+mer=12.50%
+wil=23.44%
+wip=76.56%
+wer=12.50%
+"
+1249120_44292353_107326859.wav,I feel dizzy when I step in front of my laptop for an hour or two. What possibly could be the reason?,"I feel dizzy when I set in-front of my laptop for an hour or two, what possibly could be the reason?",0.14285714285714285,"=== SENTENCE 1 ===
+
+REF: i feel dizzy when i **** set infront of my laptop for an hour or two what possibly could be the reason
+HYP: i feel dizzy when i step  in   front of my laptop for an hour or two what possibly could be the reason
+                            I   S       S                                                                  
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=1 hits=19
+
+mer=13.64%
+wil=21.86%
+wip=78.14%
+wer=14.29%
+"
+1249120_44292353_23165570.wav,I feel my heart hurts when I ran for a long distance.,I felt my heart hurts when I ran for along distance,0.2727272727272727,"=== SENTENCE 1 ===
+
+REF: i felt my heart hurts when i ran for * along distance
+HYP: i feel my heart hurts when i ran for a  long distance
+          S                               I     S         
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=2 deletions=0 insertions=1 hits=9
+
+mer=25.00%
+wil=38.64%
+wip=61.36%
+wer=27.27%
+"
+1249120_44292353_70288448.wav,"When I raise my hand, I feel pain my shoulder.",when i raise my hand i feel pain in my shoulder.,0.09090909090909091,"=== SENTENCE 1 ===
+
+REF: when i raise my hand i feel pain in my shoulder
+HYP: when i raise my hand i feel pain ** my shoulder
+                                       D            
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=1 insertions=0 hits=10
+
+mer=9.09%
+wil=9.09%
+wip=90.91%
+wer=9.09%
+"
+1249120_44273314_103514863.wav,My body feels weak although I take my vitamins regularly.,My body feels weak although I take my vitamins regularly.,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=10
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
+1249120_44273314_84076771.wav,Having difficulty moving my knee.,having difficulty moving my knee,0.0,"=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=0 insertions=0 hits=5
+
+mer=0.00%
+wil=0.00%
+wip=100.00%
+wer=0.00%
+"
