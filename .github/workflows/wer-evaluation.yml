@@ -6,12 +6,12 @@ on:
       model:
         description: 'Model to evaluate'
         required: true
-        default: 'whisper-large-v3-turbo'
+        default: 'canary-1b-v2'
         type: choice
         options:
           - whisper-large-v3-turbo
           - whisper-large-v3
-          - canary-qwen-2.5b
+          - canary-1b-v2
           - granite-speech-3.3-8b
           - phi4-multimodal
   push:
@@ -41,10 +41,10 @@ jobs:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           MODAL_TOKEN_ID: ${{ secrets.MODAL_TOKEN_ID }}
           MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
-          MODEL_NAME: ${{ inputs.model || 'whisper-large-v3-turbo' }}
+          MODEL_NAME: ${{ inputs.model || 'canary-1b-v2' }}
         run: |
           cd openemr_whisper_wer
-          if [ "$MODEL_NAME" = "canary-qwen-2.5b" ]; then
+          if [ "$MODEL_NAME" = "canary-1b-v2" ]; then
             python canary_wer.py --output results.csv
           elif [ "$MODEL_NAME" = "granite-speech-3.3-8b" ]; then
             python granite_wer.py --output results.csv
@@ -63,7 +63,7 @@ jobs:
           import os
 
           df = pd.read_csv("openemr_whisper_wer/results.csv")
-          model = os.environ.get("MODEL_NAME", "whisper-large-v3-turbo")
+          model = os.environ.get("MODEL_NAME", "canary-1b-v2")
 
           # Calculate summary stats
           valid = df[~df.get('error', pd.Series([None]*len(df))).notna() | (df.get('error', '') == '')]
@@ -122,12 +122,12 @@ jobs:
           print(summary)
           EOF
         env:
-          MODEL_NAME: ${{ inputs.model || 'whisper-large-v3-turbo' }}
+          MODEL_NAME: ${{ inputs.model || 'canary-1b-v2' }}
 
       - name: Upload results
         uses: actions/upload-artifact@v4
         with:
-          name: wer-results-${{ inputs.model || 'whisper-large-v3-turbo' }}
+          name: wer-results-${{ inputs.model || 'canary-1b-v2' }}
           path: openemr_whisper_wer/results.csv
           retention-days: 90
 
@@ -140,7 +140,7 @@ jobs:
           from datetime import datetime
 
           df = pd.read_csv("openemr_whisper_wer/results.csv")
-          model = os.environ.get("MODEL_NAME", "whisper-large-v3-turbo")
+          model = os.environ.get("MODEL_NAME", "canary-1b-v2")
 
           valid = df[~df.get('error', pd.Series([None]*len(df))).notna() | (df.get('error', '') == '')]
           avg_wer = valid['wer'].mean() if len(valid) > 0 else 1.0
@@ -166,4 +166,4 @@ jobs:
           print(history.tail(10).to_string())
           EOF
         env:
-          MODEL_NAME: ${{ inputs.model || 'whisper-large-v3-turbo' }}
+          MODEL_NAME: ${{ inputs.model || 'canary-1b-v2' }}
