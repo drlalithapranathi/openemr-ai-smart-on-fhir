@@ -1,12 +1,13 @@
 """
-Whisper WER Calculator
+Microsoft Phi-4 Multimodal WER Calculator
 
-Fetches audio from Notion database, transcribes with Whisper on Modal (ephemeral),
+Fetches audio from Notion database, transcribes with Phi-4 Multimodal Instruct on Modal (ephemeral),
 calculates Word Error Rate, and generates detailed error analysis.
 
+Phi-4 Multimodal is Microsoft's multimodal model that can process audio for ASR tasks.
+
 Usage:
-    python whisper_wer.py --output results.csv
-    python whisper_wer.py --output results.csv --use-large-v3  # More accurate, slower
+    python phi4_wer.py --output results.csv
 
 Requirements:
     pip install modal jiwer pandas requests notion-client httpx
@@ -25,64 +26,112 @@ if not os.environ.get("MODAL_IS_REMOTE"):
     )
 
 # ============================================================================
-# Modal App - Whisper Transcription (Ephemeral)
+# Modal App - Phi-4 Multimodal Transcription (Ephemeral)
 # ============================================================================
 
-app = modal.App("whisper-transcription")
+app = modal.App("phi4-multimodal-transcription")
 
-whisper_image = (
-    modal.Image.debian_slim(python_version="3.11")
-    .apt_install("ffmpeg")
+MODEL_ID = "microsoft/Phi-4-multimodal-instruct"
+
+# Phi-4 Multimodal requires transformers with audio support and flash attention
+phi4_image = (
+    modal.Image.from_registry("nvidia/cuda:12.4.0-devel-ubuntu22.04", add_python="3.11")
+    .apt_install("ffmpeg", "libsndfile1", "git")
     .pip_install(
         "torch",
-        "transformers",
+        "torchaudio",
+        "torchvision",
+        "transformers>=4.45.0",
         "accelerate",
-        "datasets[audio]",
         "soundfile",
         "librosa",
+        "scipy",
+        "peft",
+        "backoff",
+        "packaging",
+        "ninja",
+    )
+    .pip_install(
+        "flash-attn",
+        extra_options="--no-build-isolation",
     )
 )
 
+# Create persistent volume for model caching (Phi-4 is large)
+model_volume = modal.Volume.from_name("phi4-model-cache", create_if_missing=True)
 
-@app.cls(image=whisper_image, gpu="A10G", timeout=600)
-class WhisperTranscriber:
-    def __init__(self, model_id: str = "openai/whisper-large-v3-turbo"):
-        self.model_id = model_id
+
+@app.cls(
+    image=phi4_image,
+    gpu="A100",  # Phi-4 benefits from more VRAM
+    timeout=900,
+    volumes={"/cache": model_volume},
+    scaledown_window=300,
+)
+class Phi4Transcriber:
+    """Microsoft Phi-4 Multimodal transcriber for ASR."""
 
     @modal.enter()
     def load_model(self):
         import torch
-        from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, pipeline
+        from transformers import AutoModelForCausalLM, AutoProcessor
+
+        # Use the mounted volume for caching
+        cache_base = "/cache"
+        hf_cache = os.path.join(cache_base, "huggingface")
+        os.makedirs(hf_cache, exist_ok=True)
+        os.environ["HF_HOME"] = hf_cache
+        os.environ["TORCH_HOME"] = cache_base
 
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.torch_dtype = torch.float16 if torch.cuda.is_available() else torch.float32
 
-        print(f"Loading {self.model_id}...")
-        model = AutoModelForSpeechSeq2Seq.from_pretrained(
-            self.model_id,
-            torch_dtype=self.torch_dtype,
-            low_cpu_mem_usage=True,
-            use_safetensors=True,
-        )
-        model.to(self.device)
+        print(f"Loading {MODEL_ID}...")
+        print(f"Device: {self.device}")
+        print(f"Cache: {hf_cache}")
 
-        processor = AutoProcessor.from_pretrained(self.model_id)
-        self.pipe = pipeline(
-            "automatic-speech-recognition",
-            model=model,
-            tokenizer=processor.tokenizer,
-            feature_extractor=processor.feature_extractor,
-            chunk_length_s=30,
-            batch_size=16,
-            torch_dtype=self.torch_dtype,
-            device=self.device,
-        )
-        print("Model loaded!")
+        # Check if model is already cached
+        model_marker = os.path.join(cache_base, ".phi4_downloaded")
+
+        if os.path.exists(model_marker):
+            print("Loading from cached model in volume...")
+        else:
+            print("First run: downloading model to volume (this may take 5-10 minutes)...")
+
+        try:
+            self.processor = AutoProcessor.from_pretrained(
+                MODEL_ID,
+                trust_remote_code=True,
+                cache_dir=hf_cache,
+            )
+
+            self.model = AutoModelForCausalLM.from_pretrained(
+                MODEL_ID,
+                torch_dtype=self.torch_dtype,
+                trust_remote_code=True,
+                cache_dir=hf_cache,
+                device_map="auto",
+                attn_implementation="eager",  # Disable flash attention requirement
+            )
+            self.model.eval()
+
+            # Mark as successfully downloaded
+            if not os.path.exists(model_marker):
+                with open(model_marker, 'w') as f:
+                    f.write(f"Model {MODEL_ID} cached successfully\n")
+                model_volume.commit()
+                print("Model cached to volume successfully!")
+
+            print("Model loaded and ready!")
+
+        except Exception as e:
+            print(f"Error loading model: {e}")
+            raise
 
     @modal.method()
     def transcribe(self, audio_bytes: bytes) -> str:
         """
-        Transcribe audio bytes to text.
+        Transcribe audio bytes to text using Phi-4 Multimodal.
 
         Args:
             audio_bytes: Raw audio file bytes (m4a, mp3, wav, etc.)
@@ -93,6 +142,8 @@ class WhisperTranscriber:
         import tempfile
         import os
         import subprocess
+        import torch
+        import librosa
 
         # Detect format from magic bytes
         if audio_bytes[:12].find(b'ftyp') >= 0:
@@ -115,14 +166,45 @@ class WhisperTranscriber:
         output_path = input_path.rsplit('.', 1)[0] + ".wav"
 
         try:
-            # Convert to 16kHz mono WAV for optimal Whisper performance
+            # Convert to 16kHz mono WAV
             subprocess.run([
                 "ffmpeg", "-y", "-i", input_path,
                 "-ar", "16000", "-ac", "1", "-c:a", "pcm_s16le", output_path
             ], check=True, capture_output=True)
 
-            result = self.pipe(output_path, return_timestamps=True)
-            return result["text"].strip()
+            # Load audio
+            audio, sr = librosa.load(output_path, sr=16000)
+
+            # Create ASR prompt for Phi-4 multimodal
+            # Phi-4 uses a chat-style format with audio input
+            prompt = "<|audio|>\nTranscribe the speech in this audio clip exactly as spoken."
+
+            # Process inputs
+            inputs = self.processor(
+                text=prompt,
+                audios=[audio],
+                sampling_rate=sr,
+                return_tensors="pt",
+            )
+            inputs = {k: v.to(self.model.device) for k, v in inputs.items()}
+
+            # Generate transcription
+            with torch.no_grad():
+                generated_ids = self.model.generate(
+                    **inputs,
+                    max_new_tokens=448,
+                    do_sample=False,
+                    pad_token_id=self.processor.tokenizer.eos_token_id,
+                )
+
+            # Decode - skip the input tokens
+            input_len = inputs.get("input_ids", inputs.get("input_features")).shape[1]
+            transcription = self.processor.decode(
+                generated_ids[0][input_len:],
+                skip_special_tokens=True,
+            )
+
+            return transcription.strip()
 
         except subprocess.CalledProcessError as e:
             raise RuntimeError(f"FFmpeg conversion failed: {e.stderr.decode()}")
@@ -140,24 +222,21 @@ class WhisperTranscriber:
 def run_pipeline(
         database_id: str,
         output_csv: str = "results.csv",
-        use_large_v3: bool = False,
         error_report_path: str = "error_analysis.txt",
 ):
     """
-    Run the complete Whisper WER pipeline.
+    Run the complete Phi-4 Multimodal WER pipeline.
 
     Args:
         database_id: Notion database ID
         output_csv: Path for results CSV
-        use_large_v3: Use whisper-large-v3 instead of turbo (slower, more accurate)
         error_report_path: Path for detailed error analysis report
     """
     print("=" * 60)
-    print("Whisper WER Pipeline")
+    print("Microsoft Phi-4 Multimodal WER Pipeline")
     print("=" * 60)
 
-    model_id = "openai/whisper-large-v3" if use_large_v3 else "openai/whisper-large-v3-turbo"
-    print(f"Model: {model_id}")
+    print(f"Model: {MODEL_ID}")
 
     # Initialize
     print("\n[1/5] Fetching entries from Notion...")
@@ -173,10 +252,12 @@ def run_pipeline(
     results = []
 
     # Run Modal transcription (ephemeral)
-    print("\n[2/5] Starting Whisper transcription...")
+    print("\n[2/5] Starting Phi-4 Multimodal transcription...")
+    print("Note: First run will download model to volume (5-10 min), then fast after that.")
 
+    modal.enable_output()
     with app.run():
-        transcriber = WhisperTranscriber()
+        transcriber = Phi4Transcriber()
 
         for i, entry in enumerate(entries):
             name = entry["name"]
@@ -223,7 +304,7 @@ def run_pipeline(
     return calculate_and_save_results(
         results=results,
         wer_calc=wer_calc,
-        model_name=model_id,
+        model_name=MODEL_ID,
         output_csv=output_csv,
         error_report_path=error_report_path,
     )
@@ -237,7 +318,7 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="Calculate WER using Whisper with detailed error analysis"
+        description="Calculate WER using Microsoft Phi-4 Multimodal with detailed error analysis"
     )
     parser.add_argument(
         "--database-id",
@@ -254,18 +335,12 @@ def main():
         default="error_analysis.txt",
         help="Error analysis report path",
     )
-    parser.add_argument(
-        "--use-large-v3",
-        action="store_true",
-        help="Use whisper-large-v3 (more accurate, slower) instead of turbo",
-    )
 
     args = parser.parse_args()
 
     run_pipeline(
         database_id=args.database_id,
         output_csv=args.output,
-        use_large_v3=args.use_large_v3,
         error_report_path=args.error_report,
     )
 

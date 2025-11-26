@@ -1,12 +1,13 @@
 """
-Whisper WER Calculator
+IBM Granite Speech WER Calculator
 
-Fetches audio from Notion database, transcribes with Whisper on Modal (ephemeral),
+Fetches audio from Notion database, transcribes with IBM Granite Speech 3.3 8B on Modal (ephemeral),
 calculates Word Error Rate, and generates detailed error analysis.
 
+Granite Speech is IBM's multimodal speech-to-text model.
+
 Usage:
-    python whisper_wer.py --output results.csv
-    python whisper_wer.py --output results.csv --use-large-v3  # More accurate, slower
+    python granite_wer.py --output results.csv
 
 Requirements:
     pip install modal jiwer pandas requests notion-client httpx
@@ -25,64 +26,61 @@ if not os.environ.get("MODAL_IS_REMOTE"):
     )
 
 # ============================================================================
-# Modal App - Whisper Transcription (Ephemeral)
+# Modal App - Granite Speech Transcription (Ephemeral)
 # ============================================================================
 
-app = modal.App("whisper-transcription")
+app = modal.App("granite-speech-transcription")
 
-whisper_image = (
+# Granite Speech model requires transformers with audio support
+granite_image = (
     modal.Image.debian_slim(python_version="3.11")
-    .apt_install("ffmpeg")
+    .apt_install("ffmpeg", "libsndfile1")
     .pip_install(
         "torch",
-        "transformers",
+        "torchaudio",
+        "transformers>=4.45.0",
         "accelerate",
-        "datasets[audio]",
         "soundfile",
         "librosa",
     )
 )
 
 
-@app.cls(image=whisper_image, gpu="A10G", timeout=600)
-class WhisperTranscriber:
-    def __init__(self, model_id: str = "openai/whisper-large-v3-turbo"):
+@app.cls(image=granite_image, gpu="A10G", timeout=600)
+class GraniteSpeechTranscriber:
+    """IBM Granite Speech 3.3 8B transcriber."""
+
+    def __init__(self, model_id: str = "ibm-granite/granite-speech-3.3-8b"):
         self.model_id = model_id
 
     @modal.enter()
     def load_model(self):
         import torch
-        from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, pipeline
+        from transformers import AutoProcessor, AutoModelForSpeechSeq2Seq
 
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.torch_dtype = torch.float16 if torch.cuda.is_available() else torch.float32
 
         print(f"Loading {self.model_id}...")
-        model = AutoModelForSpeechSeq2Seq.from_pretrained(
+
+        self.processor = AutoProcessor.from_pretrained(
+            self.model_id,
+            trust_remote_code=True,
+        )
+        self.model = AutoModelForSpeechSeq2Seq.from_pretrained(
             self.model_id,
             torch_dtype=self.torch_dtype,
-            low_cpu_mem_usage=True,
-            use_safetensors=True,
+            trust_remote_code=True,
         )
-        model.to(self.device)
+        self.model.to(self.device)
+        self.model.eval()
 
-        processor = AutoProcessor.from_pretrained(self.model_id)
-        self.pipe = pipeline(
-            "automatic-speech-recognition",
-            model=model,
-            tokenizer=processor.tokenizer,
-            feature_extractor=processor.feature_extractor,
-            chunk_length_s=30,
-            batch_size=16,
-            torch_dtype=self.torch_dtype,
-            device=self.device,
-        )
         print("Model loaded!")
 
     @modal.method()
     def transcribe(self, audio_bytes: bytes) -> str:
         """
-        Transcribe audio bytes to text.
+        Transcribe audio bytes to text using Granite Speech.
 
         Args:
             audio_bytes: Raw audio file bytes (m4a, mp3, wav, etc.)
@@ -93,6 +91,8 @@ class WhisperTranscriber:
         import tempfile
         import os
         import subprocess
+        import torch
+        import librosa
 
         # Detect format from magic bytes
         if audio_bytes[:12].find(b'ftyp') >= 0:
@@ -115,14 +115,37 @@ class WhisperTranscriber:
         output_path = input_path.rsplit('.', 1)[0] + ".wav"
 
         try:
-            # Convert to 16kHz mono WAV for optimal Whisper performance
+            # Convert to 16kHz mono WAV for optimal ASR performance
             subprocess.run([
                 "ffmpeg", "-y", "-i", input_path,
                 "-ar", "16000", "-ac", "1", "-c:a", "pcm_s16le", output_path
             ], check=True, capture_output=True)
 
-            result = self.pipe(output_path, return_timestamps=True)
-            return result["text"].strip()
+            # Load audio with librosa
+            audio, sr = librosa.load(output_path, sr=16000)
+
+            # Process with Granite Speech
+            inputs = self.processor(
+                audio,
+                sampling_rate=sr,
+                return_tensors="pt",
+            )
+            inputs = {k: v.to(self.device) for k, v in inputs.items()}
+
+            # Generate transcription
+            with torch.no_grad():
+                generated_ids = self.model.generate(
+                    **inputs,
+                    max_new_tokens=448,
+                )
+
+            # Decode
+            transcription = self.processor.batch_decode(
+                generated_ids,
+                skip_special_tokens=True,
+            )[0]
+
+            return transcription.strip()
 
         except subprocess.CalledProcessError as e:
             raise RuntimeError(f"FFmpeg conversion failed: {e.stderr.decode()}")
@@ -140,23 +163,21 @@ class WhisperTranscriber:
 def run_pipeline(
         database_id: str,
         output_csv: str = "results.csv",
-        use_large_v3: bool = False,
         error_report_path: str = "error_analysis.txt",
 ):
     """
-    Run the complete Whisper WER pipeline.
+    Run the complete Granite Speech WER pipeline.
 
     Args:
         database_id: Notion database ID
         output_csv: Path for results CSV
-        use_large_v3: Use whisper-large-v3 instead of turbo (slower, more accurate)
         error_report_path: Path for detailed error analysis report
     """
     print("=" * 60)
-    print("Whisper WER Pipeline")
+    print("IBM Granite Speech WER Pipeline")
     print("=" * 60)
 
-    model_id = "openai/whisper-large-v3" if use_large_v3 else "openai/whisper-large-v3-turbo"
+    model_id = "ibm-granite/granite-speech-3.3-8b"
     print(f"Model: {model_id}")
 
     # Initialize
@@ -173,10 +194,10 @@ def run_pipeline(
     results = []
 
     # Run Modal transcription (ephemeral)
-    print("\n[2/5] Starting Whisper transcription...")
+    print("\n[2/5] Starting Granite Speech transcription...")
 
     with app.run():
-        transcriber = WhisperTranscriber()
+        transcriber = GraniteSpeechTranscriber()
 
         for i, entry in enumerate(entries):
             name = entry["name"]
@@ -237,7 +258,7 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="Calculate WER using Whisper with detailed error analysis"
+        description="Calculate WER using IBM Granite Speech with detailed error analysis"
     )
     parser.add_argument(
         "--database-id",
@@ -254,18 +275,12 @@ def main():
         default="error_analysis.txt",
         help="Error analysis report path",
     )
-    parser.add_argument(
-        "--use-large-v3",
-        action="store_true",
-        help="Use whisper-large-v3 (more accurate, slower) instead of turbo",
-    )
 
     args = parser.parse_args()
 
     run_pipeline(
         database_id=args.database_id,
         output_csv=args.output,
-        use_large_v3=args.use_large_v3,
         error_report_path=args.error_report,
     )
 

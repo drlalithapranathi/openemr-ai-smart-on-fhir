@@ -1,12 +1,13 @@
 """
-Whisper WER Calculator
+NVIDIA Canary WER Calculator
 
-Fetches audio from Notion database, transcribes with Whisper on Modal (ephemeral),
+Fetches audio from Notion database, transcribes with NVIDIA Canary-1B on Modal (ephemeral),
 calculates Word Error Rate, and generates detailed error analysis.
 
+Canary-1B is NVIDIA's multi-task ASR model based on the NeMo toolkit.
+
 Usage:
-    python whisper_wer.py --output results.csv
-    python whisper_wer.py --output results.csv --use-large-v3  # More accurate, slower
+    python canary_wer.py --output results.csv
 
 Requirements:
     pip install modal jiwer pandas requests notion-client httpx
@@ -25,58 +26,41 @@ if not os.environ.get("MODAL_IS_REMOTE"):
     )
 
 # ============================================================================
-# Modal App - Whisper Transcription (Ephemeral)
+# Modal App - Canary Transcription (Ephemeral)
 # ============================================================================
 
-app = modal.App("whisper-transcription")
+app = modal.App("canary-transcription")
 
-whisper_image = (
-    modal.Image.debian_slim(python_version="3.11")
-    .apt_install("ffmpeg")
+MODEL_ID = "nvidia/canary-1b"
+
+canary_image = (
+    modal.Image.debian_slim(python_version="3.10")
+    .apt_install("git", "libsndfile1", "ffmpeg", "build-essential")
     .pip_install(
+        "cython",
+        "packaging",
         "torch",
-        "transformers",
-        "accelerate",
-        "datasets[audio]",
-        "soundfile",
-        "librosa",
+        "torchaudio",
+        "nemo_toolkit[asr]",
     )
 )
 
 
-@app.cls(image=whisper_image, gpu="A10G", timeout=600)
-class WhisperTranscriber:
-    def __init__(self, model_id: str = "openai/whisper-large-v3-turbo"):
+@app.cls(image=canary_image, gpu="A10G", timeout=600)
+class CanaryTranscriber:
+    def __init__(self, model_id: str = MODEL_ID):
         self.model_id = model_id
 
     @modal.enter()
     def load_model(self):
-        import torch
-        from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, pipeline
-
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        self.torch_dtype = torch.float16 if torch.cuda.is_available() else torch.float32
+        import nemo.collections.asr as nemo_asr
 
         print(f"Loading {self.model_id}...")
-        model = AutoModelForSpeechSeq2Seq.from_pretrained(
-            self.model_id,
-            torch_dtype=self.torch_dtype,
-            low_cpu_mem_usage=True,
-            use_safetensors=True,
+        self.model = nemo_asr.models.EncDecMultiTaskModel.from_pretrained(
+            model_name=self.model_id,
+            map_location="cuda"
         )
-        model.to(self.device)
-
-        processor = AutoProcessor.from_pretrained(self.model_id)
-        self.pipe = pipeline(
-            "automatic-speech-recognition",
-            model=model,
-            tokenizer=processor.tokenizer,
-            feature_extractor=processor.feature_extractor,
-            chunk_length_s=30,
-            batch_size=16,
-            torch_dtype=self.torch_dtype,
-            device=self.device,
-        )
+        self.model.eval()
         print("Model loaded!")
 
     @modal.method()
@@ -115,14 +99,25 @@ class WhisperTranscriber:
         output_path = input_path.rsplit('.', 1)[0] + ".wav"
 
         try:
-            # Convert to 16kHz mono WAV for optimal Whisper performance
+            # Convert to 16kHz mono WAV (required for Canary)
             subprocess.run([
                 "ffmpeg", "-y", "-i", input_path,
                 "-ar", "16000", "-ac", "1", "-c:a", "pcm_s16le", output_path
             ], check=True, capture_output=True)
 
-            result = self.pipe(output_path, return_timestamps=True)
-            return result["text"].strip()
+            # Transcribe with Canary
+            result = self.model.transcribe(
+                paths2audio_files=[output_path],
+                batch_size=1,
+            )
+
+            # Handle return format - Canary returns list of strings or hypotheses
+            if result and len(result) > 0:
+                text = result[0]
+                if hasattr(text, 'text'):
+                    return text.text.strip()
+                return str(text).strip()
+            return ""
 
         except subprocess.CalledProcessError as e:
             raise RuntimeError(f"FFmpeg conversion failed: {e.stderr.decode()}")
@@ -140,24 +135,21 @@ class WhisperTranscriber:
 def run_pipeline(
         database_id: str,
         output_csv: str = "results.csv",
-        use_large_v3: bool = False,
         error_report_path: str = "error_analysis.txt",
 ):
     """
-    Run the complete Whisper WER pipeline.
+    Run the complete Canary WER pipeline.
 
     Args:
         database_id: Notion database ID
         output_csv: Path for results CSV
-        use_large_v3: Use whisper-large-v3 instead of turbo (slower, more accurate)
         error_report_path: Path for detailed error analysis report
     """
     print("=" * 60)
-    print("Whisper WER Pipeline")
+    print("NVIDIA Canary WER Pipeline")
     print("=" * 60)
 
-    model_id = "openai/whisper-large-v3" if use_large_v3 else "openai/whisper-large-v3-turbo"
-    print(f"Model: {model_id}")
+    print(f"Model: {MODEL_ID}")
 
     # Initialize
     print("\n[1/5] Fetching entries from Notion...")
@@ -173,10 +165,10 @@ def run_pipeline(
     results = []
 
     # Run Modal transcription (ephemeral)
-    print("\n[2/5] Starting Whisper transcription...")
+    print("\n[2/5] Starting Canary transcription...")
 
     with app.run():
-        transcriber = WhisperTranscriber()
+        transcriber = CanaryTranscriber()
 
         for i, entry in enumerate(entries):
             name = entry["name"]
@@ -223,7 +215,7 @@ def run_pipeline(
     return calculate_and_save_results(
         results=results,
         wer_calc=wer_calc,
-        model_name=model_id,
+        model_name=MODEL_ID,
         output_csv=output_csv,
         error_report_path=error_report_path,
     )
@@ -237,7 +229,7 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="Calculate WER using Whisper with detailed error analysis"
+        description="Calculate WER using NVIDIA Canary with detailed error analysis"
     )
     parser.add_argument(
         "--database-id",
@@ -254,18 +246,12 @@ def main():
         default="error_analysis.txt",
         help="Error analysis report path",
     )
-    parser.add_argument(
-        "--use-large-v3",
-        action="store_true",
-        help="Use whisper-large-v3 (more accurate, slower) instead of turbo",
-    )
 
     args = parser.parse_args()
 
     run_pipeline(
         database_id=args.database_id,
         output_csv=args.output,
-        use_large_v3=args.use_large_v3,
         error_report_path=args.error_report,
     )
 

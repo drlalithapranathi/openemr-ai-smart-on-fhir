@@ -11,8 +11,9 @@ on:
         options:
           - whisper-large-v3-turbo
           - whisper-large-v3
-          - whisper-medium
-          - whisper-small
+          - canary-qwen-2.5b
+          - granite-speech-3.3-8b
+          - phi4-multimodal
   push:
     paths:
       - 'openemr_whisper_wer/**'
@@ -40,9 +41,20 @@ jobs:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           MODAL_TOKEN_ID: ${{ secrets.MODAL_TOKEN_ID }}
           MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
+          MODEL_NAME: ${{ inputs.model || 'whisper-large-v3-turbo' }}
         run: |
           cd openemr_whisper_wer
-          python whisper_wer.py --output results.csv
+          if [ "$MODEL_NAME" = "canary-qwen-2.5b" ]; then
+            python canary_wer.py --output results.csv
+          elif [ "$MODEL_NAME" = "granite-speech-3.3-8b" ]; then
+            python granite_wer.py --output results.csv
+          elif [ "$MODEL_NAME" = "phi4-multimodal" ]; then
+            python phi4_wer.py --output results.csv
+          elif [ "$MODEL_NAME" = "whisper-large-v3" ]; then
+            python whisper_wer.py --output results.csv --use-large-v3
+          else
+            python whisper_wer.py --output results.csv
+          fi
 
       - name: Generate summary table
         run: |
