@@ -1,15 +1,22 @@
 """
-Whisper WER Calculator
+Whisper WER Calculator with Error Analysis
 
-Fetches audio from Notion database, transcribes with Whisper v3 Turbo on Modal,
-and calculates Word Error Rate.
+Fetches audio from Notion database, transcribes with Whisper v3 on Modal,
+calculates Word Error Rate, and generates detailed error analysis.
 
 Usage:
     python whisper_wer.py --output results.csv
+    python whisper_wer.py --output results.csv --use-large-v3  # More accurate, slower
+    python whisper_wer.py --output results.csv --medical-prompt  # Add medical context
+
+Requirements:
+    pip install modal jiwer pandas requests notion-client httpx
 """
 
 import os
+import re
 from typing import Optional
+from collections import Counter
 
 import modal
 
@@ -21,7 +28,7 @@ if not os.environ.get("MODAL_IS_REMOTE"):
     from notion_client import Client as NotionClient
 
 # ============================================================================
-# Modal App - Runs only during inference (not deployed)
+# Modal App - Whisper Transcription
 # ============================================================================
 
 app = modal.App("whisper-transcription")
@@ -42,6 +49,9 @@ whisper_image = (
 
 @app.cls(image=whisper_image, gpu="A10G", timeout=600)
 class WhisperTranscriber:
+    def __init__(self, model_id: str = "openai/whisper-large-v3-turbo"):
+        self.model_id = model_id
+
     @modal.enter()
     def load_model(self):
         import torch
@@ -49,23 +59,22 @@ class WhisperTranscriber:
 
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.torch_dtype = torch.float16 if torch.cuda.is_available() else torch.float32
-        model_id = "openai/whisper-large-v3-turbo"
 
-        print(f"Loading {model_id}...")
+        print(f"Loading {self.model_id}...")
         model = AutoModelForSpeechSeq2Seq.from_pretrained(
-            model_id,
+            self.model_id,
             torch_dtype=self.torch_dtype,
             low_cpu_mem_usage=True,
             use_safetensors=True,
         )
         model.to(self.device)
 
-        processor = AutoProcessor.from_pretrained(model_id)
+        self.processor = AutoProcessor.from_pretrained(self.model_id)
         self.pipe = pipeline(
             "automatic-speech-recognition",
             model=model,
-            tokenizer=processor.tokenizer,
-            feature_extractor=processor.feature_extractor,
+            tokenizer=self.processor.tokenizer,
+            feature_extractor=self.processor.feature_extractor,
             chunk_length_s=30,
             batch_size=16,
             torch_dtype=self.torch_dtype,
@@ -74,7 +83,17 @@ class WhisperTranscriber:
         print("Model loaded!")
 
     @modal.method()
-    def transcribe(self, audio_bytes: bytes) -> str:
+    def transcribe(self, audio_bytes: bytes, prompt: Optional[str] = None) -> str:
+        """
+        Transcribe audio bytes to text.
+
+        Args:
+            audio_bytes: Raw audio file bytes (m4a, mp3, wav, etc.)
+            prompt: Optional prompt to condition the model (e.g., medical terms)
+
+        Returns:
+            Transcribed text
+        """
         import tempfile
         import os
         import subprocess
@@ -88,6 +107,8 @@ class WhisperTranscriber:
             suffix = ".wav"
         elif audio_bytes[:4] == b'fLaC':
             suffix = ".flac"
+        elif audio_bytes[:4] == b'OggS':
+            suffix = ".ogg"
         else:
             suffix = ".m4a"
 
@@ -95,16 +116,30 @@ class WhisperTranscriber:
             f.write(audio_bytes)
             input_path = f.name
 
-        output_path = input_path.replace(suffix, ".wav")
+        output_path = input_path.rsplit('.', 1)[0] + ".wav"
 
         try:
+            # Convert to 16kHz mono WAV for optimal Whisper performance
             subprocess.run([
                 "ffmpeg", "-y", "-i", input_path,
-                "-ar", "16000", "-ac", "1", "-f", "wav", output_path
+                "-ar", "16000", "-ac", "1", "-c:a", "pcm_s16le", output_path
             ], check=True, capture_output=True)
 
-            result = self.pipe(output_path, return_timestamps=True)
-            return result["text"]
+            # Build generation kwargs
+            generate_kwargs = {}
+            if prompt:
+                prompt_ids = self.processor.get_prompt_ids(prompt, return_tensors="pt")
+                generate_kwargs["prompt_ids"] = prompt_ids.to(self.device)
+
+            result = self.pipe(
+                output_path,
+                return_timestamps=True,
+                generate_kwargs=generate_kwargs if generate_kwargs else None,
+            )
+            return result["text"].strip()
+
+        except subprocess.CalledProcessError as e:
+            raise RuntimeError(f"FFmpeg conversion failed: {e.stderr.decode()}")
         finally:
             if os.path.exists(input_path):
                 os.unlink(input_path)
@@ -141,30 +176,28 @@ class NotionFetcher:
 
     def get_entries(self, database_id: str) -> list[dict]:
         """Fetch entries from Notion database."""
+        import httpx
+
         database_id = self._format_uuid(database_id)
         entries = []
         has_more = True
         next_cursor = None
 
-        # First try to retrieve the database to check if it's valid
         try:
-            db_info = self.client.databases.retrieve(database_id=database_id)
+            self.client.databases.retrieve(database_id=database_id)
             print(f"  Database found: {database_id}")
-        except Exception as e:
+        except Exception:
             print(f"  Database ID invalid, searching for databases...")
             self.search_for_database()
-            raise ValueError(f"Invalid database ID: {database_id}. See above for available databases.")
+            raise ValueError(f"Invalid database ID: {database_id}")
+
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Notion-Version": "2022-06-28",
+            "Content-Type": "application/json",
+        }
 
         while has_more:
-            # Use httpx directly since notion_client.request is having issues
-            import httpx
-
-            headers = {
-                "Authorization": f"Bearer {self.api_key}",
-                "Notion-Version": "2022-06-28",
-                "Content-Type": "application/json",
-            }
-
             body = {}
             if next_cursor:
                 body["start_cursor"] = next_cursor
@@ -182,19 +215,16 @@ class NotionFetcher:
                 props = page.get("properties", {})
                 entry = {"id": page["id"]}
 
-                # Get name (title property)
                 if "name" in props and props["name"].get("title"):
                     entry["name"] = "".join(
                         t.get("plain_text", "") for t in props["name"]["title"]
                     )
 
-                # Get original_script (rich_text)
                 if "original_script" in props and props["original_script"].get("rich_text"):
                     entry["ground_truth"] = "".join(
                         t.get("plain_text", "") for t in props["original_script"]["rich_text"]
                     )
 
-                # Get raw_audio (files property)
                 if "raw_audio" in props and props["raw_audio"].get("files"):
                     file_obj = props["raw_audio"]["files"][0]
                     if file_obj.get("type") == "file":
@@ -202,7 +232,6 @@ class NotionFetcher:
                     elif file_obj.get("type") == "external":
                         entry["audio_url"] = file_obj["external"]["url"]
 
-                # Only include if we have all required fields
                 if entry.get("name") and entry.get("ground_truth") and entry.get("audio_url"):
                     entries.append(entry)
 
@@ -218,22 +247,72 @@ class NotionFetcher:
 
 
 # ============================================================================
-# WER Calculator
+# WER Calculator with Error Analysis
 # ============================================================================
 
 class WERCalculator:
-    def __init__(self):
+    """Calculate WER with detailed error analysis."""
+
+    # Medical abbreviation mappings for normalization
+    MEDICAL_ABBREVIATIONS = {
+        r'\bmg\b': 'milligrams',
+        r'\bml\b': 'milliliters',
+        r'\bmcg\b': 'micrograms',
+        r'\bkg\b': 'kilograms',
+        r'\bbid\b': 'twice daily',
+        r'\btid\b': 'three times daily',
+        r'\bqid\b': 'four times daily',
+        r'\bprn\b': 'as needed',
+        r'\bpo\b': 'by mouth',
+        r'\biv\b': 'intravenous',
+        r'\bim\b': 'intramuscular',
+        r'\bhtn\b': 'hypertension',
+        r'\bdm\b': 'diabetes mellitus',
+        r'\bchf\b': 'congestive heart failure',
+        r'\bcad\b': 'coronary artery disease',
+        r'\bcopd\b': 'chronic obstructive pulmonary disease',
+        r'\bgerd\b': 'gastroesophageal reflux disease',
+        r'\bdka\b': 'diabetic ketoacidosis',
+        r'\b(\d+)\s*%': r'\1 percent',
+    }
+
+    def __init__(self, normalize_medical: bool = True):
+        self.normalize_medical_terms = normalize_medical
         self.transform = jiwer.Compose([
-            jiwer.RemovePunctuation(),
-            jiwer.ToLowerCase(),
             jiwer.RemoveMultipleSpaces(),
             jiwer.Strip(),
+            jiwer.RemovePunctuation(),
+            jiwer.ToLowerCase(),
         ])
 
+    def _normalize_medical(self, text: str) -> str:
+        """Normalize medical abbreviations and patterns."""
+        text = text.lower()
+        for pattern, replacement in self.MEDICAL_ABBREVIATIONS.items():
+            text = re.sub(pattern, replacement, text, flags=re.IGNORECASE)
+        return text
+
+    def _prepare_text(self, text: str) -> str:
+        """Apply all normalization steps."""
+        if self.normalize_medical_terms:
+            text = self._normalize_medical(text)
+        return self.transform(text)
+
     def calculate(self, reference: str, hypothesis: str) -> dict:
-        ref = self.transform(reference)
-        hyp = self.transform(hypothesis)
+        """
+        Calculate WER and related metrics.
+
+        Args:
+            reference: Ground truth transcript
+            hypothesis: Model's transcription
+
+        Returns:
+            Dict with wer, mer, wil, insertions, deletions, substitutions, hits
+        """
+        ref = self._prepare_text(reference)
+        hyp = self._prepare_text(hypothesis)
         output = jiwer.process_words(ref, hyp)
+
         return {
             "wer": output.wer,
             "mer": output.mer,
@@ -244,18 +323,232 @@ class WERCalculator:
             "hits": output.hits,
         }
 
+    def get_alignment(self, reference: str, hypothesis: str) -> str:
+        """
+        Get visual alignment of reference and hypothesis.
+
+        Args:
+            reference: Ground truth transcript
+            hypothesis: Model's transcription
+
+        Returns:
+            String visualization of word alignment with measures
+        """
+        ref = self._prepare_text(reference)
+        hyp = self._prepare_text(hypothesis)
+        out = jiwer.process_words(ref, hyp)
+        return jiwer.visualize_alignment(out, show_measures=True)
+
+    def get_error_details(self, reference: str, hypothesis: str) -> dict:
+        """
+        Extract specific words that were wrong.
+
+        Args:
+            reference: Ground truth transcript
+            hypothesis: Model's transcription
+
+        Returns:
+            Dict with lists of substitutions (tuples), deletions, insertions
+        """
+        ref = self._prepare_text(reference)
+        hyp = self._prepare_text(hypothesis)
+        out = jiwer.process_words(ref, hyp)
+
+        ref_words = ref.split()
+        hyp_words = hyp.split()
+
+        errors = {
+            "substitutions": [],  # (reference_word, hypothesis_word)
+            "deletions": [],      # words in reference but missing
+            "insertions": [],     # words in hypothesis but not in reference
+        }
+
+        for chunk in out.alignments[0]:
+            if chunk.type == "substitute":
+                for i, j in zip(
+                        range(chunk.ref_start_idx, chunk.ref_end_idx),
+                        range(chunk.hyp_start_idx, chunk.hyp_end_idx)
+                ):
+                    if i < len(ref_words) and j < len(hyp_words):
+                        errors["substitutions"].append((ref_words[i], hyp_words[j]))
+            elif chunk.type == "delete":
+                for i in range(chunk.ref_start_idx, chunk.ref_end_idx):
+                    if i < len(ref_words):
+                        errors["deletions"].append(ref_words[i])
+            elif chunk.type == "insert":
+                for j in range(chunk.hyp_start_idx, chunk.hyp_end_idx):
+                    if j < len(hyp_words):
+                        errors["insertions"].append(hyp_words[j])
+
+        return errors
+
+
+# ============================================================================
+# Error Report Generator
+# ============================================================================
+
+def generate_error_report(
+        results: list,
+        wer_calc: WERCalculator,
+        output_path: str = "error_analysis.txt"
+):
+    """
+    Generate detailed error analysis report.
+
+    Args:
+        results: List of result dicts from pipeline
+        wer_calc: WERCalculator instance
+        output_path: Path to save report
+    """
+    with open(output_path, "w") as f:
+        f.write("=" * 80 + "\n")
+        f.write("WHISPER TRANSCRIPTION ERROR ANALYSIS REPORT\n")
+        f.write("=" * 80 + "\n\n")
+
+        all_subs, all_dels, all_ins = [], [], []
+        valid_results = [r for r in results if "error" not in r and r.get("transcript")]
+
+        # Per-entry analysis
+        for r in sorted(valid_results, key=lambda x: x["wer"], reverse=True):
+            f.write(f"\n{'=' * 70}\n")
+            f.write(f"Entry: {r['name']}\n")
+            f.write(f"WER: {r['wer']*100:.2f}% | ")
+            f.write(f"Insertions: {r['insertions']} | ")
+            f.write(f"Deletions: {r['deletions']} | ")
+            f.write(f"Substitutions: {r['substitutions']}\n")
+            f.write(f"{'=' * 70}\n\n")
+
+            # Show ground truth and transcript
+            f.write("GROUND TRUTH:\n")
+            f.write(f"{r['ground_truth'][:500]}{'...' if len(r['ground_truth']) > 500 else ''}\n\n")
+            f.write("TRANSCRIPT:\n")
+            f.write(f"{r['transcript'][:500]}{'...' if len(r['transcript']) > 500 else ''}\n\n")
+
+            # Alignment visualization
+            f.write("ALIGNMENT:\n")
+            f.write("-" * 70 + "\n")
+            f.write(wer_calc.get_alignment(r["ground_truth"], r["transcript"]))
+            f.write("\n")
+
+            # Error details
+            errors = wer_calc.get_error_details(r["ground_truth"], r["transcript"])
+            all_subs.extend(errors["substitutions"])
+            all_dels.extend(errors["deletions"])
+            all_ins.extend(errors["insertions"])
+
+            if errors["substitutions"]:
+                f.write(f"\nSUBSTITUTIONS ({len(errors['substitutions'])}):\n")
+                for ref_w, hyp_w in errors["substitutions"][:20]:
+                    f.write(f"  '{ref_w}' → '{hyp_w}'\n")
+                if len(errors["substitutions"]) > 20:
+                    f.write(f"  ... and {len(errors['substitutions']) - 20} more\n")
+
+            if errors["deletions"]:
+                f.write(f"\nDELETIONS ({len(errors['deletions'])}):\n")
+                f.write(f"  {errors['deletions'][:30]}\n")
+                if len(errors["deletions"]) > 30:
+                    f.write(f"  ... and {len(errors['deletions']) - 30} more\n")
+
+            if errors["insertions"]:
+                f.write(f"\nINSERTIONS ({len(errors['insertions'])}):\n")
+                f.write(f"  {errors['insertions'][:30]}\n")
+                if len(errors["insertions"]) > 30:
+                    f.write(f"  ... and {len(errors['insertions']) - 30} more\n")
+
+        # Aggregate error patterns
+        f.write("\n\n" + "=" * 80 + "\n")
+        f.write("AGGREGATE ERROR PATTERNS\n")
+        f.write("=" * 80 + "\n")
+
+        f.write(f"\nTotal errors across all entries:\n")
+        f.write(f"  Substitutions: {len(all_subs)}\n")
+        f.write(f"  Deletions: {len(all_dels)}\n")
+        f.write(f"  Insertions: {len(all_ins)}\n")
+
+        f.write(f"\n\nMOST COMMON SUBSTITUTIONS (what Whisper gets wrong):\n")
+        f.write("-" * 50 + "\n")
+        for (ref_w, hyp_w), count in Counter(all_subs).most_common(30):
+            f.write(f"  '{ref_w}' → '{hyp_w}': {count}x\n")
+
+        f.write(f"\n\nMOST COMMONLY DELETED WORDS (Whisper misses these):\n")
+        f.write("-" * 50 + "\n")
+        for word, count in Counter(all_dels).most_common(30):
+            f.write(f"  '{word}': {count}x\n")
+
+        f.write(f"\n\nMOST COMMONLY INSERTED WORDS (Whisper hallucinates these):\n")
+        f.write("-" * 50 + "\n")
+        for word, count in Counter(all_ins).most_common(30):
+            f.write(f"  '{word}': {count}x\n")
+
+        # Recommendations
+        f.write("\n\n" + "=" * 80 + "\n")
+        f.write("RECOMMENDATIONS\n")
+        f.write("=" * 80 + "\n\n")
+
+        if all_subs:
+            common_subs = Counter(all_subs).most_common(10)
+            medical_subs = [(r, h) for (r, h), _ in common_subs
+                            if len(r) > 4 or len(h) > 4]  # Likely medical terms
+            if medical_subs:
+                f.write("1. Consider adding these terms to the medical prompt:\n")
+                unique_terms = set()
+                for ref_w, hyp_w in medical_subs:
+                    unique_terms.add(ref_w)
+                f.write(f"   {', '.join(unique_terms)}\n\n")
+
+        f.write("2. If WER is high on specific entries, check:\n")
+        f.write("   - Audio quality (background noise, multiple speakers)\n")
+        f.write("   - Speaker accent or speech patterns\n")
+        f.write("   - Domain-specific terminology\n\n")
+
+        f.write("3. Consider post-processing corrections for common substitutions\n")
+
+    print(f"Error analysis saved to: {output_path}")
+
 
 # ============================================================================
 # Main Pipeline
 # ============================================================================
 
-def run_pipeline(database_id: str, output_csv: str = "results.csv"):
+def run_pipeline(
+        database_id: str,
+        output_csv: str = "results.csv",
+        use_large_v3: bool = False,
+        medical_prompt: bool = False,
+        normalize_medical: bool = True,
+        error_report_path: str = "error_analysis.txt",
+):
+    """
+    Run the complete pipeline.
+
+    Args:
+        database_id: Notion database ID
+        output_csv: Path for results CSV
+        use_large_v3: Use whisper-large-v3 instead of turbo (slower, more accurate)
+        medical_prompt: Add medical context prompt to Whisper
+        normalize_medical: Normalize medical abbreviations before WER calculation
+        error_report_path: Path for detailed error analysis report
+    """
     print("=" * 60)
     print("Whisper WER Pipeline")
     print("=" * 60)
 
+    model_id = "openai/whisper-large-v3" if use_large_v3 else "openai/whisper-large-v3-turbo"
+    print(f"Model: {model_id}")
+
+    # Medical prompt for conditioning
+    prompt = None
+    if medical_prompt:
+        prompt = (
+            "Medical consultation transcript. "
+            "Terms: diagnosis, symptoms, medication, prescription, "
+            "patient history, vital signs, blood pressure, heart rate, "
+            "chronic condition, acute, benign, malignant, prognosis."
+        )
+        print(f"Using medical prompt: {prompt[:50]}...")
+
     # Initialize
-    print("\n[1/4] Fetching entries from Notion...")
+    print("\n[1/5] Fetching entries from Notion...")
     fetcher = NotionFetcher()
     entries = fetcher.get_entries(database_id)
     print(f"  Found {len(entries)} entries")
@@ -264,11 +557,11 @@ def run_pipeline(database_id: str, output_csv: str = "results.csv"):
         print("No entries found!")
         return
 
-    wer_calc = WERCalculator()
+    wer_calc = WERCalculator(normalize_medical=normalize_medical)
     results = []
 
-    # Run Modal app for transcription
-    print("\n[2/4] Starting Whisper transcription (Modal will spin up GPU)...")
+    # Run Modal transcription
+    print("\n[2/5] Starting Whisper transcription...")
 
     with app.run():
         transcriber = WhisperTranscriber()
@@ -278,18 +571,24 @@ def run_pipeline(database_id: str, output_csv: str = "results.csv"):
             print(f"\n  [{i+1}/{len(entries)}] {name}")
 
             try:
-                # Download audio
+                # Download
                 print(f"    Downloading audio...")
                 audio_bytes = fetcher.download_audio(entry["audio_url"])
                 print(f"    Downloaded {len(audio_bytes):,} bytes")
 
                 # Transcribe
                 print(f"    Transcribing...")
-                transcript = transcriber.transcribe.remote(audio_bytes)
+                transcript = transcriber.transcribe.remote(audio_bytes, prompt=prompt)
 
                 # Calculate WER
                 metrics = wer_calc.calculate(entry["ground_truth"], transcript)
                 print(f"    WER: {metrics['wer']:.4f} ({metrics['wer']*100:.2f}%)")
+
+                # Show quick error summary for high WER
+                if metrics['wer'] > 0.15:
+                    errors = wer_calc.get_error_details(entry["ground_truth"], transcript)
+                    if errors["substitutions"]:
+                        print(f"    Top substitutions: {errors['substitutions'][:3]}")
 
                 results.append({
                     "name": name,
@@ -309,44 +608,64 @@ def run_pipeline(database_id: str, output_csv: str = "results.csv"):
                 })
 
     # Calculate summary
-    print("\n[3/4] Calculating statistics...")
+    print("\n[3/5] Calculating statistics...")
     valid = [r for r in results if "error" not in r]
 
     if valid:
         avg_wer = sum(r["wer"] for r in valid) / len(valid)
-        all_refs = " ".join(wer_calc.transform(r["ground_truth"]) for r in valid)
-        all_hyps = " ".join(wer_calc.transform(r["transcript"]) for r in valid)
+        all_refs = " ".join(wer_calc._prepare_text(r["ground_truth"]) for r in valid)
+        all_hyps = " ".join(wer_calc._prepare_text(r["transcript"]) for r in valid)
         agg_wer = jiwer.wer(all_refs, all_hyps)
     else:
         avg_wer = agg_wer = 1.0
 
-    # Save results
-    print("\n[4/4] Saving results...")
+    # Save CSV
+    print("\n[4/5] Saving results...")
     df = pd.DataFrame(results)
     df.to_csv(output_csv, index=False)
+    print(f"  Results saved to: {output_csv}")
+
+    # Generate error report
+    print("\n[5/5] Generating error analysis report...")
+    generate_error_report(results, wer_calc, error_report_path)
 
     # Print summary
     print("\n" + "=" * 60)
-    print("RESULTS")
+    print("RESULTS SUMMARY")
     print("=" * 60)
-    print(f"Model: openai/whisper-large-v3-turbo")
+    print(f"Model: {model_id}")
+    print(f"Medical prompt: {'Yes' if medical_prompt else 'No'}")
+    print(f"Medical normalization: {'Yes' if normalize_medical else 'No'}")
     print(f"Entries: {len(entries)} total, {len(valid)} successful")
     print(f"\nAverage WER: {avg_wer:.4f} ({avg_wer*100:.2f}%)")
     print(f"Aggregate WER: {agg_wer:.4f} ({agg_wer*100:.2f}%)")
-    print(f"\nResults saved to: {output_csv}")
 
-    print("\nPer-entry scores:")
-    for r in results:
+    print("\nPer-entry scores (sorted by WER):")
+    for r in sorted(results, key=lambda x: x.get("wer", 1.0)):
         if "error" in r:
             print(f"  {r['name']}: ERROR - {r['error']}")
         else:
             print(f"  {r['name']}: {r['wer']:.4f} ({r['wer']*100:.2f}%)")
 
+    print(f"\nDetailed error analysis: {error_report_path}")
+
+    return {
+        "average_wer": avg_wer,
+        "aggregate_wer": agg_wer,
+        "results": results,
+    }
+
+
+# ============================================================================
+# CLI
+# ============================================================================
 
 def main():
     import argparse
 
-    parser = argparse.ArgumentParser(description="Calculate WER using Whisper")
+    parser = argparse.ArgumentParser(
+        description="Calculate WER using Whisper with detailed error analysis"
+    )
     parser.add_argument(
         "--database-id",
         default="294a6166c4978050930fea2073e66dc2",
@@ -357,9 +676,37 @@ def main():
         default="results.csv",
         help="Output CSV path",
     )
+    parser.add_argument(
+        "--error-report",
+        default="error_analysis.txt",
+        help="Error analysis report path",
+    )
+    parser.add_argument(
+        "--use-large-v3",
+        action="store_true",
+        help="Use whisper-large-v3 (more accurate, slower) instead of turbo",
+    )
+    parser.add_argument(
+        "--medical-prompt",
+        action="store_true",
+        help="Add medical terminology prompt to improve transcription",
+    )
+    parser.add_argument(
+        "--no-medical-normalize",
+        action="store_true",
+        help="Disable medical abbreviation normalization in WER calculation",
+    )
+
     args = parser.parse_args()
 
-    run_pipeline(args.database_id, args.output)
+    run_pipeline(
+        database_id=args.database_id,
+        output_csv=args.output,
+        use_large_v3=args.use_large_v3,
+        medical_prompt=args.medical_prompt,
+        normalize_medical=not args.no_medical_normalize,
+        error_report_path=args.error_report,
+    )
 
 
 if __name__ == "__main__":
