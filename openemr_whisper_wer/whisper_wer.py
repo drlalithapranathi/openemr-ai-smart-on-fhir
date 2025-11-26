@@ -14,7 +14,6 @@ Requirements:
 """
 
 import os
-import re
 from typing import Optional
 from collections import Counter
 
@@ -253,31 +252,9 @@ class NotionFetcher:
 class WERCalculator:
     """Calculate WER with detailed error analysis."""
 
-    # Medical abbreviation mappings for normalization
-    MEDICAL_ABBREVIATIONS = {
-        r'\bmg\b': 'milligrams',
-        r'\bml\b': 'milliliters',
-        r'\bmcg\b': 'micrograms',
-        r'\bkg\b': 'kilograms',
-        r'\bbid\b': 'twice daily',
-        r'\btid\b': 'three times daily',
-        r'\bqid\b': 'four times daily',
-        r'\bprn\b': 'as needed',
-        r'\bpo\b': 'by mouth',
-        r'\biv\b': 'intravenous',
-        r'\bim\b': 'intramuscular',
-        r'\bhtn\b': 'hypertension',
-        r'\bdm\b': 'diabetes mellitus',
-        r'\bchf\b': 'congestive heart failure',
-        r'\bcad\b': 'coronary artery disease',
-        r'\bcopd\b': 'chronic obstructive pulmonary disease',
-        r'\bgerd\b': 'gastroesophageal reflux disease',
-        r'\bdka\b': 'diabetic ketoacidosis',
-        r'\b(\d+)\s*%': r'\1 percent',
-    }
-
-    def __init__(self, normalize_medical: bool = True):
-        self.normalize_medical_terms = normalize_medical
+    def __init__(self):
+        # Standard WER normalization - no medical expansion
+        # (expanding abbreviations was causing worse WER scores)
         self.transform = jiwer.Compose([
             jiwer.RemoveMultipleSpaces(),
             jiwer.Strip(),
@@ -285,17 +262,8 @@ class WERCalculator:
             jiwer.ToLowerCase(),
         ])
 
-    def _normalize_medical(self, text: str) -> str:
-        """Normalize medical abbreviations and patterns."""
-        text = text.lower()
-        for pattern, replacement in self.MEDICAL_ABBREVIATIONS.items():
-            text = re.sub(pattern, replacement, text, flags=re.IGNORECASE)
-        return text
-
     def _prepare_text(self, text: str) -> str:
-        """Apply all normalization steps."""
-        if self.normalize_medical_terms:
-            text = self._normalize_medical(text)
+        """Apply normalization steps."""
         return self.transform(text)
 
     def calculate(self, reference: str, hypothesis: str) -> dict:
@@ -515,7 +483,6 @@ def run_pipeline(
         output_csv: str = "results.csv",
         use_large_v3: bool = False,
         medical_prompt: bool = False,
-        normalize_medical: bool = True,
         error_report_path: str = "error_analysis.txt",
 ):
     """
@@ -526,7 +493,6 @@ def run_pipeline(
         output_csv: Path for results CSV
         use_large_v3: Use whisper-large-v3 instead of turbo (slower, more accurate)
         medical_prompt: Add medical context prompt to Whisper
-        normalize_medical: Normalize medical abbreviations before WER calculation
         error_report_path: Path for detailed error analysis report
     """
     print("=" * 60)
@@ -557,7 +523,7 @@ def run_pipeline(
         print("No entries found!")
         return
 
-    wer_calc = WERCalculator(normalize_medical=normalize_medical)
+    wer_calc = WERCalculator()
     results = []
 
     # Run Modal transcription
@@ -635,7 +601,6 @@ def run_pipeline(
     print("=" * 60)
     print(f"Model: {model_id}")
     print(f"Medical prompt: {'Yes' if medical_prompt else 'No'}")
-    print(f"Medical normalization: {'Yes' if normalize_medical else 'No'}")
     print(f"Entries: {len(entries)} total, {len(valid)} successful")
     print(f"\nAverage WER: {avg_wer:.4f} ({avg_wer*100:.2f}%)")
     print(f"Aggregate WER: {agg_wer:.4f} ({agg_wer*100:.2f}%)")
@@ -691,11 +656,6 @@ def main():
         action="store_true",
         help="Add medical terminology prompt to improve transcription",
     )
-    parser.add_argument(
-        "--no-medical-normalize",
-        action="store_true",
-        help="Disable medical abbreviation normalization in WER calculation",
-    )
 
     args = parser.parse_args()
 
@@ -704,7 +664,6 @@ def main():
         output_csv=args.output,
         use_large_v3=args.use_large_v3,
         medical_prompt=args.medical_prompt,
-        normalize_medical=not args.no_medical_normalize,
         error_report_path=args.error_report,
     )
 

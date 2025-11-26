@@ -42,7 +42,7 @@ jobs:
           MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
         run: |
           cd openemr_whisper_wer
-          python whisper_wer.py --output results.csv --medical-prompt
+          python whisper_wer.py --output results.csv
 
       - name: Generate summary table
         run: |
