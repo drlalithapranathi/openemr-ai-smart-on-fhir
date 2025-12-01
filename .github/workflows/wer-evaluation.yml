@@ -14,6 +14,7 @@ on:
           - canary-1b-v2
           - granite-speech-3.3-8b
           - phi4-multimodal
+          - groq-whisper-large-v3-turbo
   push:
     paths:
       - 'openemr_whisper_wer/**'
@@ -41,7 +42,9 @@ jobs:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           MODAL_TOKEN_ID: ${{ secrets.MODAL_TOKEN_ID }}
           MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY}}
           MODEL_NAME: ${{ inputs.model || 'canary-1b-v2' }}
+
         run: |
           cd openemr_whisper_wer
           if [ "$MODEL_NAME" = "canary-1b-v2" ]; then
@@ -52,6 +55,8 @@ jobs:
             python phi4_wer.py --output results.csv
           elif [ "$MODEL_NAME" = "whisper-large-v3" ]; then
             python whisper_wer.py --output results.csv --use-large-v3
+          elif [ "$MODEL_NAME" = "whisper-large-v3" ]; then
+            python wlv3t_on_groq.py --output results.csv
           else
             python whisper_wer.py --output results.csv
           fi
