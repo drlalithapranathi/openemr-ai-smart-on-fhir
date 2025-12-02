@@ -32,17 +32,18 @@ if not os.environ.get("MODAL_IS_REMOTE"):
 app = modal.App("granite-speech-transcription")
 
 # Granite Speech model requires transformers with audio support + peft for LoRA
+# Image version 2: fixed torchaudio backend
 granite_image = (
     modal.Image.debian_slim(python_version="3.11")
     .apt_install("ffmpeg", "libsndfile1")
     .pip_install(
-        "torch",
-        "torchaudio",
+        "torch==2.4.0",  # Pin torch to avoid torchcodec default in torchaudio
+        "torchaudio==2.4.0",
         "transformers>=4.52.0",
         "accelerate",
         "soundfile",
         "librosa",
-        "peft",  # Required for LoRA adapter
+        "peft==0.13.0",  # Pin to older version for compatibility
     )
 )
 

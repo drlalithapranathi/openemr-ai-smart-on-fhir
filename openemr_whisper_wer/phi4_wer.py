@@ -53,7 +53,7 @@ phi4_image = (
         "soundfile",
         "librosa",
         "scipy",
-        "peft",
+        "peft==0.13.0",  # Pin to older version compatible with Phi-4's custom model code
         "backoff",
         "packaging",
         FLASH_ATTN_WHEEL,  # Prebuilt wheel - no compilation needed
