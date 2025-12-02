@@ -17,11 +17,19 @@ dataset_image = modal.Image.debian_slim(python_version="3.11").pip_install(
 _kaggle_username = os.environ.get("KAGGLE_USERNAME")
 _kaggle_key = os.environ.get("KAGGLE_KEY")
 
-if not _kaggle_username or not _kaggle_key:
-    raise ValueError(
-        "KAGGLE_USERNAME and KAGGLE_KEY environment variables must be set!\n"
-        "Run with: KAGGLE_USERNAME=xxx KAGGLE_KEY=xxx modal run modal_dataset_volume.py"
-    )
+# if not _kaggle_username or not _kaggle_key:
+#     raise ValueError(
+#         "KAGGLE_USERNAME and KAGGLE_KEY environment variables must be set!\n"
+#         "Run with: KAGGLE_USERNAME=xxx KAGGLE_KEY=xxx modal run modal_dataset_volume.py"
+#     )
+
+if _kaggle_username and _kaggle_key:
+    kaggle_secret = modal.Secret.from_dict({
+        "KAGGLE_USERNAME": _kaggle_username,
+        "KAGGLE_KEY": _kaggle_key,
+    })
+else:
+    kaggle_secret = None
 
 # Create secret from environment variables (passed from GitHub Actions)
 kaggle_secret = modal.Secret.from_dict({
