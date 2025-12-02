@@ -33,13 +33,19 @@ app = modal.App("phi4-multimodal-transcription")
 
 MODEL_ID = "microsoft/Phi-4-multimodal-instruct"
 
-# Phi-4 Multimodal requires transformers with audio support
-# Note: flash-attn is optional; we use attn_implementation="eager" instead
+# Phi-4 Multimodal requires transformers with audio support and flash-attn
+# Use prebuilt flash-attn wheel from Dao-AILab releases (much faster than building)
+# See: https://modal.com/docs/examples/install_flash_attn
+FLASH_ATTN_WHEEL = (
+    "https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.4.post1/"
+    "flash_attn-2.7.4.post1+cu12torch2.6cxx11abiFALSE-cp311-cp311-linux_x86_64.whl"
+)
+
 phi4_image = (
-    modal.Image.from_registry("nvidia/cuda:12.4.0-devel-ubuntu22.04", add_python="3.11")
-    .apt_install("ffmpeg", "libsndfile1", "git")
+    modal.Image.debian_slim(python_version="3.11")
+    .apt_install("ffmpeg", "libsndfile1")
     .pip_install(
-        "torch",
+        "torch==2.6.0",
         "torchaudio",
         "torchvision",
         "transformers>=4.45.0",
@@ -50,6 +56,7 @@ phi4_image = (
         "peft",
         "backoff",
         "packaging",
+        FLASH_ATTN_WHEEL,  # Prebuilt wheel - no compilation needed
     )
 )
 
@@ -107,7 +114,7 @@ class Phi4Transcriber:
                 trust_remote_code=True,
                 cache_dir=hf_cache,
                 device_map="auto",
-                attn_implementation="eager",  # Disable flash attention requirement
+                attn_implementation="flash_attention_2",  # Use flash attention for better performance
             )
             self.model.eval()
 

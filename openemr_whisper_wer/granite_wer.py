@@ -118,8 +118,8 @@ class GraniteSpeechTranscriber:
                 "-ar", "16000", "-ac", "1", "-c:a", "pcm_s16le", output_path
             ], check=True, capture_output=True)
 
-            # Load audio with torchaudio (required format for Granite Speech)
-            wav, sr = torchaudio.load(output_path, normalize=True)
+            # Load audio with torchaudio using soundfile backend (avoids torchcodec dependency)
+            wav, sr = torchaudio.load(output_path, normalize=True, backend="soundfile")
             assert sr == 16000, f"Expected 16kHz, got {sr}Hz"
 
             # Create text prompt with audio placeholder (required by Granite Speech API)
