@@ -33,7 +33,8 @@ app = modal.App("phi4-multimodal-transcription")
 
 MODEL_ID = "microsoft/Phi-4-multimodal-instruct"
 
-# Phi-4 Multimodal requires transformers with audio support and flash-attn
+# Phi-4 Multimodal requires specific versions per official docs:
+# https://huggingface.co/microsoft/Phi-4-multimodal-instruct
 # Use prebuilt flash-attn wheel from Dao-AILab releases (much faster than building)
 # See: https://modal.com/docs/examples/install_flash_attn
 FLASH_ATTN_WHEEL = (
@@ -46,17 +47,17 @@ phi4_image = (
     .apt_install("ffmpeg", "libsndfile1")
     .pip_install(
         "torch==2.6.0",
-        "torchaudio",
-        "torchvision",
-        "transformers>=4.45.0",
-        "accelerate",
+        "torchaudio==2.6.0",
+        "torchvision==0.21.0",
+        "transformers==4.48.2",  # Official recommended version for Phi-4
+        "accelerate==1.3.0",     # Official recommended version
         "soundfile",
         "librosa",
         "scipy",
-        "peft==0.13.0",  # Pin to older version compatible with Phi-4's custom model code
+        "peft==0.13.2",          # Official recommended version
         "backoff",
         "packaging",
-        FLASH_ATTN_WHEEL,  # Prebuilt wheel - no compilation needed
+        FLASH_ATTN_WHEEL,        # Prebuilt wheel - no compilation needed
     )
 )
 
