@@ -33,7 +33,8 @@ app = modal.App("phi4-multimodal-transcription")
 
 MODEL_ID = "microsoft/Phi-4-multimodal-instruct"
 
-# Phi-4 Multimodal requires transformers with audio support and flash attention
+# Phi-4 Multimodal requires transformers with audio support
+# Note: flash-attn is optional; we use attn_implementation="eager" instead
 phi4_image = (
     modal.Image.from_registry("nvidia/cuda:12.4.0-devel-ubuntu22.04", add_python="3.11")
     .apt_install("ffmpeg", "libsndfile1", "git")
@@ -49,11 +50,6 @@ phi4_image = (
         "peft",
         "backoff",
         "packaging",
-        "ninja",
-    )
-    .pip_install(
-        "flash-attn",
-        extra_options="--no-build-isolation",
     )
 )
 
