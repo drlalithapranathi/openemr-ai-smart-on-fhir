@@ -137,18 +137,17 @@ class CanaryTranscriber:
 # Kaggle Dataset Evaluator (Volume-based)
 # ============================================================================
 
-# Mount wer_utils.py for Kaggle evaluation
-wer_utils_mount = modal.Mount.from_local_file(
-    local_path=os.path.join(os.path.dirname(__file__), "wer_utils.py"),
-    remote_path="/root/wer_utils.py",
+# Image with wer_utils.py for Kaggle evaluation
+canary_kaggle_image = canary_image.add_local_file(
+    os.path.join(os.path.dirname(__file__), "wer_utils.py"),
+    "/root/wer_utils.py",
 )
 
 @app.cls(
-    image=canary_image,
+    image=canary_kaggle_image,
     gpu="A10G",
     timeout=1800,
     volumes={"/data": kaggle_volume},
-    mounts=[wer_utils_mount],
 )
 class CanaryKaggleEvaluator:
     """Evaluates Canary on Kaggle medical speech dataset."""

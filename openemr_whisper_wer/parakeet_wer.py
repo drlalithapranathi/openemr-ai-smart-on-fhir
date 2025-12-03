@@ -136,18 +136,17 @@ class ParakeetTranscriber:
 # Kaggle Dataset Evaluator (Volume-based)
 # ============================================================================
 
-# Mount wer_utils.py for Kaggle evaluation
-wer_utils_mount = modal.Mount.from_local_file(
-    local_path=os.path.join(os.path.dirname(__file__), "wer_utils.py"),
-    remote_path="/root/wer_utils.py",
+# Image with wer_utils.py for Kaggle evaluation
+parakeet_kaggle_image = parakeet_image.add_local_file(
+    os.path.join(os.path.dirname(__file__), "wer_utils.py"),
+    "/root/wer_utils.py",
 )
 
 @app.cls(
-    image=parakeet_image,
+    image=parakeet_kaggle_image,
     gpu="A10G",
     timeout=1800,
     volumes={"/data": kaggle_volume},
-    mounts=[wer_utils_mount],
 )
 class ParakeetKaggleEvaluator:
     """Evaluates Parakeet on Kaggle medical speech dataset."""

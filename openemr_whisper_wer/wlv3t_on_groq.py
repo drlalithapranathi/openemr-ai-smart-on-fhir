@@ -112,19 +112,18 @@ groq_image = (
     )
 )
 
-# Mount wer_utils.py for Kaggle evaluation
-wer_utils_mount = modal.Mount.from_local_file(
-    local_path=os.path.join(os.path.dirname(__file__), "wer_utils.py"),
-    remote_path="/root/wer_utils.py",
+# Image with wer_utils.py for Kaggle evaluation
+groq_kaggle_image = groq_image.add_local_file(
+    os.path.join(os.path.dirname(__file__), "wer_utils.py"),
+    "/root/wer_utils.py",
 )
 
 
 @app.cls(
-    image=groq_image,
+    image=groq_kaggle_image,
     timeout=3600,  # 1 hour for API calls
     volumes={"/data": kaggle_volume},
     secrets=[modal.Secret.from_name("groq-api-key")],
-    mounts=[wer_utils_mount],
 )
 class GroqKaggleEvaluator:
     """Evaluates Groq Whisper on Kaggle medical speech dataset."""
