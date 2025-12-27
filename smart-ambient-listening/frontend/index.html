@@ -76,7 +76,21 @@
         <!-- Actions -->
         <section class="actions-section hidden" id="actions-section">
             <button id="btn-copy" class="btn btn-secondary">Copy Transcription</button>
+            <button id="btn-summarize" class="btn btn-primary">Generate SOAP Note</button>
             <button id="btn-clear" class="btn btn-secondary">Clear Session</button>
+        </section>
+
+        <!-- SOAP Note Section -->
+        <section class="soap-section hidden" id="soap-section">
+            <h2>SOAP Note</h2>
+            <div id="soap-container">
+                <div id="soap-loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <span>Generating SOAP note... This may take 1-2 minutes.</span>
+                </div>
+                <div id="soap-results" class="soap-results">
+                </div>
+            </div>
         </section>
     </main>
 
