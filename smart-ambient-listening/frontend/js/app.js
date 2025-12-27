@@ -1,8 +1,5 @@
 /**
  * SMART Ambient Listening Application
- *
- * Main application logic that integrates SMART-on-FHIR client
- * with the ambient recorder and transcription service.
  */
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -34,6 +31,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         actionsSection: document.getElementById('actions-section'),
         btnCopy: document.getElementById('btn-copy'),
         btnClear: document.getElementById('btn-clear'),
+        btnSummarize: document.getElementById('btn-summarize'),
+        soapSection: document.getElementById('soap-section'),
+        soapLoading: document.getElementById('soap-loading'),
+        soapResults: document.getElementById('soap-results'),
         errorModal: document.getElementById('error-modal'),
         errorMessage: document.getElementById('error-message'),
         btnCloseError: document.getElementById('btn-close-error'),
@@ -149,7 +150,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         elements.btnAmbient.addEventListener('click', toggleRecording);
         elements.btnCopy.addEventListener('click', copyTranscription);
         elements.btnClear.addEventListener('click', clearSession);
-
+        elements.btnSummarize.addEventListener('click', generateSOAPNote);
         elements.btnCloseError.addEventListener('click', () => {
             elements.errorModal.classList.add('hidden');
         });
@@ -183,7 +184,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     return;
                 }
             } catch (e) {
-                // permissions API not supported, try anyway
+                // permissions API not supported
             }
             await recorder.start();
         }
@@ -207,7 +208,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         elements.btnAmbient.querySelector('.btn-text').textContent = 'Start Ambient Listening';
         elements.recordingStatus.classList.add('hidden');
         elements.transcriptionLoading.classList.remove('hidden');
-
         try {
             const result = await transcribeAudio(blob);
             displayTranscription(result);
@@ -312,9 +312,95 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    /**
-     * Clear current session
-     */
+    async function generateSOAPNote() {
+        const text = transcriptionHistory.map(h => h.text).join('\n\n');
+        if (!text.trim()) {
+            showError('No transcription available to summarize');
+            return;
+        }
+        elements.soapSection.classList.remove('hidden');
+        elements.soapLoading.classList.remove('hidden');
+        elements.soapResults.innerHTML = '';
+        try {
+            const response = await fetch('/summarize', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ text: text })
+            });
+            if (!response.ok) {
+                throw new Error(`Server error: ${response.status}`);
+            }
+            const result = await response.json();
+            displaySOAPNote(result);
+        } catch (error) {
+            console.error('SOAP generation error:', error);
+            showError('Failed to generate SOAP note: ' + error.message);
+            elements.soapSection.classList.add('hidden');
+        } finally {
+            elements.soapLoading.classList.add('hidden');
+        }
+    }
+
+    function displaySOAPNote(result) {
+        const sections = parseSOAPSections(result.soap_note || result.summary || '');
+        elements.soapResults.innerHTML = `
+            <div class="soap-note">
+                <div class="soap-section">
+                    <h4>Subjective</h4>
+                    <p>${escapeHtml(sections.subjective)}</p>
+                </div>
+                <div class="soap-section">
+                    <h4>Objective</h4>
+                    <p>${escapeHtml(sections.objective)}</p>
+                </div>
+                <div class="soap-section">
+                    <h4>Assessment</h4>
+                    <p>${escapeHtml(sections.assessment)}</p>
+                </div>
+                <div class="soap-section">
+                    <h4>Plan</h4>
+                    <p>${escapeHtml(sections.plan)}</p>
+                </div>
+                <button class="btn btn-secondary" onclick="copySOAPNote()">Copy SOAP Note</button>
+            </div>
+        `;
+    }
+
+    function parseSOAPSections(text) {
+        const sections = {
+            subjective: '',
+            objective: '',
+            assessment: '',
+            plan: ''
+        };
+        const patterns = {
+            subjective: /(?:subjective|S)[:.]?\s*([\s\S]*?)(?=(?:objective|O)[:.]|$)/i,
+            objective: /(?:objective|O)[:.]?\s*([\s\S]*?)(?=(?:assessment|A)[:.]|$)/i,
+            assessment: /(?:assessment|A)[:.]?\s*([\s\S]*?)(?=(?:plan|P)[:.]|$)/i,
+            plan: /(?:plan|P)[:.]?\s*([\s\S]*?)$/i
+        };
+        for (const [key, pattern] of Object.entries(patterns)) {
+            const match = text.match(pattern);
+            if (match && match[1]) {
+                sections[key] = match[1].trim();
+            }
+        }
+        if (!sections.subjective && !sections.objective) {
+            sections.subjective = text;
+        }
+        return sections;
+    }
+
+    window.copySOAPNote = async function() {
+        const soapText = elements.soapResults.innerText;
+        try {
+            await navigator.clipboard.writeText(soapText);
+            alert('SOAP note copied to clipboard!');
+        } catch (error) {
+            showError('Failed to copy SOAP note');
+        }
+    };
+
     function clearSession() {
         transcriptionHistory = [];
         elements.transcriptionResults.innerHTML = `
@@ -326,6 +412,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         elements.transcriptionHistory.classList.add('hidden');
         elements.historyList.innerHTML = '';
         elements.actionsSection.classList.add('hidden');
+        elements.soapSection.classList.add('hidden');
+        elements.soapResults.innerHTML = '';
     }
 
     /**
