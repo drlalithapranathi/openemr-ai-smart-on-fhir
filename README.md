@@ -1,2 +1,2 @@
-# openemr-ai
-Artificial Intelligence tooling for OpenEMR related to clinical decision rules, ambient listening, note sumarization and automated coding
+# openemr-ai-smart-on-fhir
+A smart-on-FHIR application for ambient listening & text summarization.
