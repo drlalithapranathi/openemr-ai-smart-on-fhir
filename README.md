@@ -37,4 +37,4 @@ See [smart-ambient-listening/README.md](smart-ambient-listening/README.md)
 
 ## License
 
-Apache 2.0
+MPL-2.0 license
